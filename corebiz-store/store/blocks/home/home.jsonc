@@ -1,15 +1,270 @@
 {
-  "store.home": { 
-    "blocks": [
-      "rich-text"
+	"store.home": { 
+		"blocks": [
+			"list-context.image-list#demo",
+      // Section explicação da loja (fexrow > flexrow (main container) > 3 flex col )
+      "tab-layout#home"
+      // Section Institucional > Valores Corebiz
+      //Section Slider Layout marcas
+		]
+	},
+  // Linha das Abas : Contem Lista de itens do menu e Conteudo das abas
+	"tab-layout#home": {
+		"children": [
+			"tab-list#home",
+			"tab-content#home"
+		]
+	},
+
+	// Lista os Itens de Abas
+	"tab-list#home": {
+		"children": [
+			"tab-list.item#home1",
+			"tab-list.item#home2",
+			"tab-list.item#home3"
+		]
+	},
+	// Lista os Conteudos das Abas
+	"tab-content#home": {
+		"children": [
+			"tab-content.item#home1",
+			"tab-content.item#home2",
+			"tab-content.item#home3"
+		]
+	},
+
+	// Tab Item 1
+	"tab-list.item#home1": {
+		"props": {
+			"tabId": "categoria1",
+			"label": "Corinthians",
+			"defaultActiveTab": true
+		}
+	},
+	// Tab Item 2
+	"tab-list.item#home2": {
+		"props": {
+			"tabId": "categoria2",
+			"label": "Palmeiras"
+		}
+	},
+	// Tab Item 3
+	"tab-list.item#home3": {
+		"props": {
+			"tabId": "categoria3",
+			"label": "Promoções"
+		}
+	},
+
+	// Tab Content 1
+	"tab-content.item#home1": {
+		"children": [
+			// "search-result-layout.customQuery#corinthians"
+			"search-result-layout.customQuery#corinthians"
+		],
+		"props": {
+			"tabId": "categoria1"
+		}
+	},
+	// Tab Content 2
+	"tab-content.item#home2": {
+		"children": [
+			"search-result-layout.customQuery#palmeiras"
+		],
+		"props": {
+			"tabId": "categoria2"
+		}
+	},
+	// Tab Content 3
+	"tab-content.item#home3": {
+		"children": [
+			"search-result-layout.customQuery#promocoes"
+		],
+		"props": {
+			"tabId": "categoria3"
+		}
+	},
+
+	//start new corinthians	
+
+	"search-result-layout.customQuery#corinthians": {
+		"props": {
+			"querySchema":{
+				// "mapField": "ft",
+				// "queryField": "corinthians",
+				"skusFilter": "FIRST_AVAILABLE",
+				"simulationBehavior": "skip",
+				"maxItemsPerPage": 8
+			}
+		},
+		"blocks": ["search-result-layout.desktop#lp"]
+	},
+
+	"search-result-layout.customQuery#palmeiras": {
+		"props": {
+			"querySchema":{
+				// "mapField": "ft",
+				// "queryField": "palmeiras",
+				"skusFilter": "FIRST_AVAILABLE",
+				"simulationBehavior": "skip",
+				"maxItemsPerPage": 8
+			}
+		},
+		"blocks": ["search-result-layout.desktop#lp"]
+	},
+	"search-result-layout.customQuery#promocoes": {
+		"props": {
+			"querySchema":{
+				// "mapField": "ft",
+				// "queryField": "skate",
+				"skusFilter": "FIRST_AVAILABLE",
+				"simulationBehavior": "skip",
+				"maxItemsPerPage": 8
+			}
+		},
+		"blocks": ["search-result-layout.desktop#lp"]
+	},
+
+	"search-result-layout.desktop#lp": {
+		"children": [
+      "flex-layout.row#result"
+    ],
+    "props": {
+      "preventRouteChange": true
+    }
+	},
+	"flex-layout.row#result": {
+		"children": [
+			"search-content#lp"
+		]
+	},
+	"search-content#lp": {
+		"blocks": [
+			"gallery#lp",
+			"not-found"
+		]
+	},
+
+	"gallery#lp": {
+    "props": {
+      "layouts": [
+        {
+          "name": "grid",
+          "component": "GridSummary",
+          "itemsPerRow": {
+						"(min-width:1300px)": 4,
+						"desktop": 4,
+						"tablet": 2,
+						"mobile": 1
+					}
+        },
+        {
+          "name": "list",
+          "component": "ListSummary",
+          "itemsPerRow": 1
+        }
+      ],
+			"ListSummary": "product-summary.shelf#lp",
+			"GridSummary": "product-summary.shelf#lp"
+      
+    }
+  },
+
+	"product-summary.shelf#lp": {
+    "children": [
+				"modal-trigger#lp",
+        "product-summary-name",
+        "product-images#lp",
+				"vtex.product-highlights@2.x:product-highlights",
+				"product-summary-space",
+				"product-summary-price",
+				"add-to-cart-button#lp"
     ]
   },
-  "rich-text": { 
-    "props": { 
-      "text": "VTEX Store Framework",
-      "textAlignment": "CENTER",
-      "textPosition": "CENTER",
-      "font": "t-heading-1"
+
+	"product-images#lp": {
+		"props" : {
+			"showNavigationArrows": true,
+			"showPaginationDots": true
+		}
+	},
+
+	"vtex.product-highlights@2.x:product-highlights": {
+    "children": ["product-highlight-text"]
+  },
+  "product-highlight-text": {
+    "props": {
+      "message": "{highlightName}"
+    }
+  },
+
+	"add-to-cart-button#lp": {
+		"props": {
+			"onClickBehavior": "go-to-product-page",
+			"text": "VER DETALHES"
+		}
+	},
+
+	"modal-trigger#lp": {
+		"children": [
+			"rich-text#lp",
+			"modal-layout#lp"
+		]
+	},
+
+	"rich-text#lp": {
+		"props": {
+			"text": "play"
+		}
+	},
+
+	"modal-layout#lp": {
+		"children": [
+			"video#lp"
+		]
+	},
+	"video#lp": {
+		"props": {
+      "width": "100%",
+      "height": "400px",
+      "loop": false,
+      "autoPlay": true,
+      "muted": false,
+      "src": "https://www.youtube.com/watch?v=2t01kzHKm3A",
+      "blockClass": "videoEl"
+    }
+	},
+
+	//end
+
+	// Slider Home
+	
+	"list-context.image-list#demo": {
+    "children": ["slider-layout#demo-images"],
+    "props": {
+      "height": "auto",
+      "images": [
+        {
+          "image": "https://hiringcoders2021.vteximg.com.br/arquivos/banner-upMedal_01.png",
+          "mobileImage": "https://hiringcoders2021.vteximg.com.br/arquivos/banner-upMedal_01.png"
+        },
+        {
+          "image": "https://hiringcoders2021.vteximg.com.br/arquivos/banner-upMedal_02.png",
+          "mobileImage": "https://hiringcoders2021.vteximg.com.br/arquivos/banner-upMedal_02.png"
+        }
+      ]
+    }
+  },
+  "slider-layout#demo-images": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "blockClass": "carousel"
     }
   }
 }

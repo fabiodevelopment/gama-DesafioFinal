@@ -13,14 +13,68 @@
     ]
   },
   "flex-layout.row#footer": { 
+    "props": {
+      "blockClass": "section-footer"
+    },
     "children": [
-      "image"
+      "flex-layout.col#link1",
+      "flex-layout.col#link2",
+      "flex-layout.col#link3",
+      "flex-layout.col#link4"
     ]
   },
-  "image": {
+  "flex-layout.col#link1":{
+    "children": [
+      "link#link1"
+    ]
+  },
+  "flex-layout.col#link2":{
+    "children": [
+      "link#link2"
+    ]
+  },
+  "flex-layout.col#link3":{
+    "children": [
+      "link#link3"
+    ]
+  },
+  "flex-layout.col#link4":{
+    "children": [
+      "link#link4"
+    ]
+  },
+
+  "link#link1": {
     "props": {
-      "width": 100,
-      "src": "https://brand.vtex.com/static/media/VTEX_pink_RGB.751a9fb5.svg"
+      "blockClass": "link-foooter-1",
+      "href": "/cadastro",
+      "label": "CADASTRO"
+    }
+  },
+
+  "link#link2": {
+    "props": {
+      "blockClass": "link-foooter-2",
+      "href": "#",
+      "label": "DESAFIOS"
+    }
+  },
+
+  "link#link3": {
+    "props": {
+      "blockClass": "link-foooter-3",
+      "href": "#",
+      "label": "LOJA"
+    }
+  },
+
+  "link#link4": {
+    "props": {
+      "blockClass": "link-foooter-4",
+      "href": "https://api.whatsapp.com/send?phone=5511964335064",
+      "target": "_blank",
+      "label": "SUPORTE"
     }
   }
+
 }

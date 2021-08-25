@@ -8,6 +8,7 @@
   "header-layout.desktop": {
     "children": [
       "sticky-layout#desktop"
+      // Criar Menu Departamentos
     ]
   },
   "sticky-layout#desktop": {
@@ -27,8 +28,8 @@
     "children": [
       "flex-layout.col#logo-desktop",
       "flex-layout.col#spacer",
-      "search-bar",
-      "locale-switcher",
+      "flex-layout.col#searchInput",
+      "flex-layout.col#spacer",
       "login",
       "minicart.v2"
     ]
@@ -38,32 +39,43 @@
       "width": "grow"
     }
   },
+  "flex-layout.col#spacer-mobile": {
+    "props": {
+      "width": "grow",
+      "marginRight": "8"
+    }
+  },
+  "flex-layout.col#searchInput": {
+    "props": {
+      "blockClass": "search-header",
+      "width": "grow"
+    },
+    "children": [
+      "search-bar"
+    ]
+  },
   "flex-layout.col#logo-desktop": {
     "props": {
       "verticalAlign": "middle"
     },
     "children": ["logo"]
   },
-  "logo": {
-    "props": {
-      "title": "Logo",
-      "href": "/",
-      "url": "https://brand.vtex.com/static/media/VTEX_pink_RGB.751a9fb5.svg",
-      "width": "80"
-    }
-  },
   "header-layout.mobile": {
     "children": ["sticky-layout#mobile"]
   },
   "sticky-layout#mobile": {
+    "props": {
+      "blockClass": "sticky-header"
+    },
     "children": ["flex-layout.row#mobile"]
   },
   "flex-layout.row#mobile": {
     "children": [
       "drawer",
-      "logo",
-      "flex-layout.col#spacer",
-      "login",
+      "flex-layout.col#logo-mobile",
+      "flex-layout.col#spacer-mobile",
+      // "login",
+      "flex-layout.col#searchInput",
       "minicart.v2"
     ],
     "props": {
@@ -73,6 +85,29 @@
       "fullWidth": true
     }
   },
+  "flex-layout.col#logo-mobile": {
+    "props": {
+      "verticalAlign": "middle"
+    },
+    "children": ["logo#mobile"]
+  },
+  "logo#mobile": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/upmedal.png",
+      "width": "100"
+    }
+  },
+  "logo": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/upmedal.png",
+      "width": "150"
+    }
+  },
+  
   "drawer": {
     "children": []
   }

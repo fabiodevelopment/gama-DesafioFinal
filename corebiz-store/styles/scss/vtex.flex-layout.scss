@@ -1,0 +1,32 @@
+.container-main{
+	.container {
+		padding: 0;
+		margin: 100px auto;
+		max-width: 1080px;
+
+	}
+}
+.flexRowContent--main-header-mobile{
+	background-color: transparent !important;
+}
+
+.flexRow--container-cadastro{
+	padding: 0;
+	margin: 50px auto;
+	max-width: 1080px;
+	.flexRowContent--container-cadastro {
+		display: flex;
+		flex-direction: column;
+	}
+	.flexRow--banner-cadastro {
+		width: 100%;
+		border-radius: 15px;
+		overflow: hidden;
+	}
+	.flexRow--form-cadastro {
+		width: 100%;
+		max-width: 450px;
+		margin: 0 auto;
+		color: white;
+	}
+}
