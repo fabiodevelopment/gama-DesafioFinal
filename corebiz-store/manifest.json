@@ -1,6 +1,6 @@
 {
 	"vendor": "hiringcoders202112",
-	"name": "CoreBiz Store Theme",
+	"name": "CoreBizStoreTheme",
 	"version": "0.1.1",
 	"builders": {
 		"styles": "2.x",
