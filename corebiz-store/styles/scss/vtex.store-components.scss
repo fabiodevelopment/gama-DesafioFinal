@@ -1,0 +1,12 @@
+@import './global/variables';
+
+div.flex1 {
+    display: flex;
+    flex-direction: column;
+    @include breakpoint('mobile') {
+        flex-direction: row;
+    }
+    @include breakpoint('tablet') {
+        flex-direction: row;
+    }
+}

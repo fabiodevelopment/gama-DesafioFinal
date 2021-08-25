@@ -1,0 +1,15 @@
+{
+  "name": "corebiz-store",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "sass": "sass --watch --no-source-map styles/scss:styles/css --style compressed"
+  },
+  "dependencies": {
+    "sass": "^1.38.1"
+  }
+}
