@@ -1,0 +1,49 @@
+{
+  "vtex.menu@2.x:menu#submenuHeader": {
+    "props": {
+      "experimentalOptimizeRendering": true,
+      "items": [
+        {
+          "id": "menu-item-conversao",
+          "type": "category",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "categoryId": "11",
+            "type": "internal",
+            "noFollow": false,
+            "tagTitle": "Conversão",
+            "text": "Conversão"
+          }
+        },
+        {
+          "id": "menu-item-performance",
+          "type": "category",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "categoryId": "10",
+            "type": "internal",
+            "noFollow": false,
+            "tagTitle": "Performance",
+            "text": "Performance"
+          }
+        },
+        {
+          "id": "menu-item-upgrade-de-vendas",
+          "type": "category",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "categoryId": "12",
+            "type": "internal",
+            "noFollow": false,
+            "tagTitle": "Upgrade de Vendas",
+            "text": "Upgrade de Vendas"
+          }
+        }
+      ],
+      "blockClass": "menu-item"
+    }
+  }
+}
