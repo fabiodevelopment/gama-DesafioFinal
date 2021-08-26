@@ -1,0 +1,76 @@
+{
+    "flex-layout.row#slider-brands":{
+        "children": ["flex-layout.row#slider-brand-container"]
+    },
+
+    "flex-layout.row#slider-brand-container":{
+        "props":{
+            "blockClass": "container-main"
+        },
+        "children": ["slider-layout#slider-brands"]
+    },
+
+    "slider-layout#slider-brands": {
+        "children": ["image#brand1", "image#brand2","image#brand3","image#brand4","image#brand5","image#brand6","image#brand7","image#brand8","image#brand9","image#brand10"],
+        "props": {
+          "autoplay": {
+            "timeout": 5000
+          },
+          "blockClass": "slider-brands"
+        
+        }
+      },
+
+      "image#brand1": {
+        "props": {
+          "src": "assets/logo1.png"
+        }
+      },
+    
+      "image#brand2": {
+        "props": {
+            "src": "assets/logo2.png"
+        }
+      },
+      "image#brand3": {
+        "props": {
+            "src": "assets/logo3.png"
+        }
+      },
+      "image#brand4": {
+        "props": {
+            "src": "assets/logo4.png"
+        }
+      },
+      "image#brand5": {
+        "props": {
+            "src": "assets/logo5.png"
+        }
+      },
+      "image#brand6": {
+        "props": {
+            "src": "assets/logo2.png"
+        }
+      },
+      "image#brand7": {
+        "props": {
+            "src": "assets/logo7.png"
+        }
+      },
+      "image#brand8": {
+        "props": {
+            "src": "assets/logo8.png"
+        }
+      },
+      "image#brand9": {
+        "props": {
+            "src": "assets/logo9.png"
+        }
+      },
+      "image#brand10": {
+        "props": {
+            "src": "assets/logo10.png"
+        }
+      }
+    
+}

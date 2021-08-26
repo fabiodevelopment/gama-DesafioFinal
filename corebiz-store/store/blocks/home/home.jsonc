@@ -3,9 +3,10 @@
 		"blocks": [
 			"list-context.image-list#demo",
       // Section explicação da loja (fexrow > flexrow (main container) > 3 flex col )
-      "tab-layout#home"
+      "tab-layout#home",
       // Section Institucional > Valores Corebiz
       //Section Slider Layout marcas
+	  "flex-layout.row#slider-brands"
 		]
 	},
   // Linha das Abas : Contem Lista de itens do menu e Conteudo das abas
@@ -267,4 +268,6 @@
       "blockClass": "carousel"
     }
   }
+
 }
+
