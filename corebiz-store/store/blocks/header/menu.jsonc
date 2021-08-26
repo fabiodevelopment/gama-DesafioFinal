@@ -1,0 +1,109 @@
+{
+  // flex menu row - container
+  "flex-layout.row#header": {
+    "children": ["flex-layout.col#containerMenu"],
+    "props": {
+      "blockClass": "container-menu"
+    }
+  },
+  // flex menu col - base
+  "flex-layout.col#containerMenu": {
+    "children": ["vtex.menu@2.x:menu#menuHeader"],
+    "props": {
+      "horizontalAlign": "center"
+    }
+  },
+  // menu items
+  "vtex.menu@2.x:menu#menuHeader": {
+    "props": {
+      "experimentalOptimizeRendering": true,
+      "items": [
+        {
+          "id": "menu-item-implementacoes",
+          "type": "category",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "categoryId": "5",
+            "type": "internal",
+            "href": "/implementacoes",
+            "noFollow": false,
+            "tagTitle": "implementacoes"
+          }
+        },
+        {
+          "id": "menu-item-migracoes",
+          "type": "category",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "categoryId": "6",
+            "type": "internal",
+            "href": "/migracoes",
+            "noFollow": false,
+            "tagTitle": "Migrações"
+          }
+        },
+        {
+          "id": "menu-item-integracoes",
+          "type": "category",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "categoryId": "7",
+            "type": "internal",
+            "href": "/integracoes",
+            "noFollow": false,
+            "tagTitle": "Integrações"
+          }
+        },
+        {
+          "id": "menu-item-omnichannel",
+          "type": "category",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "categoryId": "8",
+            "type": "internal",
+            "noFollow": false,
+            "tagTitle": "OmniChannel"
+          }
+        },
+        {
+          "id": "menu-item-planos",
+          "type": "category",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "categoryId": "2",
+            "type": "internal",
+            "noFollow": false,
+            "tagTitle": "Planos"
+          }
+        }
+      ],
+      "blockClass": "menu-item"
+    },
+    "children": [
+      "menu-item#marketing"
+    ]
+  },
+  "menu-item#marketing": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 9,
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Marketing"
+      }
+    },
+    "blocks": ["vtex.menu@2.x:submenu#shop"] // Defining a submenu
+  },
+  "vtex.menu@2.x:submenu#shop": {
+    "children": [
+      "vtex.menu@2.x:menu#submenuHeader"
+    ]
+  }
+}

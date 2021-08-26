@@ -7,8 +7,8 @@
   },
   "header-layout.desktop": {
     "children": [
-      "sticky-layout#desktop"
-      // Criar Menu Departamentos
+      "sticky-layout#desktop",
+      "flex-layout.row#header"
     ]
   },
   "sticky-layout#desktop": {
