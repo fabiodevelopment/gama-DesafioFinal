@@ -2,10 +2,12 @@
 	"store.home": { 
 		"blocks": [
 			"list-context.image-list#demo",
-      // Section explicação da loja (fexrow > flexrow (main container) > 3 flex col )
-      "tab-layout#home"
-      // Section Institucional > Valores Corebiz
-      //Section Slider Layout marcas
+			// Section explicação da loja (fexrow > flexrow (main container) > 3 flex col )
+      		"tab-layout#home",
+
+      		// Section Institucional > Valores Corebiz
+      		//Section Slider Layout marcas
+			"cadastro"
 		]
 	},
   // Linha das Abas : Contem Lista de itens do menu e Conteudo das abas
