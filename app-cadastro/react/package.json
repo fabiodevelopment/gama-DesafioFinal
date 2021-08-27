@@ -4,6 +4,7 @@
   },
   "dependencies": {
     "@vtex/css-handles": "^1.0.0",
+    "axios": "^0.21.1",
     "classnames": "^2.2.6",
     "ramda": "^0.26.1",
     "react": "^16.12.0",

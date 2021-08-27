@@ -52,7 +52,8 @@
     "vtex.store-link": "0.x",
     "vtex.condition-layout": "1.x",
     "vtex.store-icons": "0.x",
-    "hiringcoders202112.app-cadastro": "0.x"
+    "hiringcoders202112.app-cadastro": "0.x",
+    "hiringcoders202112.corebiz-admin": "0.x"
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

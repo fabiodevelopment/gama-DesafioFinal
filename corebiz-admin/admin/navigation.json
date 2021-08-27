@@ -1,0 +1,13 @@
+{
+  "section": "orders",
+  "titleId": "admin-example.navigation.label-group",
+  "subSection": "example",
+  "searchKeyWordsHelpers": "admin-example.navigation.search.kws",
+  "subSectionItems": [
+    {
+      "labelId": "admin-example.navigation.label-table",
+      "path": "/admin/example",
+      "searchKeyWordsHelpers": "admin-example.navigation.table.search.kws"
+    }
+  ]
+}
