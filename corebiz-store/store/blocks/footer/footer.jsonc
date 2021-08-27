@@ -4,77 +4,168 @@
   },
   "footer-layout.desktop": { 
     "children": [
-      "flex-layout.row#footer"
+      "flex-layout.row#NewsLetter",
+      "flex-layout.row#footer2",
+      "flex-layout.row#footer3"
     ]
   },
   "footer-layout.mobile": { 
     "children": [
-      "flex-layout.row#footer"
+      "flex-layout.row#NewsLetter",
+      "flex-layout.row#footer2",
+      "flex-layout.row#footer3"
     ]
   },
-  "flex-layout.row#footer": { 
+  "flex-layout.row#NewsLetter": {
+    "children": [
+      "rich-text#footer1"
+    ]
+  },
+  "rich-text#footer1": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": ".row para NEWS LETTER!"
+    }
+  },
+  "flex-layout.row#footer2": { 
     "props": {
       "blockClass": "section-footer"
     },
     "children": [
-      "flex-layout.col#link1",
-      "flex-layout.col#link2",
-      "flex-layout.col#link3",
-      "flex-layout.col#link4"
+      "flex-layout.col#col1",
+      "flex-layout.col#col2",
+      "flex-layout.col#col3",
+      "flex-layout.col#col4",
+      "flex-layout.col#col5"
     ]
   },
-  "flex-layout.col#link1":{
+  "flex-layout.col#col1":{
     "children": [
-      "link#link1"
+      "image#col1"
     ]
   },
-  "flex-layout.col#link2":{
+  "image#col1": {  
+    "props": {  
+      "src": "assets/footer/corebiz-footer-logo.png"  
+    }  
+  },
+  "flex-layout.col#col2":{
     "children": [
-      "link#link2"
+      "rich-text#brasil",
+      "rich-text#argentina"
     ]
   },
-  "flex-layout.col#link3":{
-    "children": [
-      "link#link3"
-    ]
-  },
-  "flex-layout.col#link4":{
-    "children": [
-      "link#link4"
-    ]
-  },
-
-  "link#link1": {
+  "rich-text#brasil": {
     "props": {
-      "blockClass": "link-foooter-1",
-      "href": "/cadastro",
-      "label": "CADASTRO"
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Brasil\nAvenida Andromeda, 2000.\nBloco 6 e 8 Alphaville SP\n\nR. Ifigenia Maria de Oliveira,\n3793-Jr. Piratininga Franca SP"
+      // "textColor": "c-on-emphasis"
+      // "font": "t-heading-5"
     }
   },
-
-  "link#link2": {
+  "rich-text#argentina": {
     "props": {
-      "blockClass": "link-foooter-2",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Argentina\nSoler 5518, 3 Piso C1425BYF,\nPalermo Hollywood CABA"
+      // "textColor": "c-on-emphasis"
+      // "font": "t-heading-5"
+    }
+  },
+  "flex-layout.col#col3":{
+    "children": [
+      "rich-text#mexico",
+      "rich-text#chile"
+    ]
+  },
+  "rich-text#mexico": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "México\nBlvd. Miguel de Cervantes,\nSaavedra 169, Granada, Miguel\nHildago, 11520 Ciundad de\nMéxico, CDMX"
+      // "textColor": "c-on-emphasis"
+      // "font": "t-heading-5"
+    }
+  },
+  "rich-text#chile": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Chile\nRoberto del Rio 1137,\nProvidencia"
+      // "textColor": "c-on-emphasis"
+      // "font": "t-heading-5"
+    }
+  },
+  "flex-layout.col#col4":{
+    "children": [
+      "link#col4-1",
+      "link#col4-2",
+      "link#col4-3",
+      "link#col4-4"
+    ]
+  },
+  "link#col4-1": {
+    "props": {
+      // "blockClass": "link-foooter-3",
       "href": "#",
-      "label": "DESAFIOS"
+      "label": "Sobre nós"
     }
   },
-
-  "link#link3": {
+  "link#col4-2": {
     "props": {
-      "blockClass": "link-foooter-3",
+      // "blockClass": "link-foooter-3",
       "href": "#",
-      "label": "LOJA"
+      "label": "Seja Corebiz"
     }
   },
-
-  "link#link4": {
+  "link#col4-3": {
     "props": {
-      "blockClass": "link-foooter-4",
-      "href": "https://api.whatsapp.com/send?phone=5511964335064",
-      "target": "_blank",
-      "label": "SUPORTE"
+      // "blockClass": "link-foooter-3",
+      "href": "#",
+      "label": "Políticas da empresa"
+    }
+  },
+  "link#col4-4": {
+    "props": {
+      // "blockClass": "link-foooter-3",
+      "href": "#",
+      "label": "Trabalhe conosco"
+    }
+  },
+  "flex-layout.col#col5":{
+    "children": [
+      "rich-text#col5",
+      "social-networks#col5"
+    ]
+  },
+  "rich-text#col5": {
+    "props": {
+      "text": "Follow us"
+    }
+  },
+  "social-networks#col5": {
+    "props": {
+      "socialNetworks": [
+        { "url": "https://instagrm.com/foo", "name": "Instagram" },
+        { "url": "https://facebook.com/foo", "name": "Facebook" },
+        { "url": "https://linkedin.com/foo", "name": "LinkedIn" }
+        //{ "url": "https://youtube.com/foo", "name": "Youtube" }
+      ]
+    }
+  },
+  "flex-layout.row#footer3": {
+    "children": [
+      "rich-text#footer3"
+    ]
+  },
+  
+  "rich-text#footer3": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "diretos reservados. corebiz 2021"
     }
   }
-
 }
