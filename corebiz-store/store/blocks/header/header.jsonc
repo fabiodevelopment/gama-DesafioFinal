@@ -8,7 +8,7 @@
   "header-layout.desktop": {
     "children": [
       "sticky-layout#desktop",
-      "flex-layout.row#header"
+      "flex-layout.row#headerCategories"
     ]
   },
   "sticky-layout#desktop": {
@@ -30,9 +30,18 @@
       "flex-layout.col#spacer",
       "flex-layout.col#searchInput",
       "flex-layout.col#spacer",
-      "login",
+      "flex-layout.col#menuHeader",
+      // "login",
       "minicart.v2"
     ]
+  },
+  "flex-layout.col#menuHeader": {
+    "children": [
+      "vtex.menu@2.x:menu#menuHeader"
+    ],
+    "props": {
+      "blockClass": "menu-header"
+    }
   },
   "flex-layout.col#spacer": {
     "props": {
@@ -53,6 +62,11 @@
     "children": [
       "search-bar"
     ]
+  },
+  "search-bar": {
+    "props": {
+      "blockClass": "search-bar"
+    }
   },
   "flex-layout.col#logo-desktop": {
     "props": {

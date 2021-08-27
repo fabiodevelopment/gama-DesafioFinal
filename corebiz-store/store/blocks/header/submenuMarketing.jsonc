@@ -1,5 +1,5 @@
 {
-  "vtex.menu@2.x:menu#submenuHeader": {
+  "vtex.menu@2.x:menu#submenuHeaderCategories": {
     "props": {
       "experimentalOptimizeRendering": true,
       "items": [

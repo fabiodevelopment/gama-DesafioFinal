@@ -1,0 +1,62 @@
+{
+  "vtex.menu@2.x:menu#menuHeader": {
+      "props": {
+        "experimentalOptimizeRendering": true,
+        "items": [
+          {
+            "id": "menu-item-home",
+            "type": "custom",
+            "iconId": null,
+            "highlight": false,
+            "itemProps": {
+              "type": "internal",
+              "href": "/",
+              "noFollow": false,
+              "tagTitle": "Home",
+              "text": "Home"
+            }
+          },
+          {
+            "id": "menu-item-services",
+            "type": "custom",
+            "iconId": null,
+            "highlight": false,
+            "itemProps": {
+              "type": "internal",
+              "href": "/servicos",
+              "noFollow": false,
+              "tagTitle": "Serviços",
+              "text": "Serviços"
+            }
+          },
+          {
+            "id": "menu-item-about-us",
+            "type": "custom",
+            "iconId": null,
+            "highlight": false,
+            "itemProps": {
+              "type": "internal",
+              "href": "/quem-somos",
+              "noFollow": false,
+              "tagTitle": "Quem Somos",
+              "text": "Quem Somos"
+            }
+          },
+          {
+            "id": "menu-item-contact",
+            "type": "custom",
+            "iconId": null,
+            "highlight": false,
+            "itemProps": {
+              "type": "internal",
+              "href": "/contato",
+              "noFollow": false,
+              "tagTitle": "Contato",
+              "text": "Contato"
+            }
+          }
+        ],
+        "blockClass": "menu-item"
+      }
+    }
+}

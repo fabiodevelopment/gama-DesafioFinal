@@ -5,11 +5,11 @@
 	margin: 100px auto 50px;
 	max-width: 1080px;
 }
-.autoCompleteOuterContainer {
+.autoCompleteOuterContainer--search-bar {
 	:global(.vtex-input-prefix__group) {
 		border: none;
-		border-radius: 0;
-		border-bottom: 2px solid#ffffff;
+		border-radius: 50px;
+		border: thin solid #ffffff;
 		background-color: transparent;
 		:global(.vtex-styleguide-9-x-input) {
 			border-radius: 0;

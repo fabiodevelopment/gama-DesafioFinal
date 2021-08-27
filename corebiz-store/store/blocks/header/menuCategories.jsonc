@@ -1,6 +1,6 @@
 {
   // flex menu row - container
-  "flex-layout.row#header": {
+  "flex-layout.row#headerCategories": {
     "children": ["flex-layout.col#containerMenu"],
     "props": {
       "blockClass": "container-menu"
@@ -8,13 +8,13 @@
   },
   // flex menu col - base
   "flex-layout.col#containerMenu": {
-    "children": ["vtex.menu@2.x:menu#menuHeader"],
+    "children": ["vtex.menu@2.x:menu#menuHeaderCategories"],
     "props": {
       "horizontalAlign": "center"
     }
   },
   // menu items
-  "vtex.menu@2.x:menu#menuHeader": {
+  "vtex.menu@2.x:menu#menuHeaderCategories": {
     "props": {
       "experimentalOptimizeRendering": true,
       "items": [
@@ -82,7 +82,7 @@
           }
         }
       ],
-      "blockClass": "menu-item"
+      "blockClass": "menu-item-category"
     },
     "children": [
       "menu-item#marketing"
@@ -103,7 +103,7 @@
   },
   "vtex.menu@2.x:submenu#shop": {
     "children": [
-      "vtex.menu@2.x:menu#submenuHeader"
+      "vtex.menu@2.x:menu#submenuHeaderCategories"
     ]
   }
 }

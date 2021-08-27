@@ -1,0 +1,17 @@
+// menu header
+.menuContainerNav--menu-item {
+  margin-top: .5rem;
+}
+.styledLink--menu-item {
+  text-transform: lowercase;
+  font-size: .875rem;
+
+  &:hover {
+    border-bottom: 2px solid #f1c233;
+  }
+}
+
+// menu categories
+.styledLinkContent {
+  text-transform: lowercase;
+}
