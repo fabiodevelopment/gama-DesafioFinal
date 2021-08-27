@@ -30,8 +30,8 @@
       "flex-layout.col#spacer",
       "flex-layout.col#searchInput",
       "flex-layout.col#spacer",
-      "flex-layout.col#menuHeader",
-      // "login",
+      // "flex-layout.col#menuHeader",
+      "login",
       "minicart.v2"
     ]
   },
@@ -87,8 +87,8 @@
     "children": [
       "drawer",
       "flex-layout.col#logo-mobile",
-      "flex-layout.col#spacer-mobile",
-      // "login",
+      // "flex-layout.col#spacer-mobile",
+      "login",
       "flex-layout.col#searchInput",
       "minicart.v2"
     ],
