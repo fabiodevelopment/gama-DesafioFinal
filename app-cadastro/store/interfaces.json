@@ -1,0 +1,8 @@
+{
+  "cadastro": {
+    "component": "Cadastro"
+  },
+  "change-lead": {
+    "component": "ChangeLead"
+  }
+}

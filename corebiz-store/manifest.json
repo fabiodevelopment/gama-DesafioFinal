@@ -5,7 +5,8 @@
   "builders": {
     "styles": "2.x",
     "store": "0.x",
-    "docs": "0.x"
+    "docs": "0.x",
+    "assets": "0.x"
   },
   "scripts": {
     "postreleasy": "vtex publish --verbose"
@@ -51,7 +52,9 @@
     "vtex.store-video": "1.x",
     "vtex.store-link": "0.x",
     "vtex.condition-layout": "1.x",
-    "vtex.store-icons": "0.x"
+    "vtex.store-icons": "0.x",
+    "hiringcoders202112.app-cadastro": "0.x",
+    "hiringcoders202112.corebiz-admin": "0.x"
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

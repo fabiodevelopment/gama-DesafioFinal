@@ -1,6 +1,9 @@
 {
   "store.orderplaced": {
-    "blocks": ["order-placed"]
+    "blocks": [
+      "order-placed",
+      "change-lead"
+    ]
   },
 
   "store.account": {
