@@ -2,6 +2,33 @@
     "store.custom#quem-somos": {
         "blocks": ["flex-layout.row#valores", "flex-layout.row#about-us-container"]
     },
+     
+    "flex-layout.row#title-container":{
+       "children":[
+           "flex-layout.col#titles"
+       ]
+    },
+    "flex-layout.col#titles":{
+       "children": [
+           "rich-text#h2", "rich-text#h3"
+       ],
+       "props":{
+        "horizontalAlign": "center",
+            "verticalAlign": "center",
+            "preventHorizontalStretch": true,
+            "preventVerticalStretch": true
+        }
+    },
+    "rich-text#h2": {
+        "props": {  
+           "text": "Titulo"
+        }
+    },
+    "rich-text#h3": {
+        "props": {
+           "text": "Sub titulo"
+        }
+    }, 
     "flex-layout.row#valores": {
         "children": [
             "flex-layout.col#valores1",
@@ -13,14 +40,18 @@
     "flex-layout.col#valores1": {
         "children": [
             "image#valores1",
-            "rich-text#1"
-        ]
+            "rich-text#1"    
+        ],
+        "props":{
+            "horizontalAlign": "center",
+                "verticalAlign": "center",
+                "preventHorizontalStretch": true,
+                "preventVerticalStretch": true
+        }
     },
     "image#valores1": {
         "props": {
-            "src": "assets/section-client/transferir.jpg",
-            "maxWidth": "100%",
-            "textPosition": "center"
+            "src": "assets/section-client/transferir.jpg"
         }
     },
     "rich-text#1": {
@@ -33,7 +64,13 @@
         "children": [
             "image#valores2",
             "rich-text#2"
-        ]
+        ],
+        "props":{
+            "horizontalAlign": "center",
+                "verticalAlign": "center",
+                "preventHorizontalStretch": true,
+                "preventVerticalStretch": true
+        }
     },
     "image#valores2": {
         "props": {
@@ -50,7 +87,13 @@
         "children": [
             "image#valores3",
             "rich-text#3"
-        ]
+        ],
+        "props":{
+            "horizontalAlign": "center",
+                "verticalAlign": "center",
+                "preventHorizontalStretch": true,
+                "preventVerticalStretch": true
+        }
     },
     "image#valores3": {
         "props": {
@@ -67,7 +110,13 @@
         "children": [
             "image#valores4",
             "rich-text#4"
-        ]
+        ],
+        "props":{
+            "horizontalAlign": "center",
+                "verticalAlign": "center",
+                "preventHorizontalStretch": true,
+                "preventVerticalStretch": true
+        }
     },
     "image#valores4": {
         "props": {
@@ -84,8 +133,14 @@
     // Info-Card About Us
    "flex-layout.row#about-us-container":{
         "children": [ 
-            "info-card#button-right", "info-card#button-left"
+            "flex-layout.col#info-cards"
         ]
+    },
+    "flex-layout.col#info-cards":{
+       "children": [
+        "info-card#button-right",
+        "info-card#button-left"
+       ]
     },
 
     "info-card#button-right": {
@@ -98,8 +153,10 @@
             "callToActionMode": "button",
             "callToActionText": "Explore",
             "callToActionUrl": "/sale/d",
-            "textAlignment": "center"
+            "textAlignment": "center",
+            "blockClass": "hideActionLink"
         }
+        
     },
     "info-card#button-left": {
         "props": {
@@ -110,7 +167,11 @@
             "subhead": "Determinação,Inovação,Coragem,Agilidade,Colaboração",
             "callToActionMode": "link",
             "callToActionText": "Go to collection",
-            "textAlignment": "center"
+            "textAlignment": "center",
+            "blockClass": "hideActionLink"
+
         }
     }
 }
+
+
