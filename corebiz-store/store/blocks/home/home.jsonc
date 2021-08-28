@@ -6,6 +6,9 @@
       		"tab-layout#home",
 
       		// Section Institucional > Valores Corebiz
+			  "flex-layout.row#title-container",
+			  "flex-layout.row#valores",
+			  "flex-layout.row#about-us-container",
       		//Section Slider Layout marcas
 			"cadastro"
 		]
