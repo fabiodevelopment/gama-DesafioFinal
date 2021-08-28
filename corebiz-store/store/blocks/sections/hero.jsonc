@@ -1,0 +1,36 @@
+{
+  "stack-layout#hero": {
+    "children": ["flex-layout.row#hero", "flex-layout.row#imagehero"],
+    "props": {
+      "blockClass": "hero"
+    }
+  },
+  "flex-layout.row#hero": {
+    "children": [],
+    "props": {
+      "zIndexOffset": 1,
+      "fullWidth": true,
+      "blockClass": "heroContainerImage"
+    }
+  },
+  "flex-layout.row#imagehero": {
+    "children": ["rich-text#textHero"],
+    "props": {
+      "zIndexOffset": 2,
+      "blockClass": "heroContainerText"
+    }
+  },
+  "rich-text#textHero": {
+    "props": {
+      "text": "# we are global.",
+      "blockClass": "heroText"
+    }
+  },
+  "image#hero": {
+    "props": {
+      "src": "assets/banner/banner-hero-map-corebiz.png",
+      "width": "100%",
+      "blockClass": ["cover", "heroImage"]
+    }
+  }
+}

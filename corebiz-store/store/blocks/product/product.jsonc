@@ -113,7 +113,6 @@
 		"props": {
 			"src": "assets/banner/banner-page-marketing-performance.png",
 			"width": "100%",
-			// "height": "350px",
 			"blockClass": ["cover", "opacity-banner"]
 		}
 	}

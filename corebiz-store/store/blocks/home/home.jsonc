@@ -1,10 +1,10 @@
 {
 	"store.home": { 
 		"blocks": [
-			"list-context.image-list#demo",
+			"stack-layout#hero",
+			"tab-layout#home",
 			// Section explicação da loja (fexrow > flexrow (main container) > 3 flex col )
-      		"tab-layout#home",
-      		// Section Institucional > Valores Corebiz
+			// Section Institucional > Valores Corebiz
 			"flex-layout.row#title-container",
 			"flex-layout.row#valores",
 			"flex-layout.row#about-us-container",
