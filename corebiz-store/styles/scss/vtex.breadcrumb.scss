@@ -1,0 +1,14 @@
+.link--breadcrumb, .term--breadcrumb {
+  text-transform: lowercase;
+
+    &::before {
+      content: '. '
+    }
+    &:first-child::before {
+      content: ''
+    }
+}
+.term--breadcrumb {
+  color: #f1c233;
+  font-weight: 500;
+}

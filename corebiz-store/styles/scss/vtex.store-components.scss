@@ -56,3 +56,26 @@
 .infoCardCallActionContainer--hideActionLink{  
   display: none;
 }
+
+// page product details
+.productBrand--product-name {
+	color: #f1c233;
+	text-transform: lowercase;
+	margin-bottom: .5rem;
+
+		&::before {
+			content: '. ';
+		}
+}
+.price_className--product-price {
+	margin: 1rem 0;
+}
+
+.buyButtonText {
+	color: #101010;
+}
+
+// image banner page
+.imageElement--opacity-banner {
+	filter: brightness(30%)
+}
