@@ -121,6 +121,12 @@
       "width": "150"
     }
   },
+  "login": {
+    "props": {
+      "showIconProfile": true,
+      "hideIconLabel": true
+    }
+  },
   
   "drawer": {
     "children": []
