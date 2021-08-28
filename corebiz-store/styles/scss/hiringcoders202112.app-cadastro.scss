@@ -1,7 +1,6 @@
 @import './global/variables';
 
 .modalOverlay {
-	display: none;
 	position: fixed;
     left: 0;
     top: 0;
@@ -19,12 +18,11 @@
 	z-index: 9999;
 }
 .cadastroLead {
-	display: none;
 	background-color: white;
-	height: 420px;
+	height: 520px;
 	left: 50%;
 	margin-left: -400px;
-	margin-top: -210px;
+	margin-top: -260px;
 	padding: 20px 40px;
 	position: fixed;
 	top: 50%;
@@ -73,6 +71,26 @@
 		height: 40px;
 		border-radius: 5px;
 		cursor: pointer;
+	}
+	.error {
+		color: #fff;
+		font-weight: 500;
+		background-color: #f44336;
+		border-radius: 4px;
+		margin: 0 auto 15px;
+		padding: 12px 8px;
+		border: 0;
+		text-align: center;
+	}
+	.success {
+		color: #fff;
+		font-weight: 500;
+		background-color: #4caf50;
+		border-radius: 4px;
+		margin: 0 auto 15px;
+		padding: 12px 8px;
+		border: 0;
+		text-align: center;
 	}
 }
 
