@@ -3,10 +3,10 @@
 		"blocks": [
 			"list-context.image-list#demo",
 			// Section explicação da loja (fexrow > flexrow (main container) > 3 flex col )
-      		"tab-layout#home",
-
-      		// Section Institucional > Valores Corebiz
-      		//Section Slider Layout marcas
+			"tab-layout#home",
+			// Section Institucional > Valores Corebiz
+			//Section Slider Layout marcas
+			"flex-layout.row#slider-brands",
 			"cadastro"
 		]
 	},
@@ -129,11 +129,11 @@
 
 	"search-result-layout.desktop#lp": {
 		"children": [
-      "flex-layout.row#result"
-    ],
-    "props": {
-      "preventRouteChange": true
-    }
+	  "flex-layout.row#result"
+	],
+	"props": {
+	  "preventRouteChange": true
+	}
 	},
 	"flex-layout.row#result": {
 		"children": [
@@ -148,40 +148,40 @@
 	},
 
 	"gallery#lp": {
-    "props": {
-      "layouts": [
-        {
-          "name": "grid",
-          "component": "GridSummary",
-          "itemsPerRow": {
+	"props": {
+	  "layouts": [
+		{
+		  "name": "grid",
+		  "component": "GridSummary",
+		  "itemsPerRow": {
 						"(min-width:1300px)": 4,
 						"desktop": 4,
 						"tablet": 2,
 						"mobile": 1
 					}
-        },
-        {
-          "name": "list",
-          "component": "ListSummary",
-          "itemsPerRow": 1
-        }
-      ],
+		},
+		{
+		  "name": "list",
+		  "component": "ListSummary",
+		  "itemsPerRow": 1
+		}
+	  ],
 			"ListSummary": "product-summary.shelf#lp",
 			"GridSummary": "product-summary.shelf#lp"
-      
-    }
+	  
+	}
   },
 
 	"product-summary.shelf#lp": {
-    "children": [
+	"children": [
 				"modal-trigger#lp",
-        "product-summary-name",
-        "product-images#lp",
+		"product-summary-name",
+		"product-images#lp",
 				"vtex.product-highlights@2.x:product-highlights",
 				"product-summary-space",
 				"product-summary-price",
 				"add-to-cart-button#lp"
-    ]
+	]
   },
 
 	"product-images#lp": {
@@ -192,12 +192,12 @@
 	},
 
 	"vtex.product-highlights@2.x:product-highlights": {
-    "children": ["product-highlight-text"]
+	"children": ["product-highlight-text"]
   },
   "product-highlight-text": {
-    "props": {
-      "message": "{highlightName}"
-    }
+	"props": {
+	  "message": "{highlightName}"
+	}
   },
 
 	"add-to-cart-button#lp": {
@@ -227,14 +227,14 @@
 	},
 	"video#lp": {
 		"props": {
-      "width": "100%",
-      "height": "400px",
-      "loop": false,
-      "autoPlay": true,
-      "muted": false,
-      "src": "https://www.youtube.com/watch?v=2t01kzHKm3A",
-      "blockClass": "videoEl"
-    }
+	  "width": "100%",
+	  "height": "400px",
+	  "loop": false,
+	  "autoPlay": true,
+	  "muted": false,
+	  "src": "https://www.youtube.com/watch?v=2t01kzHKm3A",
+	  "blockClass": "videoEl"
+	}
 	},
 
 	//end
@@ -242,31 +242,33 @@
 	// Slider Home
 	
 	"list-context.image-list#demo": {
-    "children": ["slider-layout#demo-images"],
-    "props": {
-      "height": "auto",
-      "images": [
-        {
-          "image": "https://theygsgroup.com/wp-content/themes/ygssite/img/blog-post-hero.jpg",
-          "mobileImage": "https://theygsgroup.com/wp-content/themes/ygssite/img/blog-post-hero.jpg"
-        },
-        {
-          "image": "https://theygsgroup.com/wp-content/themes/ygssite/img/blog-post-hero.jpg",
-          "mobileImage": "https://theygsgroup.com/wp-content/themes/ygssite/img/blog-post-hero.jpg"
-        }
-      ]
-    }
+	"children": ["slider-layout#demo-images"],
+	"props": {
+	  "height": "auto",
+	  "images": [
+		{
+		  "image": "https://theygsgroup.com/wp-content/themes/ygssite/img/blog-post-hero.jpg",
+		  "mobileImage": "https://theygsgroup.com/wp-content/themes/ygssite/img/blog-post-hero.jpg"
+		},
+		{
+		  "image": "https://theygsgroup.com/wp-content/themes/ygssite/img/blog-post-hero.jpg",
+		  "mobileImage": "https://theygsgroup.com/wp-content/themes/ygssite/img/blog-post-hero.jpg"
+		}
+	  ]
+	}
   },
   "slider-layout#demo-images": {
-    "props": {
-      "itemsPerPage": {
-        "desktop": 1,
-        "tablet": 1,
-        "phone": 1
-      },
-      "infinite": true,
-      "showNavigationArrows": "desktopOnly",
-      "blockClass": "carousel"
-    }
+	"props": {
+	  "itemsPerPage": {
+		"desktop": 1,
+		"tablet": 1,
+		"phone": 1
+	  },
+	  "infinite": true,
+	  "showNavigationArrows": "desktopOnly",
+	  "blockClass": "carousel"
+	}
   }
+
 }
+
