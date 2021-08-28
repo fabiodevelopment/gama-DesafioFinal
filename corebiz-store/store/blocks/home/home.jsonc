@@ -176,13 +176,13 @@
 
 	"product-summary.shelf#lp": {
 	"children": [
-				"modal-trigger#lp",
+				// "modal-trigger#lp",
 		"product-summary-name",
 		"product-images#lp",
-				"vtex.product-highlights@2.x:product-highlights",
-				"product-summary-space",
-				"product-summary-price",
-				"add-to-cart-button#lp"
+		"vtex.product-highlights@2.x:product-highlights",
+		"product-summary-space",
+		"product-summary-price",
+		"add-to-cart-button#lp"
 	]
   },
 
@@ -211,8 +211,8 @@
 
 	"modal-trigger#lp": {
 		"children": [
-			"rich-text#lp",
-			"modal-layout#lp"
+			"rich-text#lp"
+			// "modal-layout#lp"
 		]
 	},
 

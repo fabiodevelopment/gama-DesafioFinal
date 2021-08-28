@@ -40,10 +40,6 @@
 	width: 100%;
 }
 
-.productImagesGallerySlide {
-	max-height: 300px;
-	margin-bottom: 50px;
-}
 .swiperCaretPrev,
 .swiperCaretNext {
 	top: 330px;
@@ -60,15 +56,23 @@
 // page product details
 .productBrand--product-name {
 	color: #f1c233;
+	font-weight: 500;
+	font-size: 2rem;
 	text-transform: lowercase;
-	margin-bottom: .5rem;
 
 		&::before {
-			content: '. ';
+			content: '.';
 		}
-}
-.price_className--product-price {
-	margin: 1rem 0;
+	}
+	.price_className--product-price {
+		margin-top: 2rem;
+	}
+.content--product-description {
+	margin: 2rem auto 1rem;
+	padding: 1rem;
+	background-color: #000000;
+	border-radius: 3px;
+	line-height: 1.5rem;
 }
 
 .buyButtonText {

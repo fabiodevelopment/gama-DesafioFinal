@@ -46,7 +46,7 @@
 		"children": [
 			"product-name",
 			"product-price#product-details",
-			"sku-selector",
+			"product-description",
 			"flex-layout.row#buy-button",
 			"share#default"
 		]
@@ -61,6 +61,12 @@
 			"showInstallments": true,
 			"showSavings": true,
 			"blockClass": "product-price"
+		}
+	},
+	"product-description": {
+		"props": {
+			"showTitle": false,
+			"blockClass": "product-description"
 		}
 	},
 	"flex-layout.row#buy-button": {

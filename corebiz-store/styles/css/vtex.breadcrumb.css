@@ -1,1 +1,1 @@
-.link--breadcrumb,.term--breadcrumb{text-transform:lowercase}.link--breadcrumb::before,.term--breadcrumb::before{content:". "}.link--breadcrumb:first-child::before,.term--breadcrumb:first-child::before{content:""}.term--breadcrumb{color:#f1c233;font-weight:500}
+.link--breadcrumb,.term--breadcrumb{text-transform:lowercase}.link--breadcrumb::before,.term--breadcrumb::before{content:"."}.link--breadcrumb:first-child::before,.term--breadcrumb:first-child::before{content:""}.term--breadcrumb{color:#f1c233;font-weight:500}
