@@ -46,13 +46,6 @@
   // height: 100vh;
 }
 
-//Brands
-.flexRow--section-brands {
-  background-color: black;
-}
-
-//Product
-
 .flexRow--product-main {
   :global(.vtex-button) {
 	border: 0;
@@ -68,4 +61,14 @@
   :global(.vtex-styleguide-9-x-rotate) {
 	color: black;
   }
+}
+
+//carrossel de logos
+.flexRow--container-carrossel{
+	background-color: black;
+}
+
+// bg color section values
+.flexRow--section-black {
+	background-color: #101010;
 }
