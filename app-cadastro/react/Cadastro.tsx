@@ -6,7 +6,7 @@ import axios from 'axios';
 
 interface CadastroProps {}
 
-const CSS_HANDLES = ['cadastroLead', 'formGroup', 'modalTitle', 'modalSubTitle', 'labelGroup', 'inputGroup', 'buttonGroup', 'modalOverlay', 'error', 'success', 'modalImage', 'modalForm'] as const
+const CSS_HANDLES = ['cadastroLead', 'formGroup', 'modalTitle', 'modalSubTitle', 'labelGroup', 'inputGroup', 'buttonGroup', 'modalOverlay', 'error', 'success', 'modalImage', 'modalForm', 'modalClose'] as const
 
 
 const Cadastro: StorefrontFunctionComponent<CadastroProps> = ({ }) => {
@@ -62,6 +62,9 @@ const Cadastro: StorefrontFunctionComponent<CadastroProps> = ({ }) => {
 			>
 				<div className={`${handles.modalImage}`}></div>
 				<div className={`${handles.modalForm}`}>
+					
+					<button className={`${handles.modalClose}`} onClick={() => setIsLead(true)}>+</button>
+					
 					<h2 className={`${handles.modalTitle}`}>Cadastre-se</h2>
 					<h3 className={`${handles.modalSubTitle}`}>Para receber notificações sebre novos produtos</h3>
 					<br />

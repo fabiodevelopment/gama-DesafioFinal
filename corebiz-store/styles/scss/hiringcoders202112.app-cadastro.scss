@@ -68,6 +68,16 @@
 			width: 100%;
 		}
 	}
+	.modalClose {
+		border: none;
+		background-color: transparent;
+		font-size: 42px;
+		transform: rotate(45deg);
+		position: absolute;
+		right: 5px;
+		top: 0px;
+		cursor: pointer;
+	}
 
 	.formGroup {
 		width: 100%;
