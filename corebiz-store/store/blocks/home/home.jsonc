@@ -44,7 +44,7 @@
 	"tab-list.item#home1": {
 		"props": {
 			"tabId": "categoria1",
-			"label": "Corinthians",
+			"label": "Desenvolvimento",
 			"defaultActiveTab": true
 		}
 	},
@@ -52,22 +52,21 @@
 	"tab-list.item#home2": {
 		"props": {
 			"tabId": "categoria2",
-			"label": "Palmeiras"
+			"label": "Integrações"
 		}
 	},
 	// Tab Item 3
 	"tab-list.item#home3": {
 		"props": {
 			"tabId": "categoria3",
-			"label": "Promoções"
+			"label": "Planos"
 		}
 	},
 
 	// Tab Content 1
 	"tab-content.item#home1": {
 		"children": [
-			// "search-result-layout.customQuery#corinthians"
-			"search-result-layout.customQuery#corinthians"
+			"search-result-layout.customQuery#desenvolvimento"
 		],
 		"props": {
 			"tabId": "categoria1"
@@ -76,7 +75,7 @@
 	// Tab Content 2
 	"tab-content.item#home2": {
 		"children": [
-			"search-result-layout.customQuery#palmeiras"
+			"search-result-layout.customQuery#integracoes"
 		],
 		"props": {
 			"tabId": "categoria2"
@@ -85,20 +84,18 @@
 	// Tab Content 3
 	"tab-content.item#home3": {
 		"children": [
-			"search-result-layout.customQuery#promocoes"
+			"search-result-layout.customQuery#planos"
 		],
 		"props": {
 			"tabId": "categoria3"
 		}
 	},
 
-	//start new corinthians	
-
-	"search-result-layout.customQuery#corinthians": {
+	"search-result-layout.customQuery#desenvolvimento": {
 		"props": {
 			"querySchema":{
-				// "mapField": "ft",
-				// "queryField": "corinthians",
+				// "mapField": "c",
+				// "queryField": "5",
 				"skusFilter": "FIRST_AVAILABLE",
 				"simulationBehavior": "skip",
 				"maxItemsPerPage": 8
@@ -107,11 +104,11 @@
 		"blocks": ["search-result-layout.desktop#lp"]
 	},
 
-	"search-result-layout.customQuery#palmeiras": {
+	"search-result-layout.customQuery#integracoes": {
 		"props": {
 			"querySchema":{
-				// "mapField": "ft",
-				// "queryField": "palmeiras",
+				// "mapField": "c",
+				// "queryField": "7",
 				"skusFilter": "FIRST_AVAILABLE",
 				"simulationBehavior": "skip",
 				"maxItemsPerPage": 8
@@ -119,11 +116,11 @@
 		},
 		"blocks": ["search-result-layout.desktop#lp"]
 	},
-	"search-result-layout.customQuery#promocoes": {
+	"search-result-layout.customQuery#planos": {
 		"props": {
 			"querySchema":{
-				// "mapField": "ft",
-				// "queryField": "skate",
+				// "mapField": "c",
+				// "queryField": "2",
 				"skusFilter": "FIRST_AVAILABLE",
 				"simulationBehavior": "skip",
 				"maxItemsPerPage": 8
