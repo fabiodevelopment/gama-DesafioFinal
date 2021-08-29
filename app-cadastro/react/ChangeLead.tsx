@@ -1,13 +1,18 @@
-import React from "react";
-
 import axios from 'axios';
+import workspaceName from './workspaceName';
 
 const ChangeLead: StorefrontFunctionComponent = (props) => {
 
   const order = props.query.og;
+  
+  axios.get(`https://${workspaceName}--hiringcoders202112.myvtex.com/api/oms/pvt/orders/${order}-01/conversation-message`)
+  
+  .then(function (response) {
+    // handle success
+    const email = response.data[0].to[0].email;
 
-  axios.get(`https://grupo12fabio--hiringcoders202112.myvtex.com/api/oms/pvt/orders/${order}-01/conversation-message`)
-
+    axios.get(`https://azzk045g2g.execute-api.us-east-2.amazonaws.com/leads/${email}`)
+  
     .then(function (response) {
       // handle success
       const email = response.data[0].to[0].email;

@@ -1,13 +1,13 @@
 {
-  "section": "orders",
-  "titleId": "admin-example.navigation.label-group",
-  "subSection": "example",
-  "searchKeyWordsHelpers": "admin-example.navigation.search.kws",
+  "section": "customer",
+  "titleId": "admin-leads.navigation.label-group",
+  "subSection": "leads",
+  "searchKeyWordsHelpers": "admin-leads.navigation.search.kws",
   "subSectionItems": [
     {
-      "labelId": "admin-example.navigation.label-table",
-      "path": "/admin/example",
-      "searchKeyWordsHelpers": "admin-example.navigation.table.search.kws"
+      "labelId": "admin-leads.navigation.label-table",
+      "path": "/admin/leads",
+      "searchKeyWordsHelpers": "admin-leads.navigation.table.search.kws"
     }
   ]
 }

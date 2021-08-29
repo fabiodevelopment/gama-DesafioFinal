@@ -1,39 +1,109 @@
-import React, { Component, Fragment } from 'react'
-import {
-  Table,
-  IconArrowUp,
-  IconArrowDown,
-  IconShoppingCart,
-  Input,
-} from 'vtex.styleguide'
-import faker from 'faker'
+import React, { Component } from 'react'
+import { Table } from 'vtex.styleguide'
+import axios from 'axios'
 import { withRuntimeContext } from 'vtex.render-runtime'
-
-const EXAMPLE_LENGTH = 100
-const MOCKED_DATA = [...Array(EXAMPLE_LENGTH)].map(() => ({
-  name: faker.name.findName(),
-  streetAddress: faker.address.streetAddress(),
-  cityStateZipAddress: `${faker.address.city()}, ${faker.address.stateAbbr()} ${faker.address.zipCode()}`,
-  email: faker.internet.email().toLowerCase(),
-}))
 
 interface Props {
   runtime: any
 }
 
+// interface IOrder {
+//   orderId: string;
+// }
+
+// interface IItem {
+//   additionalInfo: {
+//     categories: [{
+//       name: string
+//     }]
+//   }
+// }
+
+interface ILead {
+  name: string;
+  email: string;
+  phone: string;
+  dateLead: string;
+  dateClient?: string;
+  favoriteCategory?: string;
+}
 class UsersTable extends Component<Props> {
   constructor(props: any) {
     super(props)
     this.state = {
-      items: MOCKED_DATA,
+      items: [],
       tableDensity: 'low',
-      searchValue: null,
-      filterStatements: [],
     }
   }
 
+  async componentDidMount() {
+    const leads = await this.getLeads() as ILead[];
+    const newLeads: ILead[] = [];
+    
+    leads.map(async item => {
+      // this.getCategories(item);
+        
+        // const favoriteCategory = await this.getFavoriteCategory(categories!)
+        // console.log(favoriteCategory)
+
+      // console.log(categories.length)
+
+      // const favoriteCategory = await this.getFavoriteCategory(categories);
+
+      // console.log(favoriteCategory)
+
+      newLeads.push({
+        name: item.name,
+        email: item.email,
+        phone: item.phone,
+        dateLead: new Date(item.dateLead).toLocaleDateString(),
+        dateClient: item.dateClient ? (new Date(item.dateClient).toLocaleDateString()) : '-',
+        // favoriteCategory: favoriteCategory,
+      })
+    })
+    this.setState({ 
+      items: newLeads
+    })
+  }
+
+  private getLeads = async ()  => {
+    const response = await axios.get('https://azzk045g2g.execute-api.us-east-2.amazonaws.com/leads');
+    return response.data.Items;
+  }
+
+  // private getCategories = async (item: ILead) => {
+  //   if(!item.dateClient){
+  //     return ['-'];
+  //   } else {
+
+  //   }
+  // }
+
+  // private getOrders = async (email: string) => {
+  //   const response = await axios.get(`https://grupo12antonio--hiringcoders202112.myvtex.com/api/oms/pvt/orders?q=${email}`);
+  //   return response.data.list as IOrder[];
+  // }
+
+  // private getItems = async (orderId: string) => {
+  //   const response = await axios.get(`https://grupo12antonio--hiringcoders202112.myvtex.com/api/oms/pvt/orders/${orderId}`);
+  //   return response.data.items as [];
+  // }
+
+  // private getCategory = (item: IItem) => {
+  //   return item.additionalInfo.categories[0].name as string;
+  // }
+
+  // private getFavoriteCategory = async (cats: string[]) => {
+  //   const fav = cats.sort((a,b) =>
+  //   cats.filter(v => v===a).length
+  //   - cats.filter(v => v===b).length
+  //   ).pop();
+  //   console.log(fav)
+  //   return fav;
+  // }
+
   private getSchema() {
-    const { tableDensity }: any = this.state
+    const { tableDensity }: any = this.state;
 
     let fontSize = 'f5'
 
@@ -58,225 +128,77 @@ class UsersTable extends Component<Props> {
     return {
       properties: {
         name: {
-          title: 'Name',
+          title: 'Nome',
         },
-        streetAddress: {
-          title: 'Street Address',
+        email: {
+          title: 'E-mail',
           cellRenderer: ({ cellData }: any) => {
             return <span className="ws-normal">{cellData}</span>
           },
         },
-        cityStateZipAddress: {
-          title: 'City, State Zip',
+        phone: {
+          title: 'Telefone',
           cellRenderer: ({ cellData }: any) => {
             return <span className={`ws-normal ${fontSize}`}>{cellData}</span>
           },
         },
-        email: {
-          title: 'Email',
+        dateLead: {
+          title: 'Data de cadastro',
           cellRenderer: ({ cellData }: any) => {
             return <span className={`ws-normal ${fontSize}`}>{cellData}</span>
           },
         },
+        dateClient: {
+          title: 'Primeira compra',
+          cellRenderer: ({ cellData }: any) => {
+            return <span className={`ws-normal ${fontSize}`}>{cellData}</span>
+          },
+        },
+        // favoriteCategory: {
+        //   title: 'Categoria favorita',
+        //   cellRenderer: ({ cellData }: any) => {
+        //     return <span className={`ws-normal ${fontSize}`}>{cellData}</span>
+        //   },
+        // },
       },
-    }
-  }
-
-  private simpleInputObject({ values, onChangeObjectCallback }: any) {
-    return (
-      <Input
-        value={values || ''}
-        onChange={(e: any) => onChangeObjectCallback(e.target.value)}
-      />
-    )
-  }
-
-  private simpleInputVerbsAndLabel() {
-    return {
-      renderFilterLabel: (st: any) => {
-        if (!st || !st.object) {
-          // you should treat empty object cases only for alwaysVisibleFilters
-          return 'Any'
-        }
-        return `${
-          st.verb === '=' ? 'is' : st.verb === '!=' ? 'is not' : 'contains'
-        } ${st.object}`
-      },
-      verbs: [
-        {
-          label: 'is',
-          value: '=',
-          object: {
-            renderFn: this.simpleInputObject,
-            extraParams: {},
-          },
-        },
-        {
-          label: 'is not',
-          value: '!=',
-          object: {
-            renderFn: this.simpleInputObject,
-            extraParams: {},
-          },
-        },
-        {
-          label: 'contains',
-          value: 'contains',
-          object: {
-            renderFn: this.simpleInputObject,
-            extraParams: {},
-          },
-        },
-      ],
     }
   }
 
   public render() {
     const {
       items,
-      searchValue,
-      filterStatements,
       tableDensity,
     }: any = this.state
-    const {
-      runtime: { navigate },
-    } = this.props
 
     return (
       <div>
-        <Table
+        {items.length > 0 ? 
+        (<Table
           fullWidth
           updateTableKey={tableDensity}
           items={items}
           schema={this.getSchema()}
           density="low"
-          onRowClick={({ rowData }: any) =>
-            navigate({
-              page: 'admin.app.example-detail',
-              params: { id: rowData.id },
-            })
-          }
+          
           toolbar={{
             density: {
-              buttonLabel: 'Line density',
-              lowOptionLabel: 'Low',
-              mediumOptionLabel: 'Medium',
-              highOptionLabel: 'High',
+              buttonLabel: 'Densidade da linha',
+              lowOptionLabel: 'Baixa',
+              mediumOptionLabel: 'Média',
+              highOptionLabel: 'Alta',
               handleCallback: (density: string) =>
                 this.setState({ tableDensity: density }),
             },
-            inputSearch: {
-              value: searchValue,
-              placeholder: 'Search stuff...',
-              onChange: (value: string) =>
-                this.setState({ searchValue: value }),
-              onClear: () => this.setState({ searchValue: null }),
-              onSubmit: () => {},
-            },
-            download: {
-              label: 'Export',
-              handleCallback: () => alert('Callback()'),
-            },
-            upload: {
-              label: 'Import',
-              handleCallback: () => alert('Callback()'),
-            },
             fields: {
-              label: 'Toggle visible fields',
-              showAllLabel: 'Show All',
-              hideAllLabel: 'Hide All',
-            },
-            extraActions: {
-              label: 'More options',
-              actions: [
-                {
-                  label: 'An action',
-                  handleCallback: () => alert('An action'),
-                },
-                {
-                  label: 'Another action',
-                  handleCallback: () => alert('Another action'),
-                },
-                {
-                  label: 'A third action',
-                  handleCallback: () => alert('A third action'),
-                },
-              ],
-            },
-            newLine: {
-              label: 'New',
-              handleCallback: () => alert('handle new line callback'),
-            },
+              label: 'Alternar campos visíveis',
+              showAllLabel: 'Mostrar tudo',
+              hideAllLabel: 'Ocultar tudo',
+            }
           }}
-          filters={{
-            alwaysVisibleFilters: ['name', 'email'],
-            statements: filterStatements,
-            onChangeStatements: (newStatements: string) =>
-              this.setState({ filterStatements: newStatements }),
-            clearAllFiltersButtonLabel: 'Clear Filters',
-            collapseLeft: true,
-            options: {
-              name: {
-                label: 'Name',
-                ...this.simpleInputVerbsAndLabel(),
-              },
-              email: {
-                label: 'Email',
-                ...this.simpleInputVerbsAndLabel(),
-              },
-              streetAddress: {
-                label: 'Street Address',
-                ...this.simpleInputVerbsAndLabel(),
-              },
-              cityStateZipAddress: {
-                label: 'City State Zip',
-                ...this.simpleInputVerbsAndLabel(),
-              },
-            },
-          }}
-          totalizers={[
-            {
-              label: 'Sales',
-              value: '420.763',
-              icon: <IconShoppingCart size={14} />,
-            },
-            {
-              label: 'Cash in',
-              value: 'R$ 890.239,05',
-              iconBackgroundColor: '#eafce3',
-              icon: <IconArrowUp color="#79B03A" size={14} />,
-            },
-
-            {
-              label: 'Cash out',
-              value: '- R$ 13.485,26',
-              icon: <IconArrowDown size={14} />,
-            },
-          ]}
-          bulkActions={{
-            texts: {
-              secondaryActionsLabel: 'Actions',
-              rowsSelected: (qty: any) => (
-                <Fragment>Selected rows: {qty}</Fragment>
-              ),
-              selectAll: 'Select all',
-              allRowsSelected: (qty: any) => (
-                <Fragment>All rows selected: {qty}</Fragment>
-              ),
-            },
-            totalItems: 100,
-            main: {
-              label: 'Send email',
-              handleCallback: (_params: any) => alert('TODO: SHOW EMAIL FORM'),
-            },
-            others: [
-              {
-                label: 'Delete',
-                handleCallback: (params: any) => console.warn(params),
-              },
-            ],
-          }}
-        />
+          
+        />):
+        <p>Carregando...</p>
+        }
       </div>
     )
   }
