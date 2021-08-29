@@ -7,8 +7,8 @@
 			// Section Institucional > Valores Corebiz
 			"flex-layout.row#title-container",
 			"flex-layout.row#valores",
-			"flex-layout.row#about-us-container",
-      		"flex-layout.row#slider-brands",
+			// "flex-layout.row#about-us-container",
+      "flex-layout.row#slider-brands",
 			"cadastro"
 		]
 	},
