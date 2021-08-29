@@ -36,3 +36,5 @@ lib
 .eslintrc
 *.orig
 react/yarn.lock
+
+react/workspaceName.ts

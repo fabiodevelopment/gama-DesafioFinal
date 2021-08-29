@@ -1,3 +1,37 @@
 .minicartQuantityBadge {
 	color: black;
 }
+
+.closeIcon {
+	color: white;
+}
+
+.minicartProductListContainer {
+	:global(.vtex-product-list-0-x-price) {
+		color: white;
+	}
+}
+
+:global(.vtex-checkout-summary-0-x-summarySmallDisclaimer) {
+    color: white;
+}
+
+.minicartCheckoutButton {
+	:global(.vtex-button) {
+		border: 0;
+		&:hover,
+		&:focus {
+			background-color: #f1c233;
+		}
+	}
+	:global(.vtex-button__spinner-container) {
+		background-color: #f1c233;
+		border-radius: 5px;
+	}
+	:global(.vtex-styleguide-9-x-rotate) {
+		color: black;
+	}
+	:global(.vtex-button__label) {
+		color: black;
+	}
+}
