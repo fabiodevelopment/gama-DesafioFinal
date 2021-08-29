@@ -90,18 +90,19 @@
 	// banner conditional
 	"condition-layout.product": {
 		"children": [
-			"condition.product#marketing"
+			"condition-layout.product#marketing"
 		]
 	},
 
 	// banner conditional marketing
-	"condition.product#marketing": {
+	"condition-layout.product#marketing": {
 		"props": {
 			"conditions": [
 				{
-					"subject": "productId",
-					"verb": "is",
-					"object": "3"
+					"subject": "categoryId",
+					"arguments": {
+						"id": "9"
+					}
 				}
 			]
 		},
