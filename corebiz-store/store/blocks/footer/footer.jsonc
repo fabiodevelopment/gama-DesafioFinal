@@ -1,297 +1,351 @@
 {
-  "footer": {
-    "blocks": ["footer-layout.desktop", "footer-layout.mobile"]
-  },
-  "footer-layout.desktop": { 
-    "children": [
-      "flex-layout.row#footerRowBg",
-      "flex-layout.row#footerContent",
-      // "flex-layout.row#footerRow1"
-      // "flex-layout.row#footerRow2",
-      // "flex-layout.row#footerRow3",
-      "flex-layout.row#footerRow4"
-    ]
-  },
-  "footer-layout.mobile": { 
-    "children": [
-      "flex-layout.row#footerRowBg",
-      // "flex-layout.row#footerRow1"
-      // "flex-layout.row#footerRow2",
-      // "flex-layout.row#footerRow3",
-      "flex-layout.row#footerRow4"
-    ]
-  },
+	"footer": {
+		"blocks": [
+			"footer-layout.desktop",
+			"footer-layout.mobile"
+		]
+	},
 
-  "flex-layout.row#footerRowBg": {
-    "props": {
-      "blockClass": "footerRowBg"
-    }
-    // "children": [
-    //   "flex-layout.row#footerRowBgContent"
-    // ]
-  },
+	//Desk
+	"footer-layout.desktop": {
+		"children": [
+			"flex-layout.row#footerSection",
+			"flex-layout.row#footerLogos"
+		]
+	},
 
-  // "flex-layout.row#footerRowBgContent":{
-  //   "children": [
-  //     "rich-text#colFooterRowBg",
-  //     "flex-layout.row#letterMedia",
-  //     "flex-layout.row#siteMap",
-  //     "flex-layout.row#pagamentoCertificado"
-  //   ]
-  // },
+	//Mobile
+	"footer-layout.mobile": {
+		"children": []
+	},
 
-  // "rich-text#colFooterRowBg": {
-  //   "props": {
-  //     "text": "row#footerRowBg"
-  //   }
-  // },
+	//Section BG
+	"flex-layout.row#footerSection": {
+		"props": {
+			"blockClass": "footerSection"
+		},
+		"children": [
+			"flex-layout.col#footerContainer"
+		]
+	},
 
-  // "flex-layout.row#letterMedia": {
-  //   "children": [
-  //     "rich-text#letterMedia"
-  //   ]
-  // },
+	// Container
+	"flex-layout.col#footerContainer": {
+		"props": {
+			"blockClass": "footerContainer"
+		},
+		"children": [
+			"flex-layout.row#newsMedia",
+			"flex-layout.row#siteMap",
+			"flex-layout.row#paymentCertificates"
+			// "rich-text"
+		]
+	},
 
-  // "rich-text#letterMedia": {
-  //   "props": {
-  //     "text": "Teste 1"
-  //   }
-  // },
+	// Bloco NewsMedia
+	"flex-layout.row#newsMedia": {
+		"props": {
+			"blockClass": "newsMedia"
+		},
+		"children": [
+			"flex-layout.col#newsletter",
+			"flex-layout.col#media"
+		]
+	},
+	"flex-layout.col#newsletter": {
+		"props": {
+			"width": "70%"
+		},
+		"children": [
+			"rich-text"
+		]
+	},
+	"flex-layout.col#media": {
+		"props": {
+			"width": "30%"
+		},
+		"children": [
+			"rich-text#mediaTitle",
+			"flex-layout.row#mediaIcons"
+		]
+	},
+	"rich-text#mediaTitle":{
+		"props": {
+			"text": "### NOSSAS MÍDIAS"
+		}
+	},
+	"flex-layout.row#mediaIcons": {
+		"props":{},
+		"children": [
+			"flex-layout.col#facebook",
+			"flex-layout.col#instagram",
+			"flex-layout.col#linkedin"
+		]
+	},
 
-  // "flex-layout.row#siteMap": {
-
-  // },
-  // "flex-layout.row#pagamentoCertificado": {
-
-  // },
-
-  //footerContent
-  "flex-layout.row#footerContent": {
-    "children": [
-      "flex-layout.row#footerContent1",
-      "flex-layout.row#footerContent2",
-      "flex-layout.row#footerContent3"
-    ]
-  },
-
-  "flex-layout.row#footerContent1": {
-    "children": [
-      "flex-layout.col#newsLetter",
-      "flex-layout.col#socialMidia"
-    ]
-  },
-
-  "flex-layout.col#newsLetter": {
-    "children": [
-      "rich-text#newsletter"
-    ]
-  },
-
-  "rich-text#newsletter": {
+	"flex-layout.col#facebook": {
+		"props": {},
+		"children": [
+			"image#facebook"
+		]
+	},
+	"image#facebook": {
     "props": {
-      "text": "NEWS LETTER"
+      "src": "assets/footer/socialMidiaFacebook.png",
+      "maxHeight": 60
     }
   },
-
-  "flex-layout.col#socialMidia": {
-    "children": [
-      "rich-text#socialMidia"
-    ]
-  },
-
-  "rich-text#socialMidia": {
+	"flex-layout.col#instagram": {
+		"props": {},
+		"children": [
+			"image#instagram"
+		]
+	},
+	"image#instagram": {
     "props": {
-      "text": "NOSSAS MIDIAS"
+      "src": "assets/footer/socialMidiaInstagram.png",
+      "maxHeight": 60
     }
   },
-
-
-  "flex-layout.row#footerContent2": {
-    "children": [
-      "flex-layout.col#ajuda",
-      "flex-layout.col#institucional",
-      "flex-layout.col#compras",
-      "flex-layout.col#suporte",
-      "flex-layout.col#atendimento"
-    ]
-  },
-
-  "flex-layout.col#ajuda":{
-    "children": [
-      "rich-text#suporteTitle",
-      "rich-text#whatsapp",
-      "rich-text#email"
-    ]
-  },
-  "rich-text#suporteTitle": {  
-    "props": {  
-      "text": "PRECISANDO DE AJUDA?"  
-    }  
-  },
-  "rich-text#whatsapp": {  
-    "props": {  
-      "text": "11 99999-9999\nvia WhatsApp das 9h as 18h\nRespondemos em ate 24 horas"  
-    }  
-  },
-  "rich-text#email": {  
-    "props": {  
-      "text": "sac@corebiz.com.br\n De segunda a sexta"  
-    }  
-  },
-  "flex-layout.col#institucional":{
-    "children": [
-      "rich-text#institucionalTitle",
-      "link#institucional-1",
-      "link#institucional-2",
-      "link#institucional-3"
-    ]
-  },
-  "rich-text#institucionalTitle": {
+	"flex-layout.col#linkedin": {
+		"props": {},
+		"children": [
+			"image#linkedin"
+		]
+	},
+	"image#linkedin": {
     "props": {
-      "text": "INSTITUCIONAL"
-    }
-  },
-  "link#institucional-1": {
-    "props": {
-      // "blockClass": "link-foooter-3",
-      "href": "#",
-      "label": "- Quem somos"
-    }
-  },
-  "link#institucional-2": {
-    "props": {
-      // "blockClass": "link-foooter-3",
-      "href": "#",
-      "label": "- Nossos Escritórios"
-    }
-  },
-  "link#institucional-3": {
-    "props": {
-      // "blockClass": "link-foooter-3",
-      "href": "#",
-      "label": "- Trabalhe Conosco"
-    }
-  },
-  "flex-layout.col#compras":{
-    "children": [
-      "rich-text#comprasTitle",
-      "link#compras-1",
-      "link#compras-2",
-      "link#compras-3"
-    ]
-  },
-  "rich-text#comprasTitle": {
-    "props": {
-      "text": "COMPRAS"
-    }
-  },
-  "link#compras-1": {
-    "props": {
-      // "blockClass": "link-foooter-3",
-      "href": "#",
-      "label": "- Meu Perfil"
-    }
-  },
-  "link#compras-2": {
-    "props": {
-      // "blockClass": "link-foooter-3",
-      "href": "#",
-      "label": "- Meus Pedidos"
-    }
-  },
-  "link#compras-3": {
-    "props": {
-      // "blockClass": "link-foooter-3",
-      "href": "#",
-      "label": "- Carrinho"
-    }
-  },
-  "flex-layout.col#suporte":{
-    "children": [
-      "rich-text#suporteTitle",
-      "link#suporte-1",
-      "link#suporte-2",
-      "link#suporte-3"
-    ]
-  },
-  "rich-text#title": {
-    "props": {
-      "text": "SUPORTE"
-    }
-  },
-  "link#suporte-1": {
-    "props": {
-      // "blockClass": "link-foooter-3",
-      "href": "#",
-      "label": "- Prazos de Entrega"
-    }
-  },
-  "link#suporte-2": {
-    "props": {
-      // "blockClass": "link-foooter-3",
-      "href": "#",
-      "label": "- Meus Orçamentos"
-    }
-  },
-  "link#suporte-3": {
-    "props": {
-      // "blockClass": "link-foooter-3",
-      "href": "#",
-      "label": "- Privacidade"
-    }
-  },
-  "flex-layout.col#atendimento":{
-    "children": [
-      "rich-text#atendimentoTitle",
-      "link#atendimento-1",
-      "link#atendimento-2",
-      "link#atendimento-3"
-    ]
-  },
-  
-  "rich-text#atendimentoTitle": {
-    "props": {
-      "text": "ATENDIMENTO"
-    }
-  },
-  "link#atendimento-1": {
-    "props": {
-      // "blockClass": "link-foooter-3",
-      "href": "#",
-      "label": "- Como Comprar"
-    }
-  },
-  "link#atendimento-2": {
-    "props": {
-      // "blockClass": "link-foooter-3",
-      "href": "#",
-      "label": "- FAQ"
-    }
-  },
-  "link#atendimento-3": {
-    "props": {
-      // "blockClass": "link-foooter-3",
-      "href": "#",
-      "label": "- Fale Conosco"
+      "src": "assets/footer/socialMidiaLinkedIn.png",
+      "maxHeight": 60
     }
   },
 
-  "flex-layout.row#footerContent3": {
+	//Bloco SiteMap
+	"flex-layout.row#siteMap": {
+		"props": {
+			"blockClass": "siteMap"
+		},
+		"children": [
+			"flex-layout.col#ajuda",
+			"flex-layout.col#institucional",
+			"flex-layout.col#compras",
+			"flex-layout.col#suporte",
+			"flex-layout.col#atendimento"
+		]
+	},
 
-  },
+	//Ajuda
+	"flex-layout.col#ajuda": {
+		"props": {
+			"width": "28%"
+		},
+		"children": [
+			"rich-text#ajudaTitle",
+			"flex-layout.row#ajudaWhats",
+			"flex-layout.row#ajudaMail"
+		]
+	},
+	"rich-text#ajudaTitle": {
+		"props": {
+			"text": "### PRECISANDO DE AJUDA?"
+		}
+	},
 
-  //footerRow4
-  "flex-layout.row#footerRow4": {
+	"flex-layout.row#ajudaWhats": {
+		"props": {
+
+		},
+		"children": [
+			"flex-layout.col#ajudaWhatsIcon",
+			"flex-layout.col#ajudaWhatsText"
+		]
+	},
+
+	"flex-layout.col#ajudaWhatsIcon": {
+		"props": {
+			"width": "20%"
+		},
+		"children": [
+			"image#iconWhats"
+		]
+	},
+	"image#iconWhats": {
+		"props": {
+      "src": "assets/footer/contactWhatsApp.png",
+      "maxHeight": 60
+    }
+	},
+
+	"flex-layout.col#ajudaWhatsText": {
+		"props": {
+			"width": "80%"
+		},
+		"children": [
+			"rich-text#textoWhats"
+		]
+	},
+	"rich-text#textoWhats":{
+		"props": {
+			"text": "11 99999-9999\nvia WhatsApp das 9h as 18h\nRespondemos em ate 24 horas"
+		}
+	},
+
+	"flex-layout.row#ajudaMail": {
+		"props": {
+
+		},
+		"children": [
+			"flex-layout.col#ajudaMailIcon",
+			"flex-layout.col#ajudaMailText"
+		]
+	},
+
+	"flex-layout.col#ajudaMailIcon": {
+		"props": {
+			"width": "20%"
+		},
+		"children": [
+			"image#iconMail"
+		]
+	},
+	"image#iconMail": {
+		"props": {
+      "src": "assets/footer/contactEmail.png",
+      "maxHeight": 60
+    }
+	},
+	
+	"flex-layout.col#ajudaMailText": {
+		"props": {
+			"width": "80%"
+		},
+		"children": [
+			"rich-text#textoMail"
+		]
+	},
+	"rich-text#textoMail":{
+		"props": {
+			"text": "sac@corebiz.com.br\n De segunda a sexta"
+		}
+	},
+
+	//Institucional
+	"flex-layout.col#institucional": {
+		"props": {
+			"width": "16%"
+		},
+		"children": [
+			"rich-text"
+		]
+	},
+	
+	//Compras
+	"flex-layout.col#compras": {
+		"props": {
+			"width": "16%"
+		},
+		"children": [
+			"rich-text"
+		]
+	},
+
+	//Suporte
+	"flex-layout.col#suporte": {
+		"props": {
+			"width": "16%"
+		},
+		"children": [
+			"rich-text"
+		]
+	},
+
+	//Atendimento
+	"flex-layout.col#atendimento": {
+		"props": {
+			"width": "16%"
+		},
+		"children": [
+			"rich-text"
+		]
+	},
+
+	//Bloco paymentCertificates
+	"flex-layout.row#paymentCertificates": {
+		"props": {
+			"blockClass": "paymentCertificates"
+		},
+		"children": [
+			"flex-layout.col#payment",
+			"flex-layout.col#certificates"
+		]
+	},
+
+	"flex-layout.col#payment": {
+		"props": {
+			"width": "60%"
+		},
+		"children": [
+			"rich-text"
+		]
+	},
+	"flex-layout.col#certificates": {
+		"props": {
+			"width": "40%"
+		},
+		"children": [
+			"rich-text"
+		]
+	},
+
+	//Bloco Logos
+  "flex-layout.row#footerLogos": {
     "props": {
-      "blockClass": "footerRow4"
+			"width": "100%",
+      "blockClass": "footerLogosSection"
+    },
+		"children": [
+			"flex-layout.row#footerLogosContainer"
+		]
+	},
+
+  "flex-layout.row#footerLogosContainer": {
+    "props": {
+      "blockClass": "footerLogosContainer",
+			"paddingTop": "7"
     },
     "children": [
-      "image#corebizLogo",
-      "rich-text#footerRow4",
-      "image#grupo12Logo",
-      "image#vtexLogo"
+			"flex-layout.col#corebizLogo",
+			"flex-layout.col#direitos",
+			"flex-layout.col#spacer",
+			"flex-layout.col#grupo12Logo",
+			"flex-layout.col#vtexLogo"
     ]
   },
+	"flex-layout.col#corebizLogo": {
+		"props": {
+			"verticalAlign": "middle",
+			"width": "18%"
+		},
+		"children": ["image#corebizLogo"]
+	},
+	"flex-layout.col#direitos": {
+		"props": {
+			"width": "25%"
+		},
+		"children": ["rich-text#direitos"]
+	},
+	"flex-layout.col#grupo12Logo": {
+		"props": {
+			"width": "20%"
+		},
+		"children": ["image#grupo12Logo"]
+	},
+	"flex-layout.col#vtexLogo": {
+		"props": {
+			"width": "20%"
+		},
+		"children": ["image#vtexLogo"]
+	},
 
   "image#corebizLogo": {
     "props": {
@@ -300,7 +354,7 @@
     }
   },
 
-  "rich-text#footerRow4": {
+  "rich-text#direitos": {
     "props": {
       "text": "Todos direitos reservados. corebiz 2021",
       "blockClass": "richTextFooterRow4"
@@ -320,51 +374,13 @@
       "src": "assets/footer/logoVtex.png",
       "maxHeight": 60
     }
-  }
+  },
 
-  // "image#footerBg": {
-  //   "props": {
-  //     "src": "./assets/footer/corebiz-footer-logo.png"
-  //   }
-  // }
+	"rich-text": {
+		"props": {
+			"text": "text alert"
+		}
+	}
 
-
-  // "flex-layout.row#footerRow1": {
-  //   "props":{
-  //     "blockClass": "footerRow1"
-  //   },
-  //   "children": [
-  //     "flex-layout.col#footerRow1#Col1",
-  //     "flex-layout.col#footerRow1#Col2"
-  //   ]
-  // },
-  // "flex-layout.col#footerRow1#Col1": {
-  //   "children": [
-  //     "rich-text#footer1"
-  //   ]
-  // },
-  // "rich-text#footer1": {
-  //   "props": {
-  //     "textAlignment": "CENTER",
-  //     "textPosition": "CENTER",
-  //     "text": ".row para NEWS LETTER"
-  //   }
-  // },
-  // "flex-layout.col#footerRow1#Col2": {
-  //   "children": [
-  //     "social-networks#col2"
-  //   ]
-  // },
-
-  // "social-networks#col2": {
-  //   "props": {
-  //     "title": "NOSSAS MIDIAS",
-  //     "socialNetworks": [
-  //       { "url": "https://facebook.com/foo", "name": "Facebook" },
-  //       { "url": "https://instagrm.com/foo", "name": "Instagram" },
-  //       { "url": "https://linkedin.com/foo", "name": "LinkedIn" }
-  //     ] 
-  //   }
-  // }
 
 }
