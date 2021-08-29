@@ -6,7 +6,7 @@ const ChangeLead: StorefrontFunctionComponent = (props) => {
 
   const order = props.query.og;
 
-  axios.get(`https://grupo12fabio--hiringcoders202112.myvtex.com/api/oms/pvt/orders/${order}-01/conversation-message`)
+  axios.get(`https://grupo12rubens--hiringcoders202112.myvtex.com/api/oms/pvt/orders/${order}-01/conversation-message`)
 
     .then(function (response) {
       // handle success
