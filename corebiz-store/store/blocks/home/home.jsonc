@@ -8,8 +8,9 @@
 			"flex-layout.row#title-container",
 			"flex-layout.row#valores",
 			"flex-layout.row#about-us-container",
-      		"flex-layout.row#slider-brands",
-			"cadastro"
+			"rich-text",
+      		"flex-layout.row#slider-brands" //carrossel
+			//"cadastro"
 		]
 	},
   // Linha das Abas : Contem Lista de itens do menu e Conteudo das abas

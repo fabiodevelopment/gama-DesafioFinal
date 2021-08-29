@@ -1,6 +1,17 @@
 {
     "flex-layout.row#slider-brands":{
-        "children": ["flex-layout.row#slider-brand-container"]
+      "props":{
+        "blockClass": "container-carrossel"
+      },
+      "children": ["flex-layout.row#slider-brand-container"]
+    },
+
+    "rich-text": {
+      "props": {
+        "text": "alguns de nossos principais clientes",
+        "textPosition": "CENTER",
+        "blockClass": "title-logo-message"
+      }
     },
 
     "flex-layout.row#slider-brand-container":{
@@ -23,53 +34,53 @@
 
       "image#brand1": {
         "props": {
-          "src": "assets/logo1.png"
+          "src": "assets/logo1.jpg"
         }
       },
     
       "image#brand2": {
         "props": {
-            "src": "assets/logo2.png"
+            "src": "assets/logo2.jpg"
         }
       },
       "image#brand3": {
         "props": {
-            "src": "assets/logo3.png"
+            "src": "assets/logo3.jpg"
         }
       },
       "image#brand4": {
         "props": {
-            "src": "assets/logo4.png"
+            "src": "assets/logo4.jpg"
         }
       },
       "image#brand5": {
         "props": {
-            "src": "assets/logo5.png"
+            "src": "assets/logo5.jpg"
         }
       },
       "image#brand6": {
         "props": {
-            "src": "assets/logo2.png"
+            "src": "assets/logo2.jpg"
         }
       },
       "image#brand7": {
         "props": {
-            "src": "assets/logo7.png"
+            "src": "assets/logo7.jpg"
         }
       },
       "image#brand8": {
         "props": {
-            "src": "assets/logo8.png"
+            "src": "assets/logo8.jpg"
         }
       },
       "image#brand9": {
         "props": {
-            "src": "assets/logo9.png"
+            "src": "assets/logo9.jpg"
         }
       },
       "image#brand10": {
         "props": {
-            "src": "assets/logo10.png"
+            "src": "assets/logo10.jpg"
         }
       }
     
