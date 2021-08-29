@@ -7,15 +7,14 @@
   },
   "header-layout.desktop": {
     "children": [
-      "sticky-layout#desktop",
-      "flex-layout.row#headerCategories"
+      "sticky-layout#desktop"
     ]
   },
   "sticky-layout#desktop": {
     "props": {
       "blockClass": "sticky-header"
     },
-    "children": ["flex-layout.row#desktop"]
+    "children": ["flex-layout.row#desktop", "flex-layout.row#headerCategories"]
   },
   "flex-layout.row#desktop": {
     "props": {
@@ -129,6 +128,9 @@
   },
   
   "drawer": {
-    "children": []
+    "children": ["vtex.menu@2.x:menu#menuHeaderCategories"],
+    "props":{
+      "blockClass": "menu-header"
+    }
   }
 }

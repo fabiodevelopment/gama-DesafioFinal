@@ -26,7 +26,7 @@
           "itemProps": {
             "categoryId": "5",
             "type": "internal",
-            "href": "/implementacoes",
+            // "href": "/implementacoes",
             "noFollow": false,
             "tagTitle": "implementacoes"
           }
@@ -39,7 +39,7 @@
           "itemProps": {
             "categoryId": "6",
             "type": "internal",
-            "href": "/migracoes",
+            // "href": "/migracoes",
             "noFollow": false,
             "tagTitle": "Migrações"
           }
@@ -52,7 +52,7 @@
           "itemProps": {
             "categoryId": "7",
             "type": "internal",
-            "href": "/integracoes",
+            // "href": "/integracoes",
             "noFollow": false,
             "tagTitle": "Integrações"
           }

@@ -1,0 +1,7 @@
+@import './global/variables';
+  
+.menuIcon--menu-header {
+  @include breakpoint('mobile') {
+    fill: #fff!important;
+  }
+}
