@@ -1,6 +1,9 @@
 {
     "flex-layout.row#slider-brands":{
-        "children": ["flex-layout.row#slider-brand-container"]
+      "props": {
+        "blockClass": "section-brands"
+      },
+      "children": ["flex-layout.row#slider-brand-container"]
     },
 
     "flex-layout.row#slider-brand-container":{
