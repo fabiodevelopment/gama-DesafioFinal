@@ -52,7 +52,7 @@
     },
     "image#valores1": {
         "props": {
-            "src": "assets/section-client/coragem.png"
+            "src": "assets/illustrations/illustration-one.png"
         }
     },
     "rich-text#1": {
@@ -75,7 +75,7 @@
     },
     "image#valores2": {
         "props": {
-            "src": "assets/section-client/determinacao.png",
+            "src": "assets/illustrations/illustration-two.png",
             "maxWidth": "100%"
         }
     },
@@ -98,7 +98,7 @@
     },
     "image#valores3": {
         "props": {
-            "src": "assets/section-client/colaboracao.png",
+            "src": "assets/illustrations/illustration-three.png",
             "maxWidth": "100%"
         }
     },
@@ -121,7 +121,7 @@
     },
     "image#valores4": {
         "props": {
-            "src": "assets/section-client/inovacao.png",
+            "src": "assets/illustrations/illustration-four.png",
             "maxWidth": "100%"
         }
     },
