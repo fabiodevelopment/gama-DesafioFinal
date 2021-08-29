@@ -59,7 +59,7 @@
 	},
 	"flex-layout.col#search": {
 		"children": [
-			"search-content"
+			"search-content#lp"
 		]
 	}
 }
