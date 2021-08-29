@@ -1,5 +1,5 @@
 {
-  "name": "vtex.admin-example",
+  "name": "vtex.admin-leads",
   "version": "0.0.12",
   "devDependencies": {
     "@types/node": "^11.12.1",
@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@types/faker": "^4.1.5",
+    "axios": "^0.21.1",
     "faker": "^4.1.0"
   }
 }

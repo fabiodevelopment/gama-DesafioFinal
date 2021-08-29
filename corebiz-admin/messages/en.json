@@ -1,9 +1,9 @@
 {
-  "admin-example.navigation.label-group": "Example admins",
-  "admin-example.navigation.label-table": "Example table",
-  "admin-example.navigation.search.kws": "test, mock, fake",
-  "admin-example.navigation.details.search.kws": "details, mock, test, hello",
-  "admin-example.navigation.table.search.kws": "table, mock, test, bye",
-  "admin-example.hello-world": "Example Admin",
-  "admin-example.details": "Details page"
+  "admin-leads.navigation.label-group": "Example admins",
+  "admin-leads.navigation.label-table": "Example table",
+  "admin-leads.navigation.search.kws": "test, mock, fake",
+  "admin-leads.navigation.details.search.kws": "details, mock, test, hello",
+  "admin-leads.navigation.table.search.kws": "table, mock, test, bye",
+  "admin-leads.hello-world": "Example Admin",
+  "admin-leads.details": "Details page"
 }
