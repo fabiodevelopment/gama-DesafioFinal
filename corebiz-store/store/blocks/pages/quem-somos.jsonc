@@ -1,6 +1,6 @@
 {
     "store.custom#quem-somos": {
-        "blocks": ["flex-layout.row#valores", "flex-layout.row#about-us-container"]
+        "blocks": ["flex-layout.row#valores"]
     },
      
     "flex-layout.row#title-container":{
@@ -21,12 +21,13 @@
     },
     "rich-text#h2": {
         "props": {  
-           "text": "Titulo"
+           "text": "# Who we are?"
+           
         }
     },
     "rich-text#h3": {
         "props": {
-           "text": "Sub titulo"
+           "text": "## From Santa Monica to Corebiz"
         }
     }, 
     "flex-layout.row#valores": {
@@ -51,12 +52,12 @@
     },
     "image#valores1": {
         "props": {
-            "src": "assets/section-client/transferir.jpg"
+            "src": "assets/section-client/coragem.png"
         }
     },
     "rich-text#1": {
         "props": {
-            "text": "teste",
+            "text": "COURAGE",
             "textPosition": "center"
         }
     },
@@ -74,13 +75,13 @@
     },
     "image#valores2": {
         "props": {
-            "src": "assets/section-client/transferir.jpg",
+            "src": "assets/section-client/determinacao.png",
             "maxWidth": "100%"
         }
     },
     "rich-text#2": {
         "props": {
-            "text": "teste"
+            "text": "DETERMINATION"
         }
     },
     "flex-layout.col#valores3": {
@@ -97,13 +98,13 @@
     },
     "image#valores3": {
         "props": {
-            "src": "assets/section-client/transferir.jpg",
+            "src": "assets/section-client/colaboracao.png",
             "maxWidth": "100%"
         }
     },
     "rich-text#3": {
         "props": {
-            "text": "teste"
+            "text": "COLLABORATION AND AGILITY"
         }
     },
     "flex-layout.col#valores4": {
@@ -120,58 +121,19 @@
     },
     "image#valores4": {
         "props": {
-            "src": "assets/section-client/transferir.jpg",
+            "src": "assets/section-client/inovacao.png",
             "maxWidth": "100%"
         }
     },
     "rich-text#4": {
         "props": {
-            "text": "teste"
-        }
-    },
-    //end
-    // Info-Card About Us
-   "flex-layout.row#about-us-container":{
-        "children": [ 
-            "flex-layout.col#info-cards"
-        ]
-    },
-    "flex-layout.col#info-cards":{
-       "children": [
-        "info-card#button-right",
-        "info-card#button-left"
-       ]
-    },
-
-    "info-card#button-right": {
-        "props": {
-            "isFullModeStyle": false,
-            "textPosition": "right",
-            "imageUrl": "https://st2.depositphotos.com/1003593/7026/i/600/depositphotos_70269921-stock-photo-values-arrows-concept.jpg",
-            "headline": "Principal Valor",
-            "subhead": "Texto Motivacional",
-            "callToActionMode": "button",
-            "callToActionText": "Explore",
-            "callToActionUrl": "/sale/d",
-            "textAlignment": "center",
-            "blockClass": "hideActionLink"
-        }
-        
-    },
-    "info-card#button-left": {
-        "props": {
-            "isFullModeStyle": false,
-            "textPosition": "left",
-            "imageUrl": "https://st2.depositphotos.com/1003593/7026/i/600/depositphotos_70269921-stock-photo-values-arrows-concept.jpg",
-            "headline": "Valores Declarados",
-            "subhead": "Determinação,Inovação,Coragem,Agilidade,Colaboração",
-            "callToActionMode": "link",
-            "callToActionText": "Go to collection",
-            "textAlignment": "center",
-            "blockClass": "hideActionLink"
-
+            "text": "INNOVATION"      
         }
     }
 }
+    //end
+    
+  
+
 
 
