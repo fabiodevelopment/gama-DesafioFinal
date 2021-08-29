@@ -1,24 +1,17 @@
 {
     "flex-layout.row#slider-brands":{
-<<<<<<< HEAD
-      "props": {
-        "blockClass": "section-brands"
-      },
-      "children": ["flex-layout.row#slider-brand-container"]
-=======
       "props":{
         "blockClass": "container-carrossel"
       },
       "children": ["flex-layout.row#slider-brand-container"]
     },
 
-    "rich-text": {
+    "rich-text#title-brand": {
       "props": {
         "text": "alguns de nossos principais clientes",
         "textPosition": "CENTER",
         "blockClass": "title-logo-message"
       }
->>>>>>> feature/alt-carrossel
     },
 
     "flex-layout.row#slider-brand-container":{
@@ -41,93 +34,53 @@
 
       "image#brand1": {
         "props": {
-<<<<<<< HEAD
-          "src": "assets/logos/logo1.png"
-=======
           "src": "assets/logo1.jpg"
->>>>>>> feature/alt-carrossel
         }
       },
     
       "image#brand2": {
         "props": {
-<<<<<<< HEAD
-            "src": "assets/logos/logo2.png"
-=======
             "src": "assets/logo2.jpg"
->>>>>>> feature/alt-carrossel
         }
       },
       "image#brand3": {
         "props": {
-<<<<<<< HEAD
-            "src": "assets/logos/logo3.png"
-=======
             "src": "assets/logo3.jpg"
->>>>>>> feature/alt-carrossel
         }
       },
       "image#brand4": {
         "props": {
-<<<<<<< HEAD
-            "src": "assets/logos/logo4.png"
-=======
             "src": "assets/logo4.jpg"
->>>>>>> feature/alt-carrossel
         }
       },
       "image#brand5": {
         "props": {
-<<<<<<< HEAD
-            "src": "assets/logos/logo5.png"
-=======
             "src": "assets/logo5.jpg"
->>>>>>> feature/alt-carrossel
         }
       },
       "image#brand6": {
         "props": {
-<<<<<<< HEAD
-            "src": "assets/logos/logo2.png"
-=======
             "src": "assets/logo2.jpg"
->>>>>>> feature/alt-carrossel
         }
       },
       "image#brand7": {
         "props": {
-<<<<<<< HEAD
-            "src": "assets/logos/logo7.png"
-=======
             "src": "assets/logo7.jpg"
->>>>>>> feature/alt-carrossel
         }
       },
       "image#brand8": {
         "props": {
-<<<<<<< HEAD
-            "src": "assets/logos/logo8.png"
-=======
             "src": "assets/logo8.jpg"
->>>>>>> feature/alt-carrossel
         }
       },
       "image#brand9": {
         "props": {
-<<<<<<< HEAD
-            "src": "assets/logos/logo9.png"
-=======
             "src": "assets/logo9.jpg"
->>>>>>> feature/alt-carrossel
         }
       },
       "image#brand10": {
         "props": {
-<<<<<<< HEAD
-            "src": "assets/logos/logo10.png"
-=======
             "src": "assets/logo10.jpg"
->>>>>>> feature/alt-carrossel
         }
       }
     
