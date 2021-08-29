@@ -210,9 +210,9 @@
 	},
 	"image#iconMail": {
 		"props": {
-      "src": "assets/footer/contactEmail.png",
-      "maxHeight": 60
-    }
+			"src": "assets/footer/contactEmail.png",
+			"maxHeight": 60
+		}
 	},
 	
 	"flex-layout.col#ajudaMailText": {
@@ -285,96 +285,151 @@
 			"width": "60%"
 		},
 		"children": [
-			"rich-text"
+			"rich-text#paymentTitle",
+			"image#paymentIcons"
 		]
 	},
+	"rich-text#paymentTitle": {
+		"props": {
+			"text": "#### FORMAS DE PAGAMENTO"
+		}
+	},
+	"image#paymentIcons": {
+		"props": {
+			"src": "assets/footer/payments.png",
+			"maxHeight": 60
+		}
+	},
+
 	"flex-layout.col#certificates": {
 		"props": {
 			"width": "40%"
 		},
 		"children": [
-			"rich-text"
+			"rich-text#certificatesTitle",
+			"flex-layout.row#certificatesContentIcons"
+		]
+	},
+	"rich-text#certificatesTitle": {
+		"props": {
+			"text": "#### CERTIFICADOS"
+		}
+	},
+	"flex-layout.row#certificatesContentIcons": {
+		"props": {
+			"blockClass": "certificatesContent"
+		},
+		"children": [
+			"image#certificate1",
+			"image#certificate2",
+			"image#certificate3"
 		]
 	},
 
+	"image#certificate1": {
+		"props": {
+			"src": "assets/footer/certificationEbitNielsen.png",
+			"maxHeight": 60
+		}
+	},
+	"image#certificate2": {
+		"props": {
+			"src": "assets/footer/certificationGoogleReport.png",
+			"maxHeight": 60
+		}
+	},
+	"image#certificate3": {
+		"props": {
+			"src": "assets/footer/certificationEbitNielsen.png",
+			"maxHeight": 60
+		}
+	},
+
 	//Bloco Logos
-  "flex-layout.row#footerLogos": {
-    "props": {
+	"flex-layout.row#footerLogos": {
+		"props": {
 			"width": "100%",
-      "blockClass": "footerLogosSection"
-    },
+			"blockClass": "footerLogosSection"
+		},
 		"children": [
 			"flex-layout.row#footerLogosContainer"
 		]
 	},
-
-  "flex-layout.row#footerLogosContainer": {
-    "props": {
-      "blockClass": "footerLogosContainer",
+	"flex-layout.row#footerLogosContainer": {
+		"props": {
+			"blockClass": "footerLogosContainer",
 			"paddingTop": "7"
-    },
-    "children": [
+		},
+		"children": [
 			"flex-layout.col#corebizLogo",
 			"flex-layout.col#direitos",
 			"flex-layout.col#spacer",
 			"flex-layout.col#grupo12Logo",
 			"flex-layout.col#vtexLogo"
-    ]
-  },
+		]
+	},
 	"flex-layout.col#corebizLogo": {
 		"props": {
 			"verticalAlign": "middle",
 			"width": "18%"
 		},
-		"children": ["image#corebizLogo"]
+		"children": [
+			"image#corebizLogo"
+		]
 	},
 	"flex-layout.col#direitos": {
 		"props": {
 			"width": "25%"
 		},
-		"children": ["rich-text#direitos"]
+		"children": [
+			"rich-text#direitos"
+		]
 	},
 	"flex-layout.col#grupo12Logo": {
 		"props": {
 			"width": "20%"
 		},
-		"children": ["image#grupo12Logo"]
+		"children": [
+			"image#grupo12Logo"
+		]
 	},
 	"flex-layout.col#vtexLogo": {
 		"props": {
 			"width": "20%"
 		},
-		"children": ["image#vtexLogo"]
+		"children": [
+			"image#vtexLogo"
+		]
 	},
 
-  "image#corebizLogo": {
-    "props": {
-      "src": "assets/footer/logoCorebiz.png",
-      "maxHeight": 60
-    }
-  },
+	"image#corebizLogo": {
+		"props": {
+		"src": "assets/footer/logoCorebiz.png",
+		"maxHeight": 60
+		}
+	},
 
-  "rich-text#direitos": {
-    "props": {
-      "text": "Todos direitos reservados. corebiz 2021",
-      "blockClass": "richTextFooterRow4"
-    }
-  },
+	"rich-text#direitos": {
+		"props": {
+		"text": "Todos direitos reservados. corebiz 2021",
+		"blockClass": "richTextFooterRow4"
+		}
+	},
 
-  "image#grupo12Logo": {
-    "props": {
-      "blockClass": "grupo12Logo",
-      "src": "assets/footer/logoGrupo12.png",
-      "maxHeight": 60
-    }
-  },
+	"image#grupo12Logo": {
+		"props": {
+			"blockClass": "grupo12Logo",
+			"src": "assets/footer/logoGrupo12.png",
+			"maxHeight": 60
+		}
+	},
 
-  "image#vtexLogo": {
-    "props": {
-      "src": "assets/footer/logoVtex.png",
-      "maxHeight": 60
-    }
-  },
+	"image#vtexLogo": {
+		"props": {
+			"src": "assets/footer/logoVtex.png",
+			"maxHeight": 60
+		}
+	},
 
 	"rich-text": {
 		"props": {
