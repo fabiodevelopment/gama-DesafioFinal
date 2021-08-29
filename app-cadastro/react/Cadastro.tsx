@@ -15,16 +15,23 @@ const Cadastro: StorefrontFunctionComponent<CadastroProps> = ({ }) => {
 	const [phone, setPhone] = useState('');
 	const [erro, setErro] = useState(false);
 	const [success, setSuccess] = useState(false);
-	const [isLead, setIsLead] = useState(false);
-	const [isProspect, setIsProspect] = useState('');
+	const [isLead, setIsLead] = useState(true);
 	
 	const handles = useCssHandles(CSS_HANDLES);
 	
 	useEffect(() => {
-		console.log("valor do LocalStorage", localStorage.getItem('prospect'))
-		console.log("setIsLead", setIsLead);
-		setIsProspect(localStorage.getItem('prospect'));
-
+		const closeDateLS = localStorage.getItem('@corebiz/popUpCloseDate');
+		const isLeadLS = localStorage.getItem('@corebiz/isLead');
+		if(closeDateLS) {
+			const closeDate = new Date(JSON.parse(closeDateLS));
+			if(new Date().valueOf() - closeDate.valueOf() > 86400000){
+				isLeadLS ? setIsLead(true) : setIsLead(false);
+			} else {
+				setIsLead(true);
+			};
+		} else {
+			isLeadLS ? setIsLead(true) : setIsLead(false);
+		}
 	}, [])
 
 	async function handleSubmit(e: any) {
@@ -42,6 +49,7 @@ const Cadastro: StorefrontFunctionComponent<CadastroProps> = ({ }) => {
 					email,
 					phone,
 					dateLead: new Date(),
+					formOrigin: "Pop-Up"
 				}
 			})
 			console.log("Cadastro realizado com sucesso");
@@ -50,20 +58,25 @@ const Cadastro: StorefrontFunctionComponent<CadastroProps> = ({ }) => {
 			setName('');
 			setEmail('');
 			setPhone('');
-			localStorage.setItem('prospect', JSON.stringify('prospect'))
-			setIsLead(true)
+			localStorage.setItem('@corebiz/isLead', 'true');
+			setTimeout(() => {setIsLead(true)},1500);
 		}
+	};
+
+	function handleClose() {
+		localStorage.setItem('@corebiz/popUpCloseDate', JSON.stringify(new Date()));
+		setIsLead(true);
 	};
 
 	return (
 		<>	
 			<div className={`${handles.cadastroLead}`} 
-			style={{display: isLead || isProspect === '"prospect"' ? "none" : "flex" }} 
+			style={{display: isLead ? "none" : "flex" }} 
 			>
 				<div className={`${handles.modalImage}`}></div>
 				<div className={`${handles.modalForm}`}>
 					
-					<button className={`${handles.modalClose}`} onClick={() => setIsLead(true)}>+</button>
+					<button className={`${handles.modalClose}`} onClick={handleClose}>+</button>
 					
 					<h2 className={`${handles.modalTitle}`}>Cadastre-se</h2>
 					<h3 className={`${handles.modalSubTitle}`}>Para receber notificações sebre novos produtos</h3>
@@ -89,7 +102,7 @@ const Cadastro: StorefrontFunctionComponent<CadastroProps> = ({ }) => {
 				</div>
 			</div>
 			<div className={`${handles.modalOverlay}`}
-			style={{display: isLead || isProspect === '"prospect"' ? "none" : "block" }} 
+			style={{display: isLead ? "none" : "block" }} 
 			></div>
 
 		</>
