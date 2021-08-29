@@ -4,6 +4,9 @@
     },
      
     "flex-layout.row#title-container":{
+        "props": {
+            "blockClass": "section-black"
+        },
        "children":[
            "flex-layout.col#titles"
        ]
@@ -31,6 +34,9 @@
         }
     }, 
     "flex-layout.row#valores": {
+        "props": {
+            "blockClass": "section-black"
+        },
         "children": [
             "flex-layout.col#valores1",
             "flex-layout.col#valores2",
