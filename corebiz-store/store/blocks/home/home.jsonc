@@ -8,7 +8,7 @@
 			"flex-layout.row#title-container",
 			"flex-layout.row#valores",
 			"flex-layout.row#about-us-container",
-      		"flex-layout.row#slider-brands",
+      "flex-layout.row#slider-brands",
 			"cadastro"
 		]
 	},
@@ -17,7 +17,10 @@
 		"children": [
 			"tab-list#home",
 			"tab-content#home"
-		]
+		],
+		"props": {
+			"blockClass": "tab-layout"
+		}
 	},
 
 	// Lista os Itens de Abas
