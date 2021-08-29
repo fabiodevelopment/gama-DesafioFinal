@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react'
-import { useCssHandles } from 'vtex.css-handles'
+import React, { useState, useEffect } from 'react';
+import { useCssHandles } from 'vtex.css-handles';
 import axios from 'axios';
+import InputMask from 'react-input-mask';
 
 // import { Container, Button, Form } from 'react-bootstrap';
 
@@ -36,7 +37,7 @@ const Cadastro: StorefrontFunctionComponent<CadastroProps> = ({ }) => {
 
 	async function handleSubmit(e: any) {
 		e.preventDefault();
-		if(name === '' || email ==='' || phone ==='') {
+		if(name === '' || email === '' || phone.match(/_/)) {
 			setErro(true);
 			setSuccess(false);
 		} else {
@@ -79,23 +80,23 @@ const Cadastro: StorefrontFunctionComponent<CadastroProps> = ({ }) => {
 					<button className={`${handles.modalClose}`} onClick={handleClose}>+</button>
 					
 					<h2 className={`${handles.modalTitle}`}>Cadastre-se</h2>
-					<h3 className={`${handles.modalSubTitle}`}>Para receber notificações sebre novos produtos</h3>
+					<h3 className={`${handles.modalSubTitle}`}>Para receber notificações sobre novos produtos</h3>
 					<br />
 					<form>
 
 						{ erro ? <p className={`${handles.error}`} >Ocorreu um erro. Tente novamente.</p> : ''}
-						{ success ? <p className={`${handles.success}`} >E-mail Cadastrado com sucesso</p> : ''}
+						{ success ? <p className={`${handles.success}`} >Cadastrado realizado com sucesso</p> : ''}
 						<div className={`${handles.formGroup}`}>
 							<label className={`${handles.labelGroup}`}>Nome:</label>
 							<input className={`${handles.inputGroup}`} placeholder="Nome" value={name} onChange={e => setName(e.target.value)} />
 						</div>
 						<div className={`${handles.formGroup}`}>
-							<label className={`${handles.labelGroup}`}>Email:</label>
-							<input className={`${handles.inputGroup}`} placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
+							<label className={`${handles.labelGroup}`}>E-mail:</label>
+							<input className={`${handles.inputGroup}`} placeholder="E-mail" value={email} onChange={e => setEmail(e.target.value)} />
 						</div>
 						<div className={`${handles.formGroup}`}>
 							<label className={`${handles.labelGroup}`}>Telefone:</label>
-							<input className={`${handles.inputGroup}`} placeholder="Telefone" value={phone} onChange={e => setPhone(e.target.value)} />
+							<InputMask className={`${handles.inputGroup}`} placeholder="Telefone" value={phone} mask='(99) 99999-9999' /*maskChar=""*/ onChange={e => setPhone(e.target.value)} />
 						</div>
 						<button className={`${handles.buttonGroup}`} onClick={handleSubmit}>Enviar</button>
 					</form>
