@@ -24,6 +24,7 @@ interface ILead {
   email: string;
   phone: string;
   dateLead: string;
+  formOrigin: string;
   dateClient?: string;
   favoriteCategory?: string;
 }
@@ -56,6 +57,7 @@ class UsersTable extends Component<Props> {
         name: item.name,
         email: item.email,
         phone: item.phone,
+        formOrigin: item.formOrigin,
         dateLead: new Date(item.dateLead).toLocaleDateString(),
         dateClient: item.dateClient ? (new Date(item.dateClient).toLocaleDateString()) : '-',
         // favoriteCategory: favoriteCategory,
@@ -144,6 +146,12 @@ class UsersTable extends Component<Props> {
         },
         dateLead: {
           title: 'Data de cadastro',
+          cellRenderer: ({ cellData }: any) => {
+            return <span className={`ws-normal ${fontSize}`}>{cellData}</span>
+          },
+        },
+        formOrigin: {
+          title: 'Origem',
           cellRenderer: ({ cellData }: any) => {
             return <span className={`ws-normal ${fontSize}`}>{cellData}</span>
           },
