@@ -1,8 +1,58 @@
 {
     "store.custom#quem-somos": {
-        "blocks": []
-    }
-    }
+        "blocks": ["flex-layout.row#main-container"]
+    
+},
+"flex-layout.row#main-container": {
+  "children": [
+    "flex-layout.col#image",
+    "flex-layout.col#spacer",
+    "flex-layout.col#text-about-us"
+  ],
+  
+  "props" : {
+      "blockClass": "main-container",
+      "rowGap" : "2"
+  }
+},
+"flex-layout.col#image" : {
+    "children":[
+        "image#about-us"
+],
+"props": {
+    "width": "45%"
+}
+},
+"flex-layout.col#text-about-us": {
+  "children": [
+    "rich-text#about-title",
+    "rich-text#about-content"
+  ],
+    "props": {
+    "preventVerticalStretch": true,
+    "width": "45%"
+  }
+},
+"rich-text#about-title": {
+  "props": {
+    "text":
+    "# a corebiz"
+  }
+},
+"rich-text#about-content": {
+  "props": {
+    "text":
+    ".o Corebiz Group se posiciona como uma empresa única, capaz de oferecer todo o diferencial necessário para melhorar a performance e lucratividade de uma loja virtual. Com escritório no Brasil, México, Argentina e projetos em mais de 20 países, nos destacamos como uma das maiores agências de e-commerce da América Latina. Temos como missão rentabilizar continuamente os negócios dos nossos clientes, por meio de uma estratégia única, baseada 100% em Marketing Cognitivo, experiência do usuário e tecnologia. Somos mais que uma agência de marketing, somos especializados em oferecer soluções completas em marketing digital focados em Omnichannel & Omnicontext. Com a  experiência e conhecimento, ajudamos a fortalece marcas e impulsionar vendas de todos os segmentos, nos moldamos para entender ainda melhor nosso público-alvo."
+      }
+},
+"image#about-us": {
+  "props": {
+    "src": "https://www.corebiz.ag/wp-content/uploads/2020/06/about-intro-image.jpg",
+    "maxHeight": "600px"
+  }
+}
+}  
+
      
     
     

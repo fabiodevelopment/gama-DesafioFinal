@@ -5,6 +5,7 @@
 	margin: 100px auto 150px;
 	max-width: 1080px;
 }
+
 .autoCompleteOuterContainer--search-bar {
 	:global(.vtex-input-prefix__group) {
 		border: none;
@@ -74,10 +75,11 @@
 	}
 .content--product-description {
 	margin: 2rem auto 1rem;
-	padding: 1rem;
-	background-color: #000000;
+	//padding: 1rem;
+	//background-color: #000000;
 	border-radius: 3px;
 	line-height: 1.5rem;
+	color: white;
 }
 
 .buyButtonText {
