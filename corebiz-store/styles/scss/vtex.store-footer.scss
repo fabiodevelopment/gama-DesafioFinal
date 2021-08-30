@@ -82,6 +82,12 @@
 			display: block;
 			width: 100%;
 			margin-bottom: 60px;
+
+			:global(.vtex-rich-text-0-x-container--textCertificados) {
+				margin-left: 30px;
+			}
+	
+
 			:global(.vtex-flex-layout-0-x-flexRowContent--certificatesContent) {
 				@include breakpoint('mobile') {
 					:global(.vtex-flex-layout-0-x-stretchChildrenWidth) {
@@ -93,6 +99,7 @@
 			}
 		}
 
+		
 		:global(.vtex-rich-text-0-x-paragraph) {
 			font-size: 14px;
 			padding: 0;

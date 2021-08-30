@@ -414,6 +414,7 @@
 	},
 	"rich-text#certificatesTitle": {
 		"props": {
+			"blockClass": "textCertificados",
 			"text": "##### CERTIFICADOS"
 		}
 	},
