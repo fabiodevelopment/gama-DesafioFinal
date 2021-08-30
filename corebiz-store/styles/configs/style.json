@@ -79,7 +79,7 @@
     "hover-background": {
       "action-primary": "#f1c233",
       "action-secondary": "#dbe9fd",
-      "emphasis": "#dd1659",
+      "emphasis": "#f1c233",
       "success": "#8bc34a",
       "success--faded": "#eafce3",
       "danger": "#e13232",
@@ -95,7 +95,7 @@
     "active-background": {
       "action-primary": "#f1c233",
       "action-secondary": "#dbe9fd",
-      "emphasis": "#dd1659",
+      "emphasis": "#f1c233",
       "success": "#8bc34a",
       "success--faded": "#eafce3",
       "danger": "#ff4c4c",
@@ -112,7 +112,7 @@
       "action-primary": "#f1c233",
       "action-secondary": "#eef3f7",
       "link": "#f1c233",
-      "emphasis": "#f71963",
+      "emphasis": "#f1c233",
       "disabled": "#979899",
       "success": "#8bc34a",
       "success--faded": "#eafce3",
@@ -133,7 +133,7 @@
       "action-primary": "#f1c233",
       "action-secondary": "#dbe9fd",
       "link": "#f1c233",
-      "emphasis": "#dd1659",
+      "emphasis": "#f1c233",
       "success": "#8bc34a",
       "success--faded": "#eafce3",
       "danger": "#e13232",
@@ -143,7 +143,7 @@
     },
     "active-text": {
       "link": "#f1c233",
-      "emphasis": "#dd1659",
+      "emphasis": "#f1c233",
       "success": "#8bc34a",
       "success--faded": "#eafce3",
       "danger": "#ff4c4c",
@@ -154,7 +154,7 @@
     "border": {
       "action-primary": "#f1c233",
       "action-secondary": "#eef3f7",
-      "emphasis": "#f71963",
+      "emphasis": "#f1c233",
       "disabled": "#e3e4e6",
       "success": "#8bc34a",
       "success--faded": "#eafce3",
@@ -171,7 +171,7 @@
     "hover-border": {
       "action-primary": "#f1c233",
       "action-secondary": "#dbe9fd",
-      "emphasis": "#dd1659",
+      "emphasis": "#f1c233",
       "success": "#8bc34a",
       "success--faded": "#eafce3",
       "danger": "#e13232",
@@ -187,7 +187,7 @@
     "active-border": {
       "action-primary": "#f1c233",
       "action-secondary": "#dbe9fd",
-      "emphasis": "#dd1659",
+      "emphasis": "#f1c233",
       "success": "#8bc34a",
       "success--faded": "#eafce3",
       "danger": "#ff4c4c",

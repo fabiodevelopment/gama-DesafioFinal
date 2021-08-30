@@ -2,22 +2,26 @@ import React, { Component } from 'react'
 import { Table } from 'vtex.styleguide'
 import axios from 'axios'
 import { withRuntimeContext } from 'vtex.render-runtime'
+import workspaceName from '../workspaceName'
 
 interface Props {
   runtime: any
 }
 
-// interface IOrder {
-//   orderId: string;
-// }
+interface IOrder {
+  orderId: string;
+}
 
-// interface IItem {
-//   additionalInfo: {
-//     categories: [{
-//       name: string
-//     }]
-//   }
-// }
+interface IItem {
+  additionalInfo: {
+    categories: [{
+      name: string
+    }, {
+      name: string
+    }?]
+  },
+  quantity: number
+}
 
 interface ILead {
   name: string;
@@ -34,6 +38,7 @@ class UsersTable extends Component<Props> {
     this.state = {
       items: [],
       tableDensity: 'low',
+      isLoading: true,
     }
   }
 
@@ -41,31 +46,28 @@ class UsersTable extends Component<Props> {
     const leads = await this.getLeads() as ILead[];
     const newLeads: ILead[] = [];
     
-    leads.map(async item => {
-      // this.getCategories(item);
-        
-        // const favoriteCategory = await this.getFavoriteCategory(categories!)
-        // console.log(favoriteCategory)
-
-      // console.log(categories.length)
-
-      // const favoriteCategory = await this.getFavoriteCategory(categories);
-
-      // console.log(favoriteCategory)
-
-      newLeads.push({
-        name: item.name,
-        email: item.email,
-        phone: item.phone,
-        formOrigin: item.formOrigin,
-        dateLead: new Date(item.dateLead).toLocaleDateString(),
-        dateClient: item.dateClient ? (new Date(item.dateClient).toLocaleDateString()) : '-',
-        // favoriteCategory: favoriteCategory,
+    Promise.all(
+      leads.map(async item => {
+        const categories = await this.getCategories(item);
+          
+        const favoriteCategory = await this.getFavoriteCategory(categories);
+  
+        newLeads.push({
+          name: item.name,
+          email: item.email,
+          phone: item.phone,
+          formOrigin: item.formOrigin,
+          dateLead: new Date(item.dateLead).toLocaleDateString(),
+          dateClient: item.dateClient ? (new Date(item.dateClient).toLocaleDateString()) : '-',
+          favoriteCategory: favoriteCategory,
+        })
       })
-    })
-    this.setState({ 
-      items: newLeads
-    })
+    ).then(() => {
+      this.setState({
+        items: newLeads, 
+        isLoading: false
+      });
+    }) 
   }
 
   private getLeads = async ()  => {
@@ -73,36 +75,54 @@ class UsersTable extends Component<Props> {
     return response.data.Items;
   }
 
-  // private getCategories = async (item: ILead) => {
-  //   if(!item.dateClient){
-  //     return ['-'];
-  //   } else {
+  private getCategories = async (item: ILead) => {
+    if(item.dateClient){
+      const orders = await this.getOrders(item.email);
+      const items = await this.getItems(orders);
+      return Promise.all(items).then((items) => {
+        const categories = this.getCategory(items);
+        return categories;
+      })
+    } else {
+      return ['-'];
+    }
+  }
 
-  //   }
-  // }
+  private getOrders = async (email: string) => {
+    const response = await axios.get(`https://${workspaceName}hiringcoders202112.myvtex.com/api/oms/pvt/orders?q=${email}`);
+    return response.data.list as IOrder[];
+  }
 
-  // private getOrders = async (email: string) => {
-  //   const response = await axios.get(`https://grupo12antonio--hiringcoders202112.myvtex.com/api/oms/pvt/orders?q=${email}`);
-  //   return response.data.list as IOrder[];
-  // }
+  private getItems = async (orders: IOrder[]) => {
+    return orders.map(async ({orderId})=> {
+      const response = await axios.get(`https://${workspaceName}hiringcoders202112.myvtex.com/api/oms/pvt/orders/${orderId}`);
+      return response.data.items as IItem[];
+    })
+  }
 
-  // private getItems = async (orderId: string) => {
-  //   const response = await axios.get(`https://grupo12antonio--hiringcoders202112.myvtex.com/api/oms/pvt/orders/${orderId}`);
-  //   return response.data.items as [];
-  // }
+  private getCategory = (itemsA: IItem[][]) => {
+    const items = itemsA.reduce((acc, val) => acc.concat(val), []);
+    return items.map((item) => {
+      const info = item.additionalInfo;
+      const category = info.categories[1] ?
+      info.categories[1].name :
+      info.categories[0].name;
 
-  // private getCategory = (item: IItem) => {
-  //   return item.additionalInfo.categories[0].name as string;
-  // }
+      const quant = item.quantity;
+      const categories = [];
+      for (let index = 0; index < quant; index++) {
+        categories.push(category)
+      }
+      return categories;
+    }).reduce((acc, val) => acc.concat(val), []);
+  }
 
-  // private getFavoriteCategory = async (cats: string[]) => {
-  //   const fav = cats.sort((a,b) =>
-  //   cats.filter(v => v===a).length
-  //   - cats.filter(v => v===b).length
-  //   ).pop();
-  //   console.log(fav)
-  //   return fav;
-  // }
+  private getFavoriteCategory = async (cats: string[]) => {
+    return cats.sort((a,b) =>
+    cats.filter(v => v===a).length
+    - cats.filter(v => v===b).length
+    ).pop();
+  }
 
   private getSchema() {
     const { tableDensity }: any = this.state;
@@ -162,12 +182,12 @@ class UsersTable extends Component<Props> {
             return <span className={`ws-normal ${fontSize}`}>{cellData}</span>
           },
         },
-        // favoriteCategory: {
-        //   title: 'Categoria favorita',
-        //   cellRenderer: ({ cellData }: any) => {
-        //     return <span className={`ws-normal ${fontSize}`}>{cellData}</span>
-        //   },
-        // },
+        favoriteCategory: {
+          title: 'Categoria favorita',
+          cellRenderer: ({ cellData }: any) => {
+            return <span className={`ws-normal ${fontSize}`}>{cellData}</span>
+          },
+        },
       },
     }
   }
@@ -175,12 +195,13 @@ class UsersTable extends Component<Props> {
   public render() {
     const {
       items,
+      isLoading,
       tableDensity,
     }: any = this.state
 
     return (
       <div>
-        {items.length > 0 ? 
+        {!isLoading ? 
         (<Table
           fullWidth
           updateTableKey={tableDensity}

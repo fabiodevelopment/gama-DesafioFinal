@@ -1,0 +1,25 @@
+.orderPlacedHeader {
+    // :global(.vtex-flex-layout-0-x-flexColChild) {
+        :global(.vtex-button) {
+            background-color:#f1c233;
+            border: none;
+            color: black;
+            :global(.vtex-button__label) {
+                color: black;
+            }
+        }
+    // }
+    
+}
+.noticeListItem {
+    :global(.vtex-button){
+        color: black
+    }
+}
+:global(.vtex-order-placed-2-x-noticesList) {
+    background-color: transparent;
+}
+
+:global(.vtex-order-placed-2-x-section--bank-invoice) {
+    color: white;
+}

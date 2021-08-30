@@ -3,14 +3,10 @@ import { useCssHandles } from 'vtex.css-handles';
 import axios from 'axios';
 import InputMask from 'react-input-mask';
 
-// import { Container, Button, Form } from 'react-bootstrap';
-
-interface CadastroProps {}
-
 const CSS_HANDLES = ['cadastroLead', 'formGroup', 'modalTitle', 'modalSubTitle', 'labelGroup', 'inputGroup', 'buttonGroup', 'modalOverlay', 'error', 'success', 'modalImage', 'modalForm', 'modalClose'] as const
 
 
-const Cadastro: StorefrontFunctionComponent<CadastroProps> = ({ }) => {
+const CadastroPopUp: StorefrontFunctionComponent = () => {
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [phone, setPhone] = useState('');
@@ -88,15 +84,15 @@ const Cadastro: StorefrontFunctionComponent<CadastroProps> = ({ }) => {
 						{ success ? <p className={`${handles.success}`} >Cadastrado realizado com sucesso</p> : ''}
 						<div className={`${handles.formGroup}`}>
 							<label className={`${handles.labelGroup}`}>Nome:</label>
-							<input className={`${handles.inputGroup}`} placeholder="Nome" value={name} onChange={e => setName(e.target.value)} />
+							<input className={`${handles.inputGroup}`} placeholder="Preencha com o seu Nome" value={name} onChange={e => setName(e.target.value)} />
 						</div>
 						<div className={`${handles.formGroup}`}>
 							<label className={`${handles.labelGroup}`}>E-mail:</label>
-							<input className={`${handles.inputGroup}`} placeholder="E-mail" value={email} onChange={e => setEmail(e.target.value)} />
+							<input className={`${handles.inputGroup}`} placeholder="Insira seu melhor E-mail" value={email} onChange={e => setEmail(e.target.value)} />
 						</div>
 						<div className={`${handles.formGroup}`}>
 							<label className={`${handles.labelGroup}`}>Telefone:</label>
-							<InputMask className={`${handles.inputGroup}`} placeholder="Telefone" value={phone} mask='(99) 99999-9999' /*maskChar=""*/ onChange={e => setPhone(e.target.value)} />
+							<InputMask className={`${handles.inputGroup}`} placeholder="Insira seu Telefone Celular" value={phone} mask='(99) 99999-9999' /*maskChar=""*/ onChange={e => setPhone(e.target.value)} />
 						</div>
 						<button className={`${handles.buttonGroup}`} onClick={handleSubmit}>Enviar</button>
 					</form>
@@ -110,11 +106,4 @@ const Cadastro: StorefrontFunctionComponent<CadastroProps> = ({ }) => {
 	)
 }
 
-Cadastro.schema = {
-	title: 'editor.cadastro.title',
-	description: 'editor.cadastro.description',
-	type: 'object',
-	properties: {},
-}
-
-export default Cadastro
+export default CadastroPopUp

@@ -2,6 +2,11 @@
   
 .menuIcon--menu-header {
   @include breakpoint('mobile') {
-    fill: #fff!important;
+    margin-top: 10px;
+    color: #fff;
   }
+}
+
+.closeIcon {
+  color: white;
 }

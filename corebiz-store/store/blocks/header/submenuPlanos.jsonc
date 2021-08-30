@@ -1,0 +1,59 @@
+{
+  "vtex.menu@2.x:menu#submenuCategories": {
+    "props": {
+      "experimentalOptimizeRendering": true,
+      "items": [
+        {
+          "id": "menu-item-business-starter",
+          "type": "category",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "categoryId": "19",
+            "type": "internal",
+            "noFollow": false,
+            "tagTitle": "Business Starter",
+            "text": "Business"
+          }
+        },
+        {
+          "id": "menu-item-standard",
+          "type": "category",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "categoryId": "21",
+            "type": "internal",
+            "noFollow": false,
+            "tagTitle": "Business Standard"
+          }
+        },
+        {
+          "id": "menu-item-plus",
+          "type": "category",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "categoryId": "22",
+            "type": "internal",
+            "noFollow": false,
+            "tagTitle": "Business Plus"
+          }
+        },
+        {
+          "id": "menu-item-enterprise",
+          "type": "category",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "categoryId": "23",
+            "type": "internal",
+            "noFollow": false,
+            "tagTitle": "Business Enterprise"
+          }
+        }
+      ],
+      "blockClass": "menu-item"
+    }
+  }
+}

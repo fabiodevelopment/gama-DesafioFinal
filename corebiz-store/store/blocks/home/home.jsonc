@@ -10,7 +10,7 @@
 			"rich-text#title-brand",
       		"flex-layout.row#slider-brands",
 			// "flex-layout.row#about-us-container",
-			"cadastro"
+			"cadastro-pop-up"
 		]
 	},
   // Linha das Abas : Contem Lista de itens do menu e Conteudo das abas
