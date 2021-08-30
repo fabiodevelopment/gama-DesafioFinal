@@ -1,9 +1,9 @@
 {
   "vendor": "hiringcoders202112",
-  "name": "app-cadastro",
+  "name": "corebiz-register",
   "version": "0.0.1",
-  "title": "Cadastro",
-  "description": "Cadastro component",
+  "title": "Register",
+  "description": "Register component",
   "defaultLocale": "pt-BR",
   "builders": {
     "messages": "1.x",
