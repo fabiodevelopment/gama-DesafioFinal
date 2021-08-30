@@ -14,7 +14,10 @@
 	},
 	//Mobile
 	"footer-layout.mobile": {
-		"children": []
+		"children": [
+			"flex-layout.row#footerSection",
+			"flex-layout.row#footerLogos"
+		]
 	},
 	//Section BG
 	"flex-layout.row#footerSection": {
@@ -424,7 +427,7 @@
 	},
 	"image#certificate1": {
 		"props": {
-			"src": "assets/footer/certificationEbitNielsen.png",
+			"src": "assets/footer/certificationSSL.png",
 			"maxHeight": 60
 		}
 	},

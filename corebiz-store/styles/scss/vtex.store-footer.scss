@@ -19,13 +19,15 @@
 			top: 100px;
 			bottom: 135px;
 			width: 50%;
+			@include breakpoint('mobile') {
+				display: none;
+			}
 		}
 		
 	}
 	:global(.vtex-flex-layout-0-x-flexCol--footerContainer) {
 		background-color: #191919;
 		margin: 0 auto 0;
-		// min-height: 700px;
 		padding: 0;
 		display: block;
 		z-index: 99;
@@ -33,29 +35,57 @@
 		:global(.vtex-flex-layout-0-x-flexRowContent) {
 			padding: 20px;
 		}
-
+		:global(.vtex-rich-text-0-x-container) {
+			:global(.vtex-rich-text-0-x-wrapper) {
+				@include breakpoint('mobile') {
+					width: 100%;
+					text-align: center;
+				}
+			}
+		}
 		:global(.vtex-flex-layout-0-x-flexRow--newsMedia){
-			// background-color:red;
 			display: block;
 			width: 100%;
 			margin-bottom: 30px;
 			:global(.vtex-flex-layout-0-x-flexRow--mediaIcons) {
 				width: 226px;
 				margin-left: -20px;
+				@include breakpoint('mobile') {
+					width: 100%;
+					margin-left: 0px;
+					:global(.vtex-flex-layout-0-x-flexRowContent--mediaIcons) {
+						display: flex;
+						flex-direction: row;
+					}
+					
+					:global(.vtex-flex-layout-0-x-flexColChild) {
+						width: 60px;
+					}
+					:global(.vtex-flex-layout-0-x-flexCol) {
+						width: 60px;
+					}	
+				}
 			}
 		}
 		:global(.vtex-flex-layout-0-x-flexRow--siteMap){
-			// background-color: blue;
 			display: block;
 			width: 100%;
 			margin-bottom: 30px;
 		}
 		
 		:global(.vtex-flex-layout-0-x-flexRow--paymentCertificates){
-			// background-color: green;
 			display: block;
 			width: 100%;
 			margin-bottom: 60px;
+			:global(.vtex-flex-layout-0-x-flexRowContent--certificatesContent) {
+				@include breakpoint('mobile') {
+					:global(.vtex-flex-layout-0-x-stretchChildrenWidth) {
+						margin: 30px auto;
+						display: block;
+						text-align: center;
+					}
+				}
+			}
 		}
 
 		:global(.vtex-rich-text-0-x-paragraph) {
@@ -66,11 +96,15 @@
 		:global(.vtex-flex-layout-0-x-flexColChild) {
 			height: auto !important;
 			padding: 10px 0 10px;
+			
 			:global(.vtex-store-link-0-x-label--linksFooter) {
-				font-family: Arial, Helvetica, sans-serif;
+				font-family: 'Poppins-Regular', sans-serif;
 				font-size: 15px;
 				margin-bottom: 25px;
 				display: block;
+				@include breakpoint('mobile') {
+					text-align: center;
+				}
 				&::before {
 					content: '-';
 					display: inline-block;
@@ -97,6 +131,17 @@
 			:global(.vtex-rich-text-0-x-paragraph) {
 				margin-top: 0;
 			}
+			@include breakpoint('mobile') {
+				text-align: center;
+				:global(.vtex-rich-text-0-x-wrapper) {
+					width: 100%;
+					margin-top: 20px;
+
+				}
+				:global(.vtex-rich-text-0-x-paragraph) {
+					text-align: center;
+				}
+			}
 		}
 		:global(.vtex-flex-layout-0-x-flexColChild) {
 			padding: 0;
@@ -110,7 +155,14 @@
 		min-height: 135px;
 		z-index: 99;
 		display: block;
+		@include breakpoint('mobile') { 
+			text-align: center;
+		}
+		:global(.vtex-rich-text-0-x-container--richTextFooterRow4) {
+			width: 100%;
+			display: block;
+			text-align: center;
+		}
 	}
 
 }
-
