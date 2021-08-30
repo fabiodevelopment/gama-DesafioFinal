@@ -89,3 +89,15 @@
 .imageElement--opacity-banner {
 	filter: brightness(30%)
 }
+
+//search
+.searchBarInnerContainer{
+	@include breakpoint('mobile') {
+		background-color: black;
+		padding: 0 20px 10px 20px;
+		position: fixed;
+		top: 64px;
+		left: 0;
+		right: 0;
+	}
+}

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Table } from 'vtex.styleguide'
 import axios from 'axios'
 import { withRuntimeContext } from 'vtex.render-runtime'
+import workspaceName from '../workspaceName'
 
 interface Props {
   runtime: any
@@ -15,8 +16,11 @@ interface IItem {
   additionalInfo: {
     categories: [{
       name: string
-    }]
-  }
+    }, {
+      name: string
+    }?]
+  },
+  quantity: number
 }
 
 interface ILead {
@@ -46,7 +50,7 @@ class UsersTable extends Component<Props> {
       leads.map(async item => {
         const categories = await this.getCategories(item);
           
-        const favoriteCategory = await this.getFavoriteCategory(categories)
+        const favoriteCategory = await this.getFavoriteCategory(categories);
   
         newLeads.push({
           name: item.name,
@@ -72,13 +76,11 @@ class UsersTable extends Component<Props> {
   }
 
   private getCategories = async (item: ILead) => {
-    // const categories = []; 
     if(item.dateClient){
       const orders = await this.getOrders(item.email);
       const items = await this.getItems(orders);
       return Promise.all(items).then((items) => {
         const categories = this.getCategory(items);
-        console.log(categories);
         return categories;
       })
     } else {
@@ -87,13 +89,13 @@ class UsersTable extends Component<Props> {
   }
 
   private getOrders = async (email: string) => {
-    const response = await axios.get(`https://grupo12antonio--hiringcoders202112.myvtex.com/api/oms/pvt/orders?q=${email}`);
+    const response = await axios.get(`https://${workspaceName}hiringcoders202112.myvtex.com/api/oms/pvt/orders?q=${email}`);
     return response.data.list as IOrder[];
   }
 
   private getItems = async (orders: IOrder[]) => {
     return orders.map(async ({orderId})=> {
-      const response = await axios.get(`https://grupo12antonio--hiringcoders202112.myvtex.com/api/oms/pvt/orders/${orderId}`);
+      const response = await axios.get(`https://${workspaceName}hiringcoders202112.myvtex.com/api/oms/pvt/orders/${orderId}`);
       return response.data.items as IItem[];
     })
   }
@@ -101,16 +103,25 @@ class UsersTable extends Component<Props> {
   private getCategory = (itemsA: IItem[][]) => {
     const items = itemsA.reduce((acc, val) => acc.concat(val), []);
     return items.map((item) => {
-      return item.additionalInfo.categories[0].name as string;
-    })
+      const info = item.additionalInfo;
+      const category = info.categories[1] ?
+      info.categories[1].name :
+      info.categories[0].name;
+
+      const quant = item.quantity;
+      const categories = [];
+      for (let index = 0; index < quant; index++) {
+        categories.push(category)
+      }
+      return categories;
+    }).reduce((acc, val) => acc.concat(val), []);
   }
 
   private getFavoriteCategory = async (cats: string[]) => {
-    const fav = cats.sort((a,b) =>
+    return cats.sort((a,b) =>
     cats.filter(v => v===a).length
     - cats.filter(v => v===b).length
     ).pop();
-    return fav;
   }
 
   private getSchema() {

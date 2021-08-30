@@ -45,19 +45,18 @@ const CadastroNewsletter: StorefrontFunctionComponent = () => {
 				<h2 className={`${handles.newsletterTitle}`}>Cadastre-se</h2>
 				<h3 className={`${handles.newsletterSubTitle}`}>Para receber notificações sobre novos produtos</h3>
 				<br />
+				
 				<form className={`${handles.newsletterForm}`}>
-					{ erro ? <p className={`${handles.error}`} >Ocorreu um erro. Tente novamente.</p> : ''}
-					{ success ? <p className={`${handles.success}`} >Cadastrado realizado com sucesso</p> : ''}
 					<div className={`${handles.formGroup}`}>
-						<label className={`${handles.labelGroup}`}>Nome:</label>
 						<input className={`${handles.inputGroup}`} placeholder="Nome" value={name} onChange={e => setName(e.target.value)} />
 					</div>
 					<div className={`${handles.formGroup}`}>
-						<label className={`${handles.labelGroup}`}>E-mail:</label>
 						<input className={`${handles.inputGroup}`} placeholder="E-mail" value={email} onChange={e => setEmail(e.target.value)} />
 					</div>
 					<button className={`${handles.buttonGroup}`} onClick={handleSubmit}>Enviar</button>
 				</form>
+				{ erro ? <p className={`${handles.error}`} >Ocorreu um erro. Tente novamente.</p> : ''}
+				{ success ? <p className={`${handles.success}`} >Cadastrado realizado com sucesso</p> : ''}
 			</div>
 		</>
 	)

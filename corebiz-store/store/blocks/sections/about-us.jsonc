@@ -1,0 +1,147 @@
+//Section valores e quem somos
+{
+    "store.custom#about-us": {
+        "blocks": ["flex-layout.row#valores"]
+    },
+     
+    "flex-layout.row#title-container":{
+        "props": {
+            "blockClass": "section-black"
+        },
+       "children":[
+           "flex-layout.col#titles"
+       ]
+    },
+    "flex-layout.col#titles":{
+       "children": [
+           "rich-text#h1", "rich-text#h2", "rich-text#p"
+       ],
+       "props":{
+        "horizontalAlign": "center",
+            "verticalAlign": "center",
+            "preventHorizontalStretch": true,
+            "preventVerticalStretch": true,
+            "blockClass": "titles"
+        }
+    },
+    "rich-text#h1": {
+        "props": {
+            "text": "# Who we are?"
+        }  
+    },
+    "rich-text#h2": {
+        "props": {
+            "text": "## from santa monica to corebiz"
+        }
+    },
+    "rich-text#p": {
+        "props": { 
+            "text": "Acreditamos em dados, acreditamos em um mundo onde tudo pode e deve ser mensurado. Acreditamos na tecnologia,acreditamos em uma constante busca por disrupção e acima de tudo acreditamos que devemos nos comunicar não apenas com consumidores mas sim com pessoas. Somos cognitvos, somos CoreBiz",
+            "blockClass": "paragrafo-quem-somos"
+        }  
+    }, 
+    "flex-layout.row#valores": {
+        "props": {
+            "blockClass": ["section-black","section-values"]
+        },
+        "children": [
+            "flex-layout.col#valores1",
+            "flex-layout.col#valores2",
+            "flex-layout.col#valores3",
+            "flex-layout.col#valores4"
+        ]
+    },
+    "flex-layout.col#valores1": {
+        "children": [
+            "image#valores1",
+            "rich-text#1"    
+        ],
+        "props":{
+            "horizontalAlign": "center",
+                "verticalAlign": "center",
+                "preventHorizontalStretch": true,
+                "preventVerticalStretch": true
+        }
+    },
+    "image#valores1": {
+        "props": {
+            "src": "assets/illustrations/illustration-one.png"
+        }
+    },
+    "rich-text#1": {
+        "props": {
+            "text": ".courage",
+            "textPosition": "center"
+        }
+    },
+    "flex-layout.col#valores2": {
+        "children": [
+            "image#valores2",
+            "rich-text#2"
+        ],
+        "props":{
+            "horizontalAlign": "center",
+                "verticalAlign": "center",
+                "preventHorizontalStretch": true,
+                "preventVerticalStretch": true
+        }
+    },
+    "image#valores2": {
+        "props": {
+            "src": "assets/illustrations/illustration-two.png",
+            "maxWidth": "100%"
+        }
+    },
+    "rich-text#2": {
+        "props": {
+            "text": ".innovation"
+        }
+    },
+    "flex-layout.col#valores3": {
+        "children": [
+            "image#valores3",
+            "rich-text#3"
+        ],
+        "props":{
+            "horizontalAlign": "center",
+                "verticalAlign": "center",
+                "preventHorizontalStretch": true,
+                "preventVerticalStretch": true
+        }
+    },
+    "image#valores3": {
+        "props": {
+            "src": "assets/illustrations/illustration-three.png",
+            "maxWidth": "100%"
+        }
+    },
+    "rich-text#3": {
+        "props": {
+            "text": ".determination"
+        }
+    },
+    "flex-layout.col#valores4": {
+        "children": [
+            "image#valores4",
+            "rich-text#4"
+        ],
+        "props":{
+            "horizontalAlign": "center",
+                "verticalAlign": "center",
+                "preventHorizontalStretch": true,
+                "preventVerticalStretch": true
+        }
+    },
+    "image#valores4": {
+        "props": {
+            "src": "assets/illustrations/illustration-four.png",
+            "maxWidth": "100%"
+        }
+    },
+    "rich-text#4": {
+        "props": {
+            "text": ".collaboration and agility"      
+        }
+    }
+}
+    //end

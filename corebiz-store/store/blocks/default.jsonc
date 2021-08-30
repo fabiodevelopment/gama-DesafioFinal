@@ -1,5 +1,8 @@
 {
   "store.orderplaced": {
+    "props": {
+      "blockClass": "opContainer"
+    },
     "blocks": [
       "order-placed",
       "change-lead"
