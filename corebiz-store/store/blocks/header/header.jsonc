@@ -87,8 +87,8 @@
       "drawer",
       "flex-layout.col#logo-mobile",
       // "flex-layout.col#spacer-mobile",
-      "login",
       "flex-layout.col#searchInput",
+      "login",
       "minicart.v2"
     ],
     "props": {

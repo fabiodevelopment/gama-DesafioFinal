@@ -1,6 +1,9 @@
 {
-  "cadastro": {
-    "component": "Cadastro"
+  "cadastro-pop-up": {
+    "component": "CadastroPopUp"
+  },
+  "cadastro-newsletter": {
+    "component": "CadastroNewsletter"
   },
   "change-lead": {
     "component": "ChangeLead"

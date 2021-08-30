@@ -3,14 +3,10 @@ import { useCssHandles } from 'vtex.css-handles';
 import axios from 'axios';
 import InputMask from 'react-input-mask';
 
-// import { Container, Button, Form } from 'react-bootstrap';
-
-interface CadastroProps {}
-
 const CSS_HANDLES = ['cadastroLead', 'formGroup', 'modalTitle', 'modalSubTitle', 'labelGroup', 'inputGroup', 'buttonGroup', 'modalOverlay', 'error', 'success', 'modalImage', 'modalForm', 'modalClose'] as const
 
 
-const Cadastro: StorefrontFunctionComponent<CadastroProps> = ({ }) => {
+const CadastroPopUp: StorefrontFunctionComponent = () => {
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [phone, setPhone] = useState('');
@@ -110,11 +106,4 @@ const Cadastro: StorefrontFunctionComponent<CadastroProps> = ({ }) => {
 	)
 }
 
-Cadastro.schema = {
-	title: 'editor.cadastro.title',
-	description: 'editor.cadastro.description',
-	type: 'object',
-	properties: {},
-}
-
-export default Cadastro
+export default CadastroPopUp

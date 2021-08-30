@@ -19,6 +19,18 @@
       "experimentalOptimizeRendering": true,
       "items": [
         {
+          "id": "menu-item-marketing",
+          "type": "category",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "categoryId": "9",
+            "type": "internal",
+            "noFollow": false,
+            "tagTitle": "Marketing"
+          }
+        },
+        {
           "id": "menu-item-implementacoes",
           "type": "category",
           "iconId": null,
@@ -73,20 +85,18 @@
           "id": "menu-item-planos",
           "type": "category",
           "iconId": null,
-          "highlight": false,
+          "highlight": true,
           "itemProps": {
             "categoryId": "2",
             "type": "internal",
             "noFollow": false,
-            "tagTitle": "Planos"
+            "tagTitle": "Planos",
+            "text": ".planos"
           }
         }
       ],
       "blockClass": "menu-item-category"
-    },
-    "children": [
-      "menu-item#marketing"
-    ]
+    }
   },
   "menu-item#marketing": {
     "props": {
