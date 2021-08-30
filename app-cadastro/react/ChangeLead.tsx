@@ -8,11 +8,11 @@ const ChangeLead: StorefrontFunctionComponent = (props) => {
   
   useEffect(() => {
     try {
-      updateLead();
+      setTimeout(updateLead, 1500);
     } catch (error) {
       console.error(error);
     }
-  })
+  },[])
 
   async function updateLead() {
     const messages = await axios.get(`https://${workspaceName}hiringcoders202112.myvtex.com/api/oms/pvt/orders/${order}-01/conversation-message`);
