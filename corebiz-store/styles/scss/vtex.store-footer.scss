@@ -78,6 +78,8 @@
 		:global(.vtex-flex-layout-0-x-flexRow--paymentCertificates){
 			:global(.vtex-flex-layout-0-x-flexRowContent--certificatesContent) {
 				padding: 0;
+				margin-top: -30px;
+				margin-bottom: -30px;
 			}
 			display: block;
 			width: 100%;
@@ -85,9 +87,13 @@
 
 			:global(.vtex-rich-text-0-x-container--textCertificados) {
 				margin-left: 30px;
+
+				@include breakpoint('mobile') {
+					margin-top: 30px;
+					margin-left: 0;
+				}
 			}
 	
-
 			:global(.vtex-flex-layout-0-x-flexRowContent--certificatesContent) {
 				@include breakpoint('mobile') {
 					:global(.vtex-flex-layout-0-x-stretchChildrenWidth) {
