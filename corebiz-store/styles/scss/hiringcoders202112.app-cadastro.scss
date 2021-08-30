@@ -1,5 +1,8 @@
 @import './global/variables';
 
+
+// PopUp
+
 .modalOverlay {
 	display: none;
 	position: fixed;
@@ -20,7 +23,7 @@
 }
 .cadastroLead {
 	display: none;
-	background-color: white;
+	background-color: #191919;
 	height: 520px;
 	left: 50%;
 	margin-left: -400px;
@@ -47,10 +50,12 @@
 
 	.modalTitle {
 		text-align: center;
+		color: white;
 	}
 	.modalSubTitle {
+		color: white;
 		text-align: center;
-		font-size: 12px;
+		font-size: 14px;
 	}
 	.modalImage {
 		width: 50%;
@@ -69,6 +74,7 @@
 		}
 	}
 	.modalClose {
+		color: white;
 		border: none;
 		background-color: transparent;
 		font-size: 42px;
@@ -85,6 +91,7 @@
 		height: 80px;	
 	}
 	.labelGroup {
+		color: white;
 		display:block;
 		width: 100%;
 		margin-bottom: 5px;
@@ -99,7 +106,7 @@
 	.inputGroup {
 		width: 100%;
 		height: 40px;
-		border-radius: 5px;
+		border-radius: 2px;
 		border: 0;
 		background-color: #424242;
 		padding: 4px 16px;
@@ -117,7 +124,7 @@
 		width: 100%;
 		border: none;
 		height: 40px;
-		border-radius: 5px;
+		border-radius: 2px;
 		cursor: pointer;
 		margin-top: 20px;
 	}
@@ -147,3 +154,106 @@
 	}
 }
 
+// NewsLetter
+
+.cadastroNewsletter {
+	padding-top: 30px;
+	width: 100%;
+	.newsletterTitle {
+		color: white;
+		display: inline;
+		margin-right: 15px;
+		text-transform: uppercase;
+		@include breakpoint('mobile') {
+			display: block;
+		}
+	}
+	.newsletterSubTitle {
+		color: white;
+		display: inline;
+		font-size: 14px;
+	}
+	.newsletterForm {
+		width: 95%;
+		margin-top: 35px;
+		display: flex;
+		@include breakpoint('mobile') {
+			width: 100%;
+			flex-direction: column;
+		}
+	}
+		
+	.formGroup {
+		display: flex;
+		flex-direction: column;
+		width: 37%;
+		padding-right: 10px;
+		box-sizing: border-box;
+		@include breakpoint('mobile') {
+			width: 100%;
+			padding-right: 0;
+		}
+	}
+
+	.inputGroup {
+		width: 100%;
+		height: 50px;
+		border-radius: 2px;
+		border: 0;
+		background-color: #272727;
+		padding: 4px 16px;
+		color: white;
+		box-sizing: border-box;
+		@include breakpoint('mobile') {
+			width: 100%;
+			margin-bottom: 10px;
+		}
+	}
+	.buttonGroup {
+		background-color: transparent;
+		color: white;
+		border: 2px solid #3b3b3b;
+		width: 25%;
+		height: 50px;
+		padding-right: 40px;
+		line-height: 3;
+		font-weight: bold;
+		text-transform: uppercase;
+		border-radius: 2px;
+		cursor: pointer;
+		background: url('assets/footer/sendArrow.png') 80% 10px no-repeat;
+		@include breakpoint('mobile') {
+			width: 100%;
+		}
+	}
+	.error {
+		background-color: #f44336;
+		border-radius: 4px;
+		border: 0;
+		color: #fff;
+		display: block;
+		font-weight: 500;
+		margin: 10px 0 0 0;
+		padding: 12px 8px;
+		text-align: center;
+		width: 94%;
+		@include breakpoint('mobile') {
+			width: 100%;
+		}
+	}
+	.success {
+		background-color: #4caf50;
+		border-radius: 4px;
+		border: 0;
+		color: #fff;
+		display: block;
+		font-weight: 500;
+		margin: 10px 0 0 0;
+		padding: 12px 8px;
+		text-align: center;
+		width: 94%;
+		@include breakpoint('mobile') {
+			width: 100%;
+		}
+	}
+}
