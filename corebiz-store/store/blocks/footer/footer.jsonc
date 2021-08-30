@@ -256,7 +256,7 @@
 			"label": "Trabalhe Conosco"
 		}
 	},
->>>>>>> fc0a9ea5bfa7b8c0c23332dd5c33910d0f423374
+
 	//Compras
 	"flex-layout.col#compras": {
 		"props": {
@@ -264,44 +264,6 @@
 		},
 		"children": [
 			"rich-text#compras",
-<<<<<<< HEAD
-      "link#meuPerfil",
-      "link#meusPedidos",
-      "link#carrinho"
-		]
-	},
-
-  "rich-text#compras": {
-    "props": {
-      "text": "##### COMPRAS"
-    }
-  },
-
-  "link#meuPerfil": {
-    "props": {
-      "blockClass": "linksFooter",
-      "src": "#",
-      "label": "Meu Perfil"
-    }
-  },
-
-  "link#meusPedidos": {
-    "props": {
-      "blockClass": "linksFooter",
-      "src": "#",
-      "label": "Meus Pedidos"
-    }
-  },
-
-  "link#carrinho": {
-    "props": {
-      "blockClass": "linksFooter",
-      "src": "#",
-      "label": "Carrinho"
-    }
-  },
-
-=======
 			"link#meuPerfil",
 			"link#meusPedidos",
 			"link#carrinho"
@@ -333,7 +295,7 @@
 			"label": "Carrinho"
 		}
 	},
->>>>>>> fc0a9ea5bfa7b8c0c23332dd5c33910d0f423374
+
 	//Suporte
 	"flex-layout.col#suporte": {
 		"props": {
@@ -341,44 +303,6 @@
 		},
 		"children": [
 			"rich-text#suporte",
-<<<<<<< HEAD
-      "link#prazosEntrega",
-      "link#meusOrcamento",
-      "link#privacidade"
-		]
-	},
-
-  "rich-text#suporte": {
-    "props": {
-      "text": "##### SUPORTE"
-    }
-  },
-
-  "link#prazosEntrega": {
-    "props": {
-      "blockClass": "linksFooter",
-      "src": "#",
-      "label": "Prazos de Entrega"
-    }
-  },
-
-  "link#meusOrcamento": {
-    "props": {
-      "blockClass": "linksFooter",
-      "src": "#",
-      "label": "Meus Orçamento"
-    }
-  },
-
-  "link#privacidade": {
-    "props": {
-      "blockClass": "linksFooter",
-      "src": "#",
-      "label": "Privacidade"
-    }
-  },
-
-=======
 			"link#prazosEntrega",
 			"link#meusOrcamento",
 			"link#privacidade"
@@ -410,7 +334,6 @@
 			"label": "Privacidade"
 		}
 	},
->>>>>>> fc0a9ea5bfa7b8c0c23332dd5c33910d0f423374
 	//Atendimento
 	"flex-layout.col#atendimento": {
 		"props": {
@@ -418,41 +341,6 @@
 		},
 		"children": [
 			"rich-text#atendimento",
-<<<<<<< HEAD
-      "link#comoComprar",
-      "link#faq",
-      "link#faleConosco"
-		]
-	},
-
-  "rich-text#atendimento": {
-    "props": {
-      "text": "##### ATENDIMENTO"
-    }
-  },
-  "link#comoComprar": {
-    "props": {
-      "blockClass": "linksFooter",
-      "src": "#",
-      "label": "Como Comprar"
-    }
-  },
-  "link#faq":{
-    "props": {
-      "blockClass": "linksFooter",
-      "src": "#",
-      "label": "FAQ"
-    }
-  },
-  "link#faleConosco": {
-    "props": {
-      "blockClass": "linksFooter",
-      "src": "#",
-      "label": "Fale Conosco"
-    }
-  },
-
-=======
 			"link#comoComprar",
 			"link#faq",
 			"link#faleConosco"
@@ -484,7 +372,7 @@
 			"label": "Fale Conosco"
 		}
 	},
->>>>>>> fc0a9ea5bfa7b8c0c23332dd5c33910d0f423374
+
 	//Bloco paymentCertificates
 	"flex-layout.row#paymentCertificates": {
 		"props": {
