@@ -122,7 +122,6 @@
   },
   "login": {
     "props": {
-      "blockClass": "exemploKa",
       "showIconProfile": true,
       "hideIconLabel": true,
       "blockClass":"loginLayout"
