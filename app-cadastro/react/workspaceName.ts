@@ -1,1 +1,0 @@
-export default "grupo12raquel";
