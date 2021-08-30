@@ -37,7 +37,6 @@
 			"flex-layout.row#newsMedia",
 			"flex-layout.row#siteMap",
 			"flex-layout.row#paymentCertificates"
-			// "rich-text"
 		]
 	},
 	// Bloco NewsMedia
@@ -55,7 +54,7 @@
 			"width": "84%"
 		},
 		"children": [
-			"rich-text"
+			"cadastro-newsletter"
 		]
 	},
 	"flex-layout.col#media": {
