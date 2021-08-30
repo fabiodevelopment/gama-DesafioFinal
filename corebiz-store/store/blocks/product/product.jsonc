@@ -2,7 +2,12 @@
 {
 	"store.product": {
 		"children": [
-			"condition-layout.product",
+			"condition-layout.product#marketing",
+			"condition-layout.product#migracoes",
+			"condition-layout.product#integracoes",
+			"condition-layout.product#implementacoes",
+			"condition-layout.product#omnichannel",
+			"condition-layout.product#planos",
 			"flex-layout.row#product-breadcrumb",
 			"flex-layout.row#product-main"
 		]
@@ -87,13 +92,6 @@
 		}
 	},
 
-	// banner conditional
-	"condition-layout.product": {
-		"children": [
-			"condition-layout.product#marketing"
-		]
-	},
-
 	// banner conditional marketing
 	"condition-layout.product#marketing": {
 		"props": {
@@ -104,15 +102,124 @@
 						"id": "9"
 					}
 				}
-			]
-		},
-		"children": [
-			"image#marketing-banner"
-		]
+			],
+			"Then":"image#marketing-banner"
+		}
 	},
 	"image#marketing-banner": {
 		"props": {
 			"src": "assets/banner/banner-page-marketing-performance.png",
+			"width": "100%",
+			"blockClass": ["cover", "opacity-banner"]
+		}
+	},
+
+	// banner conditional migracoes
+	"condition-layout.product#migracoes": {
+		"props": {
+			"conditions": [
+				{
+					"subject": "categoryId",
+					"arguments": {
+						"id": "6"
+					}
+				}
+			],
+			"Then":"image#migracoes-banner"
+		}
+		
+	},
+	"image#migracoes-banner": {
+		"props": {
+			"src": "assets/banner/banner-page-migracoes.png",
+			"width": "100%",
+			"blockClass": ["cover", "opacity-banner"]
+		}
+	},
+
+	// banner conditional integracoes
+	"condition-layout.product#integracoes": {
+		"props": {
+			"conditions": [
+				{
+					"subject": "categoryId",
+					"arguments": {
+						"id": "7"
+					}
+				}
+			],
+			"Then":"image#integracoes-banner"
+		}
+	},
+	"image#integracoes-banner": {
+		"props": {
+			"src": "assets/banner/banner-page-integracoes.png",
+			"width": "100%",
+			"blockClass": ["cover", "opacity-banner"]
+		}
+	},
+
+	// banner conditional implementacoes
+	"condition-layout.product#implementacoes": {
+		"props": {
+			"conditions": [
+				{
+					"subject": "categoryId",
+					"arguments": {
+						"id": "5"
+					}
+				}
+			],
+			"Then":"image#implementacoes-banner"
+		}
+	},
+	"image#implementacoes-banner": {
+		"props": {
+			"src": "assets/banner/banner-page-implementacoes.png",
+			"width": "100%",
+			"blockClass": ["cover", "opacity-banner"]
+		}
+	},
+
+	// banner conditional omnichannel
+	"condition-layout.product#omnichannel": {
+		"props": {
+			"conditions": [
+				{
+					"subject": "categoryId",
+					"arguments": {
+						"id": "8"
+					}
+				}
+			],
+			"Then":"image#omnichannel-banner"
+		}
+	},
+	"image#omnichannel-banner": {
+		"props": {
+			"src": "assets/banner/banner-page-omnichannel.png",
+			"width": "100%",
+			"blockClass": ["cover", "opacity-banner"]
+		}
+	},
+
+	// banner conditional planos
+	"condition-layout.product#planos": {
+		"props": {
+			"conditions": [
+				{
+					"subject": "categoryId",
+					"arguments": {
+						"id": "2"
+					}
+				}
+			],
+			"Then":"image#planos-banner"
+		}
+	},
+	"image#planos-banner": {
+		"props": {
+			"src": "assets/banner/banner-page-planos.png",
 			"width": "100%",
 			"blockClass": ["cover", "opacity-banner"]
 		}
