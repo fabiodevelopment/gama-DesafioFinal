@@ -90,7 +90,8 @@
 	"image#facebook": {
 		"props": {
 			"src": "assets/footer/socialMidiaFacebook.png",
-			"maxHeight": 56
+			"maxHeight": 56,
+			"link": "#"
 		}
 	},
 	"flex-layout.col#instagram": {
@@ -102,7 +103,8 @@
 	"image#instagram": {
 		"props": {
 			"src": "assets/footer/socialMidiaInstagram.png",
-			"maxHeight": 56
+			"maxHeight": 56,
+			"link": "#"
 		}
 	},
 	"flex-layout.col#linkedin": {
@@ -114,7 +116,8 @@
 	"image#linkedin": {
 		"props": {
 			"src": "assets/footer/socialMidiaLinkedIn.png",
-			"maxHeight": 56
+			"maxHeight": 56,
+			"link": "#"
 		}
 	},
 	//Bloco SiteMap
@@ -166,7 +169,8 @@
 	"image#iconWhats": {
 		"props": {
 			"src": "assets/footer/contactWhatsApp.png",
-			"maxHeight": 60
+			"maxHeight": 60,
+			"link": "#"
 		}
 	},
 	"flex-layout.col#ajudaWhatsText": {
@@ -202,7 +206,8 @@
 	"image#iconMail": {
 		"props": {
 			"src": "assets/footer/contactEmail.png",
-			"maxHeight": 60
+			"maxHeight": 60,
+			"link": "#"
 		}
 	},
 	"flex-layout.col#ajudaMailText": {

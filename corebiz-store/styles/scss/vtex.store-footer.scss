@@ -78,8 +78,6 @@
 		:global(.vtex-flex-layout-0-x-flexRow--paymentCertificates){
 			:global(.vtex-flex-layout-0-x-flexRowContent--certificatesContent) {
 				padding: 0;
-				margin-top: -30px;
-				margin-bottom: -30px;
 			}
 			display: block;
 			width: 100%;
@@ -104,7 +102,6 @@
 				}
 			}
 		}
-
 		
 		:global(.vtex-rich-text-0-x-paragraph) {
 			font-size: 14px;
@@ -182,5 +179,4 @@
 			text-align: center;
 		}
 	}
-
 }
