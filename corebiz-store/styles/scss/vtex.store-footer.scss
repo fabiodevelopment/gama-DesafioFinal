@@ -38,22 +38,70 @@
 			// background-color:red;
 			display: block;
 			width: 100%;
+			margin-bottom: 30px;
+			:global(.vtex-flex-layout-0-x-flexRow--mediaIcons) {
+				width: 226px;
+				margin-left: -20px;
+			}
 		}
 		:global(.vtex-flex-layout-0-x-flexRow--siteMap){
 			// background-color: blue;
 			display: block;
 			width: 100%;
+			margin-bottom: 30px;
 		}
 		
 		:global(.vtex-flex-layout-0-x-flexRow--paymentCertificates){
 			// background-color: green;
 			display: block;
 			width: 100%;
+			margin-bottom: 60px;
 		}
 
+		:global(.vtex-rich-text-0-x-paragraph) {
+			font-size: 14px;
+			padding: 0;
+		}
+
+		:global(.vtex-flex-layout-0-x-flexColChild) {
+			height: auto !important;
+			padding: 10px 0 10px;
+			:global(.vtex-store-link-0-x-label--linksFooter) {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 15px;
+				margin-bottom: 25px;
+				display: block;
+				&::before {
+					content: '-';
+					display: inline-block;
+					margin-right: 5px;
+				
+				}
+			}
+		}
+
+		:global(.vtex-rich-text-0-x-link),
+		:global(.vtex-store-link-0-x-link--linksFooter) {
+			color: white;
+			text-decoration: none;
+		}
+		:global(.vtex-flex-layout-0-x-flexColChild),
 		:global(.vtex-flex-layout-0-x-flexColChild--footerContainer) {
 			height: auto!important;
 		}
+
+		:global(.vtex-flex-layout-0-x-flexRowContent) {
+			padding: 0 20px;
+		}
+		:global(.vtex-flex-layout-0-x-flexRow--ajudaBlock) {
+			:global(.vtex-rich-text-0-x-paragraph) {
+				margin-top: 0;
+			}
+		}
+		:global(.vtex-flex-layout-0-x-flexColChild) {
+			padding: 0;
+		}
+
 	}
 
 	:global(.vtex-flex-layout-0-x-flexRow--footerLogosSection) {

@@ -5,7 +5,6 @@
 			"footer-layout.mobile"
 		]
 	},
-
 	//Desk
 	"footer-layout.desktop": {
 		"children": [
@@ -13,12 +12,10 @@
 			"flex-layout.row#footerLogos"
 		]
 	},
-
 	//Mobile
 	"footer-layout.mobile": {
 		"children": []
 	},
-
 	//Section BG
 	"flex-layout.row#footerSection": {
 		"props": {
@@ -28,7 +25,6 @@
 			"flex-layout.col#footerContainer"
 		]
 	},
-
 	// Container
 	"flex-layout.col#footerContainer": {
 		"props": {
@@ -41,7 +37,6 @@
 			// "rich-text"
 		]
 	},
-
 	// Bloco NewsMedia
 	"flex-layout.row#newsMedia": {
 		"props": {
@@ -54,7 +49,7 @@
 	},
 	"flex-layout.col#newsletter": {
 		"props": {
-			"width": "70%"
+			"width": "84%"
 		},
 		"children": [
 			"rich-text"
@@ -62,27 +57,28 @@
 	},
 	"flex-layout.col#media": {
 		"props": {
-			"width": "30%"
+			"width": "16%"
 		},
 		"children": [
 			"rich-text#mediaTitle",
 			"flex-layout.row#mediaIcons"
 		]
 	},
-	"rich-text#mediaTitle":{
+	"rich-text#mediaTitle": {
 		"props": {
-			"text": "### NOSSAS MÍDIAS"
+			"text": "##### NOSSAS MÍDIAS"
 		}
 	},
 	"flex-layout.row#mediaIcons": {
-		"props":{},
+		"props": {
+			"blockClass": "mediaIcons"
+		},
 		"children": [
 			"flex-layout.col#facebook",
 			"flex-layout.col#instagram",
 			"flex-layout.col#linkedin"
 		]
 	},
-
 	"flex-layout.col#facebook": {
 		"props": {},
 		"children": [
@@ -90,11 +86,11 @@
 		]
 	},
 	"image#facebook": {
-    "props": {
-      "src": "assets/footer/socialMidiaFacebook.png",
-      "maxHeight": 60
-    }
-  },
+		"props": {
+			"src": "assets/footer/socialMidiaFacebook.png",
+			"maxHeight": 56
+		}
+	},
 	"flex-layout.col#instagram": {
 		"props": {},
 		"children": [
@@ -102,11 +98,11 @@
 		]
 	},
 	"image#instagram": {
-    "props": {
-      "src": "assets/footer/socialMidiaInstagram.png",
-      "maxHeight": 60
-    }
-  },
+		"props": {
+			"src": "assets/footer/socialMidiaInstagram.png",
+			"maxHeight": 56
+		}
+	},
 	"flex-layout.col#linkedin": {
 		"props": {},
 		"children": [
@@ -114,12 +110,11 @@
 		]
 	},
 	"image#linkedin": {
-    "props": {
-      "src": "assets/footer/socialMidiaLinkedIn.png",
-      "maxHeight": 60
-    }
-  },
-
+		"props": {
+			"src": "assets/footer/socialMidiaLinkedIn.png",
+			"maxHeight": 56
+		}
+	},
 	//Bloco SiteMap
 	"flex-layout.row#siteMap": {
 		"props": {
@@ -133,11 +128,10 @@
 			"flex-layout.col#atendimento"
 		]
 	},
-
 	//Ajuda
 	"flex-layout.col#ajuda": {
 		"props": {
-			"width": "28%"
+			"width": "36%"
 		},
 		"children": [
 			"rich-text#ajudaTitle",
@@ -147,20 +141,18 @@
 	},
 	"rich-text#ajudaTitle": {
 		"props": {
-			"text": "### PRECISANDO DE AJUDA?"
+			"text": "##### PRECISANDO DE AJUDA?"
 		}
 	},
-
 	"flex-layout.row#ajudaWhats": {
 		"props": {
-
+			"blockClass": "ajudaBlock"
 		},
 		"children": [
 			"flex-layout.col#ajudaWhatsIcon",
 			"flex-layout.col#ajudaWhatsText"
 		]
 	},
-
 	"flex-layout.col#ajudaWhatsIcon": {
 		"props": {
 			"width": "20%"
@@ -171,11 +163,10 @@
 	},
 	"image#iconWhats": {
 		"props": {
-      "src": "assets/footer/contactWhatsApp.png",
-      "maxHeight": 60
-    }
+			"src": "assets/footer/contactWhatsApp.png",
+			"maxHeight": 60
+		}
 	},
-
 	"flex-layout.col#ajudaWhatsText": {
 		"props": {
 			"width": "80%"
@@ -184,22 +175,20 @@
 			"rich-text#textoWhats"
 		]
 	},
-	"rich-text#textoWhats":{
+	"rich-text#textoWhats": {
 		"props": {
 			"text": "11 99999-9999\nvia WhatsApp das 9h as 18h\nRespondemos em ate 24 horas"
 		}
 	},
-
 	"flex-layout.row#ajudaMail": {
 		"props": {
-
+			"blockClass": "ajudaBlock"
 		},
 		"children": [
 			"flex-layout.col#ajudaMailIcon",
 			"flex-layout.col#ajudaMailText"
 		]
 	},
-
 	"flex-layout.col#ajudaMailIcon": {
 		"props": {
 			"width": "20%"
@@ -214,7 +203,6 @@
 			"maxHeight": 60
 		}
 	},
-	
 	"flex-layout.col#ajudaMailText": {
 		"props": {
 			"width": "80%"
@@ -223,52 +211,163 @@
 			"rich-text#textoMail"
 		]
 	},
-	"rich-text#textoMail":{
+	"rich-text#textoMail": {
 		"props": {
 			"text": "sac@corebiz.com.br\n De segunda a sexta"
 		}
 	},
-
 	//Institucional
 	"flex-layout.col#institucional": {
 		"props": {
 			"width": "16%"
 		},
 		"children": [
-			"rich-text"
+			"rich-text#institucional",
+			"link#quemSomos",
+			"link#nossosEscritorios",
+			"link#trabalheConosco"
 		]
 	},
-	
+	"rich-text#institucional": {
+		"props": {
+			"text": "##### INSTITUCIONAL"
+		}
+	},
+	"link#quemSomos": {
+		"props": {
+			"blockClass": "linksFooter",
+			"src": "#",
+			"label": "Quem Somos"
+		}
+	},
+	"link#nossosEscritorios": {
+		"props": {
+			"blockClass": "linksFooter",
+			"src": "#",
+			"label": "Nossos Escritório"
+		}
+	},
+	"link#trabalheConosco": {
+		"props": {
+			"blockClass": "linksFooter",
+			"src": "#",
+			"label": "Trabalhe Conosco"
+		}
+	},
 	//Compras
 	"flex-layout.col#compras": {
 		"props": {
 			"width": "16%"
 		},
 		"children": [
-			"rich-text"
+			"rich-text#compras",
+			"link#meuPerfil",
+			"link#meusPedidos",
+			"link#carrinho"
 		]
 	},
-
+	"rich-text#compras": {
+		"props": {
+			"text": "##### COMPRAS"
+		}
+	},
+	"link#meuPerfil": {
+		"props": {
+			"blockClass": "linksFooter",
+			"src": "#",
+			"label": "Meu Perfil"
+		}
+	},
+	"link#meusPedidos": {
+		"props": {
+			"blockClass": "linksFooter",
+			"src": "#",
+			"label": "Meus Pedidos"
+		}
+	},
+	"link#carrinho": {
+		"props": {
+			"blockClass": "linksFooter",
+			"src": "#",
+			"label": "Carrinho"
+		}
+	},
 	//Suporte
 	"flex-layout.col#suporte": {
 		"props": {
 			"width": "16%"
 		},
 		"children": [
-			"rich-text"
+			"rich-text#suporte",
+			"link#prazosEntrega",
+			"link#meusOrcamento",
+			"link#privacidade"
 		]
 	},
-
+	"rich-text#suporte": {
+		"props": {
+			"text": "##### SUPORTE"
+		}
+	},
+	"link#prazosEntrega": {
+		"props": {
+			"blockClass": "linksFooter",
+			"src": "#",
+			"label": "Prazos de Entrega"
+		}
+	},
+	"link#meusOrcamento": {
+		"props": {
+			"blockClass": "linksFooter",
+			"src": "#",
+			"label": "Meus Orçamento"
+		}
+	},
+	"link#privacidade": {
+		"props": {
+			"blockClass": "linksFooter",
+			"src": "#",
+			"label": "Privacidade"
+		}
+	},
 	//Atendimento
 	"flex-layout.col#atendimento": {
 		"props": {
 			"width": "16%"
 		},
 		"children": [
-			"rich-text"
+			"rich-text#atendimento",
+			"link#comoComprar",
+			"link#faq",
+			"link#faleConosco"
 		]
 	},
-
+	"rich-text#atendimento": {
+		"props": {
+			"text": "##### ATENDIMENTO"
+		}
+	},
+	"link#comoComprar": {
+		"props": {
+			"blockClass": "linksFooter",
+			"src": "#",
+			"label": "Como Comprar"
+		}
+	},
+	"link#faq": {
+		"props": {
+			"blockClass": "linksFooter",
+			"src": "#",
+			"label": "FAQ"
+		}
+	},
+	"link#faleConosco": {
+		"props": {
+			"blockClass": "linksFooter",
+			"src": "#",
+			"label": "Fale Conosco"
+		}
+	},
 	//Bloco paymentCertificates
 	"flex-layout.row#paymentCertificates": {
 		"props": {
@@ -279,7 +378,6 @@
 			"flex-layout.col#certificates"
 		]
 	},
-
 	"flex-layout.col#payment": {
 		"props": {
 			"width": "60%"
@@ -291,7 +389,7 @@
 	},
 	"rich-text#paymentTitle": {
 		"props": {
-			"text": "#### FORMAS DE PAGAMENTO"
+			"text": "##### FORMAS DE PAGAMENTO"
 		}
 	},
 	"image#paymentIcons": {
@@ -300,7 +398,6 @@
 			"maxHeight": 60
 		}
 	},
-
 	"flex-layout.col#certificates": {
 		"props": {
 			"width": "40%"
@@ -312,7 +409,7 @@
 	},
 	"rich-text#certificatesTitle": {
 		"props": {
-			"text": "#### CERTIFICADOS"
+			"text": "##### CERTIFICADOS"
 		}
 	},
 	"flex-layout.row#certificatesContentIcons": {
@@ -325,7 +422,6 @@
 			"image#certificate3"
 		]
 	},
-
 	"image#certificate1": {
 		"props": {
 			"src": "assets/footer/certificationEbitNielsen.png",
@@ -344,7 +440,6 @@
 			"maxHeight": 60
 		}
 	},
-
 	//Bloco Logos
 	"flex-layout.row#footerLogos": {
 		"props": {
@@ -387,7 +482,7 @@
 	},
 	"flex-layout.col#grupo12Logo": {
 		"props": {
-			"width": "20%"
+			"width": "12%"
 		},
 		"children": [
 			"image#grupo12Logo"
@@ -395,27 +490,24 @@
 	},
 	"flex-layout.col#vtexLogo": {
 		"props": {
-			"width": "20%"
+			"width": "12%"
 		},
 		"children": [
 			"image#vtexLogo"
 		]
 	},
-
 	"image#corebizLogo": {
 		"props": {
-		"src": "assets/footer/logoCorebiz.png",
-		"maxHeight": 60
+			"src": "assets/footer/logoCorebiz.png",
+			"maxHeight": 60
 		}
 	},
-
 	"rich-text#direitos": {
 		"props": {
-		"text": "Todos direitos reservados. corebiz 2021",
-		"blockClass": "richTextFooterRow4"
+			"text": "Todos direitos reservados. corebiz 2021",
+			"blockClass": "richTextFooterRow4"
 		}
 	},
-
 	"image#grupo12Logo": {
 		"props": {
 			"blockClass": "grupo12Logo",
@@ -423,19 +515,15 @@
 			"maxHeight": 60
 		}
 	},
-
 	"image#vtexLogo": {
 		"props": {
 			"src": "assets/footer/logoVtex.png",
 			"maxHeight": 60
 		}
 	},
-
 	"rich-text": {
 		"props": {
 			"text": "text alert"
 		}
 	}
-
-
 }
