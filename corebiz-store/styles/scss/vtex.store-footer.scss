@@ -74,6 +74,9 @@
 		}
 		
 		:global(.vtex-flex-layout-0-x-flexRow--paymentCertificates){
+			:global(.vtex-flex-layout-0-x-flexRowContent--certificatesContent) {
+				padding: 0;
+			}
 			display: block;
 			width: 100%;
 			margin-bottom: 60px;
