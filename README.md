@@ -194,4 +194,5 @@ vtex link
 ## Ambientes
 
 [workspace Dev](https://grupo12fabio--hiringcoders202112.myvtex.com/)
+
 [workspace Prod](https://grupo12--hiringcoders202112.myvtex.com/)
