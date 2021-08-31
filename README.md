@@ -9,7 +9,7 @@ Status: In progress
 
 # Desafio final - Hiring Coders
 
-Projeto final do programa Hiring Coders da Gama Academy, patrocinado pela VTEX, AWS, ACCT, Whirlpool, CoreBiz, We.di e Loja Integrada.
+Projeto final do programa Hiring Coders da [Gama Academy](https://www.gama.academy/), patrocinado pela [VTEX](https://vtex.com/), [AWS](https://aws.amazon.com/), [ACCT](https://acct.global/), [Whirlpool](https://www.whirlpool.com.br/), [CoreBiz](https://www.corebiz.ag/), [We.di](https://www.wedigi.com.br) e Loja Integrada.
 
 ### Summary
 
