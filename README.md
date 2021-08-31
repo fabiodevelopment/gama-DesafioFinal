@@ -11,13 +11,12 @@ Projeto final do programa Hiring Coders da Gama Academy, patrocinado pela VTEX, 
 
 ### Summary
 
-- Desafio proposto
-- O que fizemos
-    - Tecnologias
-    - Como executar
-- Implementações
-    - Back-end
-    - Front-end
+  - [Desafio proposto](#desafio-proposto)
+  - [O que fizemos](#o-que-fizemos)
+    - [Tecnologias](#tecnologias)
+    - [Como executar](#️como-executar)
+  - [Implementações](#️implementações)
+  - [Grupo 12](#grupo-12)
 
 ## Desafio proposto
 
@@ -47,7 +46,7 @@ Aplicar tema do patrocinador, com logo, cores e página de Quem Somos com inform
     - [Assets](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-the-assets-builder)
     - [Routes](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-routes)
     - [Flex-Layout](https://github.com/vtex-apps/flex-layout)
-    - [Conditional-Layout](https://github.com/vtex-apps/condition-layout) *(em implementação, conferir antes de publicar)*
+    - [Condition-Layout](https://github.com/vtex-apps/condition-layout)
     - [Tab-Layout](https://github.com/vtex-apps/tab-layout)
     - [CustomQuery](https://github.com/vtex-apps/search-result)
     - [Slider-Layout](https://github.com/vtex-apps/slider-layout)
@@ -58,8 +57,8 @@ Aplicar tema do patrocinador, com logo, cores e página de Quem Somos com inform
 - [React](https://pt-br.reactjs.org/)
     - [TypeScript](https://www.typescriptlang.org/)
 - [SASS](https://sass-lang.com/)
-- Axios
-- inputMask
+- [Axios](https://github.com/axios/axios)
+- [React Input Mask](https://www.npmjs.com/package/react-input-mask)
 
 ### ⌨️ Como executar
 
@@ -75,17 +74,27 @@ Para instalar as dependências, siga os passos abaixo:
 ```bash
 # Instalar as dependências
 
-# App Cadastro
-cd app-cadastro
-yarn
+# CoreBiz Register
+cd corebiz-register
+yarn install
 cd react
-yarn
+yarn install
+touch workspaceName.ts
+nano workspaceName.ts
+
+# inserir: 
+export default "{workspaceName}--"
 
 # CoreBiz Admin
 cd corebiz-admin
-yarn
+yarn install
 cd react
-yarn
+yarn install
+touch workspaceName.ts
+nano workspaceName.ts
+
+# inserir: 
+export default "{workspaceName}--"
 ```
 
 Para iniciá-lo, siga os passos abaixo:
@@ -105,8 +114,8 @@ vtex whoami
 ```bash
 # Link na VTEX
 
-# App Cadastro
-cd app-cadastro
+# CoreBiz Register
+cd corebiz-register
 vtex link
 
 # CoreBiz Admin
@@ -143,7 +152,7 @@ vtex link
 
 - Menu com a listagens dos departamentos criados, aplicando:
     - `vtex-menu`
-- Seção Hero com referência ao site institucional da CorBiz
+- Seção Hero com referência ao site institucional da CoreBiz
 - Seção com aplicação de `tab-layout` contendo:
     - 3 `tab-layout-items` com as 3 classificações principais dos serviços oferecidos.
     - Prateleira de listagem de 8 produtos, utilizando `product-summary`
@@ -165,22 +174,21 @@ vtex link
     - `by-button` botão add-to-cart para incluir o produto no `minicart`
     - `share` para o compartilhamento do produto nas redes sociais
 
-    ## Squads
+## Grupo 12
 
-    [Fábio Haddad Paes](https://github.com/fabiodevelopment) - Product Owner
+### Squads
 
-    [Antonio Bastos Júnior](https://github.com/abastosjr) - Back-end
+- **Squad FullStack**
+    - [Fábio Haddad Paes](https://github.com/fabiodevelopment) - PO / FullStack
 
-    Rubens - Tech Lead - Back-end
+- **Squad Back-end**
+    - [Antonio Bastos Júnior](https://github.com/abastosjr) - Back-end
+    - [Rubens](https://github.com/rubinhoSS) - Tech Lead - Back-end
 
-    [Juslene Lobeu](https://github.com/fabiodevelopment) - Tech Lead - Front-end
-
-    [Karen Pacheco](https://github.com/srtapacheco) - Front-end
-
-    [Raquel Nobre](https://github.com/raquel-nobre) - Front-end
-
-    [Alessandra Yamazaki](https://github.com/Yamazakiale) - Front-end
-
-    [Vinícius Veloso](https://github.com/velosov) - Front-end
-
-    Derikson - Font-end
+- **Squad Front-end**
+    - [Juslene Lobeu](https://github.com/fabiodevelopment) - Tech Lead - Front-end
+    - [Alessandra Yamazaki](https://github.com/Yamazakiale) - UI/UX /Front-end
+    - [Karen Pacheco](https://github.com/srtapacheco) - Front-end
+    - [Raquel Nobre](https://github.com/raquel-nobre) - Front-end
+    - [Vinícius Veloso](https://github.com/velosov) - Front-end
+    - [Derikson](https://github.com/derikson-dev) - Font-end
