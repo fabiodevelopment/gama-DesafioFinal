@@ -1,15 +1,12 @@
 .orderPlacedHeader {
-    // :global(.vtex-flex-layout-0-x-flexColChild) {
-        :global(.vtex-button) {
-            background-color:#f1c233;
-            border: none;
+    :global(.vtex-button) {
+        background-color:#f1c233;
+        border: none;
+        color: black;
+        :global(.vtex-button__label) {
             color: black;
-            :global(.vtex-button__label) {
-                color: black;
-            }
         }
-    // }
-    
+    }
 }
 .noticeListItem {
     :global(.vtex-button){
@@ -25,18 +22,3 @@
 }
 
 
-:global(.vtex-order-placed-2-x-orderNumber) {
-    color: white;
-}
-
-:global(.vtex-button) {
-    background-color: black;
-}
-
-:global(.vtex-order-placed-2-x-packageDeliveryTitle) {
-    color: white;
-}
-
-:global(.vtex-order-placed-2-x-productPrice) {
-    color: white;
-}
