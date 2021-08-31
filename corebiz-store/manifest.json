@@ -1,7 +1,7 @@
 {
   "vendor": "hiringcoders202112",
-  "name": "core-bizstore-theme",
-  "version": "0.0.1",
+  "name": "corebiz-store",
+  "version": "0.1.0",
   "builders": {
     "styles": "2.x",
     "store": "0.x",
@@ -51,10 +51,14 @@
     "vtex.modal-layout": "0.x",
     "vtex.store-video": "1.x",
     "vtex.store-link": "0.x",
-    "vtex.condition-layout": "2.3",
+    "vtex.condition-layout": "2.x",
     "vtex.store-icons": "0.x",
     "hiringcoders202112.corebiz-register": "0.x",
     "hiringcoders202112.corebiz-admin": "0.x"
+  },
+  "billingOptions": {
+    "type": "free",
+    "availableCountries" : ["*"]
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
