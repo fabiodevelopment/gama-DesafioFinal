@@ -56,5 +56,9 @@
     "hiringcoders202112.corebiz-register": "0.x",
     "hiringcoders202112.corebiz-admin": "0.x"
   },
+  "billingOptions": {
+    "type": "free",
+    "availableCountries" : ["*"]
+  },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
