@@ -1,7 +1,7 @@
 {
   "vendor": "hiringcoders202112",
   "name": "corebiz-store",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "builders": {
     "styles": "2.x",
     "store": "0.x",
@@ -58,7 +58,9 @@
   },
   "billingOptions": {
     "type": "free",
-    "availableCountries" : ["*"]
+    "availableCountries": [
+      "*"
+    ]
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
