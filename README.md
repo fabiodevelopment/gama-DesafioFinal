@@ -38,7 +38,7 @@ Aplicar tema do patrocinador, com logo, cores e página de Quem Somos com inform
 
 ## O que fizemos
 
-### 🚀 Tecnologias
+### Tecnologias
 
 - [VTEX IO](https://github.com/vtex-apps)
     - [Minimum-Boilerplate-Theme](https://github.com/vtex-apps/minimum-boilerplate-theme)
@@ -60,7 +60,7 @@ Aplicar tema do patrocinador, com logo, cores e página de Quem Somos com inform
 - [Axios](https://github.com/axios/axios)
 - [React Input Mask](https://www.npmjs.com/package/react-input-mask)
 
-### ⌨️ Como executar
+### Como executar
 
 Clone o projeto e acesse a pasta do mesmo
 
@@ -128,7 +128,7 @@ vtex browse
 vtex link
 ```
 
-## 🖥️ Implementações
+## Implementações
 
 ### Back-end
 
@@ -163,7 +163,7 @@ vtex link
     - `Slider-layout` para as brands dos clientes da empresa
 - Footer
     - Aplicando um grande impacto visual e referência a página institucional da empresa, utilizamos:
-        - [Informar aqui...]
+    - Uso dos blocos `flex-layout.row`, `flex layout.col`, `link`, `images` e `rich-text`.
 - Página de detalhes do produto aplicamos:
     - `conditional-layout` para exibir um banner com tema do departamento de referência do produto. *(em implementação, conferir antes de publicar)*
     - `breadcrumb` pensando na experiência de navegação do usuário
@@ -179,7 +179,7 @@ vtex link
 ### Squads
 
 - **Squad FullStack**
-    - [Fábio Haddad Paes](https://github.com/fabiodevelopment) - PO / FullStack
+    - [Fábio Haddad Paes](https://github.com/fabiodevelopment) - PO / Full-Stack
 
 - **Squad Back-end**
     - [Antonio Bastos Júnior](https://github.com/abastosjr) - Back-end
