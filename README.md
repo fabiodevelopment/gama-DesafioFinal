@@ -189,3 +189,9 @@ vtex link
     - [Raquel Nobre](https://github.com/raquel-nobre) - Front-end
     - [Vinícius Veloso](https://github.com/velosov) - Front-end
     - [Derikson](https://github.com/derikson-dev) - Font-end
+
+
+## Ambientes
+
+[workspace Dev](https://grupo12fabio--hiringcoders202112.myvtex.com/)
+[workspace Prod](https://grupo12--hiringcoders202112.myvtex.com/)
