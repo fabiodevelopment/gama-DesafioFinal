@@ -10,9 +10,16 @@
   },
 
   "store.account": {
-    "blocks": ["my-account"],
+    "blocks": ["flex-layout.row#myaccount"],
     "parent": {
       "challenge": "challenge.profile"
+    }
+  },
+
+  "flex-layout.row#myaccount": {
+    "children":["my-account"],
+    "props": {
+      "blockClass": "styleAccount"
     }
   },
 

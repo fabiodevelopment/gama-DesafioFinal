@@ -19,7 +19,7 @@
   }
   .flexRow--banner-cadastro {
 	width: 100%;
-	border-radius: 2px;
+	border-radius: 15px;
 	overflow: hidden;
   }
   .flexRow--form-cadastro {
@@ -56,7 +56,7 @@
   }
   :global(.vtex-button__spinner-container) {
 	background-color: #f1c233;
-	border-radius: 2px;
+	border-radius: 5px;
   }
   :global(.vtex-styleguide-9-x-rotate) {
 	color: black;
@@ -78,11 +78,52 @@
 .flexCol--titles {
   max-width: 700px;
 }
-// pagina de quem somos
-.flexRow--main-container {
-  margin-top: 100px;
-}
 
-.flexRow--aboutUs-container {
-  padding-bottom: 4rem;
+//style my account
+.flexRow--styleAccount{
+  background-color: white;
+
+  //container - border infos
+  :global(.vtex-my-account-1-x-boxContainer){
+    border-color: black;
+    border-radius: 2px;
+
+  }
+  //conteiner dados pessoais
+  :global(.vtex-pageHeader__title){
+    color:black;
+  }
+
+  //titulos
+  :global(.vtex-my-account-1-x-dataEntryLabel){
+    color:black;
+  }
+  //botao editar + botao definir senha
+  :global(.vtex-button__label){
+    color:black;
+    &:hover{color:#f1c233};
+  }
+
+  //container newsletter
+  :global(.vtex-my-account-1-x-newsletterContainerTitle){
+    color:black;
+  }
+
+  //texto checkbox
+  :global(.vtex-checkbox__label){
+    color:black;
+    &:hover{color:#f1c233};
+  }
+ 
+  //container lateral
+  :global(.vtex-account_menu-link){
+    color:black;
+    &:hover{color:#f1c233};
+  }
+  //sair - container lateral
+  :global(.vtex-my-account-1-x-menuLink){
+    color:black;
+    &:hover{color:#f1c233};
+  }
+    
 }
