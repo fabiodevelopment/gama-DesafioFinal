@@ -9,7 +9,7 @@
 .autoCompleteOuterContainer--search-bar {
 	:global(.vtex-input-prefix__group) {
 		border: none;
-		border-radius: 50px;
+		border-radius: 2px;
 		border: thin solid #ffffff;
 		background-color: transparent;
 		:global(.vtex-styleguide-9-x-input) {
@@ -77,7 +77,7 @@
 	margin: 2rem auto 1rem;
 	//padding: 1rem;
 	//background-color: #000000;
-	border-radius: 3px;
+	border-radius: 2px;
 	line-height: 1.5rem;
 	color: white;
 }

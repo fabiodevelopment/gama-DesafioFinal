@@ -19,6 +19,7 @@
 :global(.vtex-button__label) {
 	color: white;
 	font-size: 14px;
+	text-transform: lowercase;
 }
 .listItemActive {
 	:global(.vtex-button) {
@@ -28,6 +29,13 @@
 		border-bottom:2px solid #f1c233;
 	}
 }
+
+.contentContainer--contentTabHome {
+	:global(.vtex-search-result-3-x-gallery--grid) {
+		padding-left: 0;
+	}
+}
+
 
 @media (max-width: 768px) {
 	.listItem {

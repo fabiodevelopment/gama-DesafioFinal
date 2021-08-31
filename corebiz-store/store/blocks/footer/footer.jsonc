@@ -68,7 +68,7 @@
 	},
 	"rich-text#mediaTitle": {
 		"props": {
-			"text": "##### NOSSAS MÍDIAS"
+			"text": "##### .nossas mídias"
 		}
 	},
 	"flex-layout.row#mediaIcons": {
@@ -143,7 +143,7 @@
 	},
 	"rich-text#ajudaTitle": {
 		"props": {
-			"text": "##### PRECISANDO DE AJUDA?"
+			"text": "##### .precisando de ajuda?"
 		}
 	},
 	"flex-layout.row#ajudaWhats": {
@@ -232,13 +232,13 @@
 	},
 	"rich-text#institucional": {
 		"props": {
-			"text": "##### INSTITUCIONAL"
+			"text": "##### .institucional"
 		}
 	},
 	"link#quemSomos": {
 		"props": {
 			"blockClass": "linksFooter",
-			"src": "#",
+			"href": "/quem-somos",
 			"label": "Quem Somos"
 		}
 	},
@@ -270,7 +270,7 @@
 	},
 	"rich-text#compras": {
 		"props": {
-			"text": "##### COMPRAS"
+			"text": "##### .compras"
 		}
 	},
 	"link#meuPerfil": {
@@ -308,7 +308,7 @@
 	},
 	"rich-text#suporte": {
 		"props": {
-			"text": "##### SUPORTE"
+			"text": "##### .suporte"
 		}
 	},
 	"link#prazosEntrega": {
@@ -346,7 +346,7 @@
 	},
 	"rich-text#atendimento": {
 		"props": {
-			"text": "##### ATENDIMENTO"
+			"text": "##### .atendimento"
 		}
 	},
 	"link#comoComprar": {
@@ -391,7 +391,7 @@
 	},
 	"rich-text#paymentTitle": {
 		"props": {
-			"text": "##### FORMAS DE PAGAMENTO"
+			"text": "##### .formas de pagamento"
 		}
 	},
 	"image#paymentIcons": {
@@ -411,7 +411,7 @@
 	},
 	"rich-text#certificatesTitle": {
 		"props": {
-			"text": "##### CERTIFICADOS"
+			"text": "##### .certificados"
 		}
 	},
 	"flex-layout.row#certificatesContentIcons": {

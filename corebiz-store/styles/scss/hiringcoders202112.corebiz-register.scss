@@ -163,7 +163,6 @@
 		color: white;
 		display: inline;
 		margin-right: 15px;
-		text-transform: uppercase;
 		@include breakpoint('mobile') {
 			display: block;
 		}

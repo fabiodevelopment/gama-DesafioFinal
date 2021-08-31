@@ -42,7 +42,7 @@ const CadastroNewsletter: StorefrontFunctionComponent = () => {
 		<>	
 			<div className={`${handles.cadastroNewsletter}`}>
 						
-				<h2 className={`${handles.newsletterTitle}`}>Cadastre-se</h2>
+				<h2 className={`${handles.newsletterTitle}`}>.newsletter</h2>
 				<h3 className={`${handles.newsletterSubTitle}`}>Para receber notificações sobre novos produtos</h3>
 				<br />
 				

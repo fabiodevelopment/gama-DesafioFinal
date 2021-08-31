@@ -3,13 +3,10 @@
 		"blocks": [
 			"stack-layout#hero",
 			"tab-layout#home",
-			// Section explicação da loja (fexrow > flexrow (main container) > 3 flex col )
-			// Section Institucional > Valores Corebiz
 			"flex-layout.row#title-container",
 			"flex-layout.row#valores",
 			"rich-text#title-brand",
       		"flex-layout.row#slider-brands",
-			// "flex-layout.row#about-us-container",
 			"cadastro-pop-up"
 		]
 	},
@@ -34,6 +31,9 @@
 	},
 	// Lista os Conteudos das Abas
 	"tab-content#home": {
+		"props": {
+			"blockClass": "contentTabHome"
+		},
 		"children": [
 			"tab-content.item#home1",
 			"tab-content.item#home2",
@@ -45,7 +45,7 @@
 	"tab-list.item#home1": {
 		"props": {
 			"tabId": "categoria1",
-			"label": "Desenvolvimento",
+			"label": ".desenvolvimento",
 			"defaultActiveTab": true
 		}
 	},
@@ -53,14 +53,14 @@
 	"tab-list.item#home2": {
 		"props": {
 			"tabId": "categoria2",
-			"label": "Integrações"
+			"label": ".integrações"
 		}
 	},
 	// Tab Item 3
 	"tab-list.item#home3": {
 		"props": {
 			"tabId": "categoria3",
-			"label": "Planos"
+			"label": ".planos"
 		}
 	},
 
@@ -95,11 +95,11 @@
 	"search-result-layout.customQuery#desenvolvimento": {
 		"props": {
 			"querySchema":{
-				// "mapField": "c",
-				// "queryField": "5",
+				"mapField": "c",
+				"queryField": "5",
 				"skusFilter": "FIRST_AVAILABLE",
 				"simulationBehavior": "skip",
-				"maxItemsPerPage": 8
+				"maxItemsPerPage": 4
 			}
 		},
 		"blocks": ["search-result-layout.desktop#lp"]
@@ -108,11 +108,11 @@
 	"search-result-layout.customQuery#integracoes": {
 		"props": {
 			"querySchema":{
-				// "mapField": "c",
-				// "queryField": "7",
+				"mapField": "c",
+				"queryField": "7",
 				"skusFilter": "FIRST_AVAILABLE",
 				"simulationBehavior": "skip",
-				"maxItemsPerPage": 8
+				"maxItemsPerPage": 4
 			}
 		},
 		"blocks": ["search-result-layout.desktop#lp"]
@@ -120,11 +120,11 @@
 	"search-result-layout.customQuery#planos": {
 		"props": {
 			"querySchema":{
-				// "mapField": "c",
-				// "queryField": "2",
+				"mapField": "c",
+				"queryField": "2",
 				"skusFilter": "FIRST_AVAILABLE",
 				"simulationBehavior": "skip",
-				"maxItemsPerPage": 8
+				"maxItemsPerPage": 4
 			}
 		},
 		"blocks": ["search-result-layout.desktop#lp"]

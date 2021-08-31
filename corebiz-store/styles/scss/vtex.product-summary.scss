@@ -7,12 +7,16 @@
 	height: 50px;
 }
 
+.container {
+	border-radius: 2px;
+}
+
 .element {
 	background-color: #424242;
 
 	:global(.vtex-rich-text-0-x-container) {
 		position: absolute;
-		border-radius: 5px;
+		border-radius: 2px;
 		background: #424242;
 		width: 40px;
 		height: 40px;
@@ -34,6 +38,7 @@
 		width: 200px;
 		margin: 0 auto;
 		border: 0;
+		border-radius: 2px;
 		&:hover,
 		&:focus {
 			background-color: #f1c233;
@@ -41,7 +46,7 @@
 	}
 	:global(.vtex-button__spinner-container) {
 		background-color: #f1c233;
-		border-radius: 5px;
+		border-radius: 2px;
 	}
 	:global(.vtex-styleguide-9-x-rotate) {
 		color: black;
