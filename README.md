@@ -1,8 +1,3 @@
-# Criar o README do repositório
-
-Assign: Juslene Lobeu
-Status: In progress
-
 ![screenshot](images-readme/screenshot.png)
 
 ![screenshot](images-readme/corebiz.png)![screenshot](images-readme/grupo12.png)![screenshot](images-readme/gama-academy.png)![screenshot](images-readme/vtex.png)
