@@ -125,5 +125,9 @@
     color:black;
     &:hover{color:#f1c233};
   }
-    
+  
+}
+
+:global(.vtex-flex-layout-0-x-flexRow--aboutUs-container) {
+  padding: 6rem 0;
 }

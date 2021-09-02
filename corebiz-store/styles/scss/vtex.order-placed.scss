@@ -22,3 +22,40 @@
 }
 
 
+:global(.vtex-order-placed-2-x-updateOrderButton) {
+    :global(.vtex-button) {
+        background-color:#191919;
+    }
+}
+
+:global(.vtex-order-placed-2-x-myOrdersButton) {
+    :global(.vtex-button) {
+        background-color:#191919;
+    }
+}
+
+:global(.vtex-order-placed-2-x-cancelOrderButton) {
+    :global(.vtex-button) {
+        background-color:#191919;
+        border-radius: .25rem;
+        border-top-left-radius: 0.25rem;
+        border-top-right-radius: 0.25rem;
+        border-bottom-right-radius: 0.25rem;
+        border-bottom-left-radius: 0.25rem;
+        border-color: white;
+    }
+}
+
+:global(.vtex-order-placed-2-x-orderNumber){
+    color: white;
+}
+
+:global(.vtex-order-placed-2-x-packageDeliveryTitle) {
+    color: white;
+}
+
+:global(.vtex-order-placed-2-x-productPrice) {
+    color: white;
+}
+
+
